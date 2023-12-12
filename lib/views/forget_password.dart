@@ -3,7 +3,7 @@ import 'package:graduation_project/widget/login_page/custom_button.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
-
+static String id ='ForgetPassword';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

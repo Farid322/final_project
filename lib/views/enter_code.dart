@@ -4,7 +4,7 @@ import 'package:graduation_project/widget/login_page/custom_text_form_field.dart
 
 class EnterCode extends StatelessWidget {
   const EnterCode({super.key});
-
+   static String id=  'EnterCode';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -45,7 +45,7 @@ class EnterCode extends StatelessWidget {
                 
                  CustomTextFormField(hintText: 'must be 8 characters'),
 
-                   
+                   const SizedBox(height: 43,),
                   
                   const Align(
                     alignment: Alignment.centerLeft,
@@ -55,7 +55,7 @@ class EnterCode extends StatelessWidget {
                  CustomTextFormField(hintText: 'repeate password'),
 
                  const SizedBox(
-                  height:22 ,
+                  height:49 ,
                  ),
                  const CustomButton(text: 'Rest password')
                   ],

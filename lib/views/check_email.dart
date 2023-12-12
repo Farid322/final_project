@@ -3,7 +3,7 @@ import 'package:graduation_project/widget/login_page/otp_form.dart';
 
 class CheckEmail extends StatelessWidget {
   const CheckEmail({super.key});
-
+  static String id=  'CheckEmail';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

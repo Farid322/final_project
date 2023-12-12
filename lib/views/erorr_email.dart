@@ -5,7 +5,7 @@ import '../widget/login_page/custom_text_form_field.dart';
 
 class Erorremail extends StatelessWidget {
   const Erorremail({super.key});
-
+static String id = 'Erorremail';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

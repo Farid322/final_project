@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SocialLinkesCategory extends StatelessWidget {
@@ -8,8 +9,8 @@ class SocialLinkesCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return 
          Container(
-                width: 130,
-                height: 45,
+                width: 130.w,
+                height: 45.h,
                  decoration: ShapeDecoration(
                   color: Colors.white,
                  shape: RoundedRectangleBorder(
@@ -24,7 +25,7 @@ class SocialLinkesCategory extends StatelessWidget {
                                                  ),
                                              ],
                                       ),
-               child:SvgPicture.asset(iconImage,height: 45,width: 45,),
+               child:SvgPicture.asset(iconImage,height: 50,width: 45,),
                                            
                                           
                                              ) ;

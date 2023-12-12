@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/views/register.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 
-class Onboarding extends StatelessWidget {
-  const Onboarding({super.key});
-
+class AboutDiabelt extends StatelessWidget {
+  const AboutDiabelt({super.key});
+static String id= 'AboutDiabelt';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -57,7 +58,7 @@ class Onboarding extends StatelessWidget {
       Image.asset('assets/images/World health day 1.png'),
          const SizedBox(height: 47,),
 
-         const CustomButton(text: 'Get started')
+          const CustomButton(text: 'Get started')
          ], 
        ),
       

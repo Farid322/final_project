@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/views/login.dart';
-import 'package:graduation_project/views/sign_up_patient.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 import 'package:graduation_project/widget/login_page/social_linkes_category.dart';
 

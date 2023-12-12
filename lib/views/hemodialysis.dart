@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/widget/login_page/custom_button.dart';
+
 
 class hemodialysis extends StatelessWidget {
   const hemodialysis({super.key});
-
+   static String id = 'hemodialysis';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

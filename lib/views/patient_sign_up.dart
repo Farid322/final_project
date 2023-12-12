@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:graduation_project/widget/login_page/custom_text_form_field.dart';
 
 import '../widget/login_page/custom_button.dart';
 
 class PatientSignUp extends StatelessWidget {
   const PatientSignUp({super.key});
-
+   static String id = 'PatientSignUp ';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

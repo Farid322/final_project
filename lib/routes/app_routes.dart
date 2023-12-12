@@ -27,6 +27,8 @@
 //       ResetPassword.id:(context) => const ResetPassword(),
 //       SignUpdoctor.id:(context) => const   SignUpdoctor(),
 //       SignUppatient.id:(context) => const   SignUppatient(),
+//       PatientSignUp.id:(context) => const   PatientSignUp(),
+//       hemodialysis.id :(context) => const    hemodialysis(),
 //     };
   
 //   }

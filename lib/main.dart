@@ -28,7 +28,7 @@ class Hemodialysis extends StatelessWidget {
       minTextAdapt: true,
       child:  MaterialApp(
         debugShowCheckedModeBanner: false,
-         home: PatientSignUp(),
+         home: LogoPage(),
       ),
     );
   }

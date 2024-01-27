@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../routes/app_routes.dart';
 
 
 class hemodialysis extends StatelessWidget {
   const hemodialysis({super.key});
-   static String id = 'hemodialysis';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -73,35 +75,40 @@ class hemodialysis extends StatelessWidget {
     
        ),
       
-                Container(
-           width: 151,
-          height: 47,
-          decoration: ShapeDecoration(
-          color: const Color(0xFFDF7861),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          shadows: const [
-              BoxShadow(
-                  color: Color(0x210E5C6D),
-                  blurRadius: 13,
-                  offset: Offset(0, 1),
-                  spreadRadius: 0,
-              )
-          ],
-          ),
-          child:  const Center(
-            child: Text(
-              'Start',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Roboto',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  
-              ),
-          ),
-          )
-      ),
+                InkWell(
+                  onTap: (){
+                    GoRouter.of(context).go(RouterNames.RegisterPage);
+                  },
+                  child: Container(
+                           width: 151,
+                          height: 47,
+                          decoration: ShapeDecoration(
+                          color: const Color(0xFFDF7861),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                          shadows: const [
+                              BoxShadow(
+                    color: Color(0x210E5C6D),
+                    blurRadius: 13,
+                    offset: Offset(0, 1),
+                    spreadRadius: 0,
+                              )
+                          ],
+                          ),
+                          child:  const Center(
+                            child: Text(
+                              'Start',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    
+                              ),
+                          ),
+                          )
+                      ),
+                ),
       
        const SizedBox(height: 10,),
       Image.asset('assets/images/Hypochondriac (10) 1 (1).png')

@@ -8,7 +8,7 @@ class CheckEmail extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 100),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 120),
         child: Column(
           children: [
               Image.asset('assets/images/illustration.png'),
@@ -75,25 +75,28 @@ class CheckEmail extends StatelessWidget {
                     height: 40,
                   ),
 
-                  Row(
-                    children: [
-                      Text('I didn’t receive a code',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black.withOpacity(0.699999988079071)
-                      ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Text('Resend',
-                      style: TextStyle(
-                        color: Colors.black,
-                         fontSize: 16,
-                         fontWeight: FontWeight.w600,
-                      ),)
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(33),
+                    child: Row(
+                      children: [
+                        Text('I didn’t receive a code',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black.withOpacity(0.699999988079071)
+                        ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text('Resend',
+                        style: TextStyle(
+                          color: Colors.black,
+                           fontSize: 16,
+                           fontWeight: FontWeight.w600,
+                        ),)
+                      ],
+                    ),
                   )
 
           ],

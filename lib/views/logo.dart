@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/routes/app_routes.dart';
-import 'package:graduation_project/views/about_diabelt.dart';
-import 'package:graduation_project/views/sign_up_patient.dart';
 
 class LogoPage extends StatelessWidget {
   const LogoPage({super.key});
-  static String id = 'LogoPage';
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +28,7 @@ class LogoPage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                GoRouter.of(context).go(RouterNames.AboutDiabelt);
+                GoRouter.of(context).go(RouterNames.RegisterPage);
               },
               child: Container(
                   width: 330,
@@ -66,7 +63,7 @@ class LogoPage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, AboutDiabelt.id);
+                GoRouter.of(context).go(RouterNames.AboutDiabelt);
               },
               child: Container(
                   width: 330,

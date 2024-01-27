@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 
 import '../widget/login_page/custom_text_form_field.dart';
@@ -49,7 +51,9 @@ static String id = 'Erorremail';
         const SizedBox(
           height: 30,
         ), 
-        const CustomButton(text:'Send code' ),
+         CustomButton(text:'Send code',onTap: () {
+           GoRouter.of(context).go(RouterNames.EnterCode);
+        }, ),
          
                 
         

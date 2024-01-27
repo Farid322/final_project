@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
@@ -43,36 +45,41 @@ static String id ='ResetPassword';
                     ),
       
                     
-                      Container(
-           width: 330,
-            height: 52,
-            
-            decoration: ShapeDecoration(
-           color: Colors.white,
-            shape: RoundedRectangleBorder(
-              
-              borderRadius: BorderRadius.circular(8)),
-            shadows: const [
-                BoxShadow(
-                    color:Color(0x1EA6A6A6),
-                    blurRadius: 40,
-                    offset: Offset(0, 10),
-                    spreadRadius: 0,
-                )
-            ],),
-             child:  const Center(
-              child: Text(
-                'Go back to login',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color:  Color(0xFF496664),
-                    fontSize: 20,
-                    fontWeight: FontWeight.w300,
-                    
-                ),
-            ),
-            )
-            ),
+                      InkWell(
+                        onTap: () {
+                          GoRouter.of(context).go(RouterNames.LoginPage);
+                        },
+                        child: Container(
+                                 width: 330,
+                                  height: 52,
+                                  
+                                  decoration: ShapeDecoration(
+                                 color: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    
+                                    borderRadius: BorderRadius.circular(8)),
+                                  shadows: const [
+                                      BoxShadow(
+                                          color:Color(0x1EA6A6A6),
+                                          blurRadius: 40,
+                                          offset: Offset(0, 10),
+                                          spreadRadius: 0,
+                                      )
+                                  ],),
+                                   child:  const Center(
+                                    child: Text(
+                                      'Go back to login',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color:  Color(0xFF496664),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w300,
+                                          
+                                      ),
+                                  ),
+                                  )
+                                  ),
+                      ),
       
           ],
         ),

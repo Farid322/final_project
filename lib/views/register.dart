@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 import 'package:graduation_project/widget/login_page/social_linkes_category.dart';
 
@@ -17,11 +19,15 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(
                 height: 29,
               ),
-               const CustomButton(text: 'log-in'),
+                CustomButton(text: 'log-in', onTap: () {
+                 GoRouter.of(context).go(RouterNames.LoginPage);
+               },),
               const SizedBox(
                 height: 20,
               ),
-               const CustomButton(text: 'sign-up'),
+                CustomButton(text: 'sign-up', onTap: () {
+                 GoRouter.of(context).go(RouterNames.SignUppatient);
+               },),
 
            const SizedBox(
             height: 20,

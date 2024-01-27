@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 
 class AboutDiabelt extends StatelessWidget {
@@ -57,7 +59,9 @@ static String id= 'AboutDiabelt';
       Image.asset('assets/images/World health day 1.png'),
          const SizedBox(height: 47,),
 
-          const CustomButton(text: 'Get started')
+           CustomButton(text: 'Get started', onTap: () {
+            GoRouter.of(context).go(RouterNames.hemodialysis);
+          },)
          ], 
        ),
       

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -43,7 +45,9 @@ static String id ='ForgetPassword';
           const SizedBox(
             height: 60,
           ), 
-          const CustomButton(text:'Send an email' ),
+           CustomButton(text:'Send an email',onTap: () {
+            GoRouter.of(context).go(RouterNames.Erorremail);
+          }, ),
            
         
 

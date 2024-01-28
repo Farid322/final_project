@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 import 'package:graduation_project/widget/login_page/custom_text_form_field.dart';
 
@@ -57,7 +59,9 @@ class EnterCode extends StatelessWidget {
                  const SizedBox(
                   height:49 ,
                  ),
-                 const CustomButton(text: 'Rest password')
+                  CustomButton(text: 'Rest password', onTap: () {
+                   GoRouter.of(context).go(RouterNames.ResetPassword);
+                 },)
                   ],
                 ),
           ),

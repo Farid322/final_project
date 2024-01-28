@@ -18,13 +18,17 @@ class SignUppatient extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-               const SizedBox(
+                SizedBox(
                 width: 343,
                  child: Row(
                    children: [
-                   Icon(Icons.arrow_back),
-                   SizedBox(width: 3,),
-                     Text('Create account',
+                   TextButton(
+                    onPressed: () {
+                      GoRouter.of(context).go(RouterNames.PatientRegisterPage);
+                    },
+                    child: const Icon(Icons.arrow_back)),
+                   const SizedBox(width: 3,),
+                     const Text('Create account',
                            style: TextStyle(
                               color: Colors.black,
                              fontSize: 26,

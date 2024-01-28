@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/routes/app_routes.dart';
-import 'package:graduation_project/views/register.dart';
 import 'package:graduation_project/views/sign_up_patient.dart';
 
 

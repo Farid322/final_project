@@ -47,7 +47,7 @@ static String id ='ResetPassword';
                     
                       InkWell(
                         onTap: () {
-                          GoRouter.of(context).go(RouterNames.LoginPage);
+                          GoRouter.of(context).go(RouterNames.PatientLoginPage);
                         },
                         child: Container(
                                  width: 330,

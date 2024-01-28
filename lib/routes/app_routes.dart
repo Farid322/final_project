@@ -1,27 +1,32 @@
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/views/about_diabelt.dart';
 import 'package:graduation_project/views/check_email.dart';
+import 'package:graduation_project/views/doctor_register.dart';
 import 'package:graduation_project/views/enter_code.dart';
 import 'package:graduation_project/views/erorr_email.dart';
 import 'package:graduation_project/views/forget_password.dart';
 import 'package:graduation_project/views/hemodialysis.dart';
-import 'package:graduation_project/views/login.dart';
+import 'package:graduation_project/views/patient_login.dart';
 import 'package:graduation_project/views/logo.dart';
 import 'package:graduation_project/views/patient_sign_up.dart';
-import 'package:graduation_project/views/register.dart';
 import 'package:graduation_project/views/reset_password.dart';
 import 'package:graduation_project/views/sign_up_doctor.dart';
 import 'package:graduation_project/views/sign_up_patient.dart';
+
+import '../views/doctor_login.dart';
+import '../views/patient_register.dart';
 
 class RouterNames {
   static const LogoPage = '/';
   static const AboutDiabelt = '/aboutdiablet';
   static const hemodialysis = '/hemodialysis';
-  static const RegisterPage = '/register';
+  static const PatientRegisterPage = '/patientregister';
   static const SignUppatient = '/signuppatient';
+  static const DoctorRegisterPage = '/doctorregister';
   static const SignUpdoctor = '/signupdoctor';
   static const PatientSignUp = '/patientsignup';
-  static const LoginPage = '/loginpage';
+  static const PatientLoginPage = '/patientloginpage';
+  static const DoctorLoginPage = '/doctorloginpage';
   static const ForgetPassword ='/forgetpassword';
   static const Erorremail = '/erroremail';
   static const CheckEmail = '/checkemail';
@@ -48,13 +53,24 @@ abstract class AppRouter {
        ),  
       
        GoRoute(
-      path: RouterNames.RegisterPage,
-      builder: (context, state) => RegisterPage(),
+      path: RouterNames.PatientRegisterPage,
+      builder: (context, state) => PatientRegisterPage(),
       ),
 
       GoRoute(
         path: RouterNames.SignUppatient,
         builder: (context, state) => SignUppatient(),
+        ),
+
+          GoRoute(
+        path: RouterNames.PatientSignUp,
+        builder: (context, state) => PatientSignUp(),
+        ),
+
+
+        GoRoute(
+          path: RouterNames.DoctorRegisterPage,
+          builder: (context, state) => DoctorRegisterPage(), 
         ),
       
        GoRoute(
@@ -62,15 +78,17 @@ abstract class AppRouter {
         builder: (context, state) => SignUpdoctor(),
         ),
       
-      GoRoute(
-        path: RouterNames.PatientSignUp,
-        builder: (context, state) => PatientSignUp(),
+    
+        GoRoute(
+        path: RouterNames.PatientLoginPage,
+        builder: (context, state) => PatientLoginPage(),
         ),
 
-        GoRoute(
-        path: RouterNames.LoginPage,
-        builder: (context, state) => LoginPage(),
+         GoRoute(
+        path: RouterNames.DoctorLoginPage,
+        builder: (context, state) => DoctorLoginPage(),
         ),
+
 
         GoRoute(
         path: RouterNames.ForgetPassword,

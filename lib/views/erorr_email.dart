@@ -12,7 +12,7 @@ static String id = 'Erorremail';
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 20, vertical: 100),
+        padding:  EdgeInsets.symmetric(horizontal: 37, vertical: 92),
         child: Column(
           children: [
             Image.asset('assets/images/Character.jpg'),

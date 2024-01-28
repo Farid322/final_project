@@ -4,9 +4,8 @@ import 'package:graduation_project/routes/app_routes.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 import 'package:graduation_project/widget/login_page/social_linkes_category.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({super.key});
-  static String id='RegisterPage';
+class DoctorRegisterPage extends StatelessWidget {
+  const DoctorRegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +19,13 @@ class RegisterPage extends StatelessWidget {
                 height: 29,
               ),
                 CustomButton(text: 'log-in', onTap: () {
-                 GoRouter.of(context).go(RouterNames.LoginPage);
+                 GoRouter.of(context).go(RouterNames.DoctorLoginPage);
                },),
               const SizedBox(
                 height: 20,
               ),
                 CustomButton(text: 'sign-up', onTap: () {
-                 GoRouter.of(context).go(RouterNames.SignUppatient);
+                 GoRouter.of(context).go(RouterNames.SignUpdoctor);
                },),
 
            const SizedBox(

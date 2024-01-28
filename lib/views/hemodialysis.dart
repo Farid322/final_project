@@ -77,7 +77,7 @@ class hemodialysis extends StatelessWidget {
       
                 InkWell(
                   onTap: (){
-                    GoRouter.of(context).go(RouterNames.RegisterPage);
+                    GoRouter.of(context).go(RouterNames.PatientRegisterPage);
                   },
                   child: Container(
                            width: 151,

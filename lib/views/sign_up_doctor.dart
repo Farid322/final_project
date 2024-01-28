@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 import 'package:graduation_project/widget/login_page/custom_button.dart';
 import 'package:graduation_project/widget/login_page/custom_text_form_field.dart';
 
@@ -17,17 +19,27 @@ class SignUpdoctor extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-               const SizedBox(
+                SizedBox(
                 width: 343,
-                 child: Text('Create account',
-                       style: TextStyle(
-                          color: Colors.black,
-                         fontSize: 30,
-                       fontWeight: FontWeight.w700,
-                    
+                 child: Row(
+                   children: [
+                   TextButton(
+                    onPressed: () {
+                      GoRouter.of(context).go(RouterNames.DoctorRegisterPage);
+                    },
+                    child: const Icon(Icons.arrow_back)),
+                   const SizedBox(width: 3,),
+                     const Text('Create account',
+                           style: TextStyle(
+                              color: Colors.black,
+                             fontSize: 26,
+                           fontWeight: FontWeight.w700,
+                       
           
                 ),
               ),
+                   ],
+                 ),
              ),
               const SizedBox(height: 37,),
               const Align(
@@ -213,13 +225,17 @@ class SignUpdoctor extends StatelessWidget {
                 height: 39,
               ),
           
-                 const Row(
+                  Row(
                   children: [
-                    Text('Already have an account? ',style: TextStyle(color:Color(0xFF737373),
+                    const Text('Already have an account? ',style: TextStyle(color:Color(0xFF737373),
                                 fontSize: 15, fontWeight: FontWeight.w600),),
-                               Text('login',style: TextStyle(color: Color(0xFF737373),
-                                            fontSize: 15,
-                                               fontWeight: FontWeight.w600,),)
+                               TextButton( onPressed: (){
+                                GoRouter.of(context).go(RouterNames.DoctorLoginPage);
+                               },
+                                 child: const Text('login',style: TextStyle(color: Color(0xFF737373),
+                                              fontSize: 15,
+                                                 fontWeight: FontWeight.w600,),),
+                               )
                   ],
                  )
               

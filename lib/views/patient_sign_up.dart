@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/routes/app_routes.dart';
 
 import '../widget/login_page/custom_button.dart';
 
@@ -101,20 +103,19 @@ class PatientSignUp extends StatelessWidget {
               ),
               Row(
                 children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 18),
-                  child: Icon(Icons.arrow_back_ios,
-                  color: Color(0xFF0E5C6D),),
-                )  ,
-                const Text('Back',
-                style:TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFF0E5C6D),
-                  fontFamily: 'Roboto'
-                ),),
+                TextButton(onPressed: () {
+                  GoRouter.of(context).go(RouterNames.SignUppatient);
+                },
+                  child: const Text('Back',
+                  style:TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF0E5C6D),
+                    fontFamily: 'Roboto'
+                  ),),
+                ),
                 const SizedBox(
-                  width:96 ,
+                  width:87 ,
                 ),
                   Container(
              width: 124,

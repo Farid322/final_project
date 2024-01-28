@@ -7,8 +7,8 @@ import 'package:graduation_project/widget/login_page/custom_button.dart';
 
 import '../widget/login_page/custom_text_form_field.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class PatientLoginPage extends StatelessWidget {
+  const PatientLoginPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,13 +19,22 @@ class LoginPage extends StatelessWidget {
             children: [
               SizedBox(
                 width: 343.w,
-                child: const Text(
-                  ' Log in',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                  ),
+                child:  Row(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        GoRouter.of(context).go(RouterNames.PatientRegisterPage);
+                      },
+                      child: const Icon(Icons.arrow_back)),
+                    const Text(
+                      ' Log in',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(

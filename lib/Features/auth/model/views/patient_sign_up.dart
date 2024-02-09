@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/routes/app_routes.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 
-import '../widget/login_page/custom_button.dart';
+import '../../peresentaion/widgets/custom_button.dart';
 
 class PatientSignUp extends StatelessWidget {
   const PatientSignUp({super.key});

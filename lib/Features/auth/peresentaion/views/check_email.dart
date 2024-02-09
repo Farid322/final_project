@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/widget/login_page/otp_form.dart';
+import 'package:graduation_project/Features/auth/peresentaion/widgets/otp_form.dart';
 
 class CheckEmail extends StatelessWidget {
   const CheckEmail({super.key});

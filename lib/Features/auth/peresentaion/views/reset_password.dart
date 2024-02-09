@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/routes/app_routes.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});

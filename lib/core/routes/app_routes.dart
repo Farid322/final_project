@@ -1,20 +1,20 @@
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/views/about_diabelt.dart';
-import 'package:graduation_project/views/check_email.dart';
-import 'package:graduation_project/views/doctor_register.dart';
-import 'package:graduation_project/views/enter_code.dart';
-import 'package:graduation_project/views/erorr_email.dart';
-import 'package:graduation_project/views/forget_password.dart';
-import 'package:graduation_project/views/hemodialysis.dart';
-import 'package:graduation_project/views/patient_login.dart';
-import 'package:graduation_project/views/logo.dart';
-import 'package:graduation_project/views/patient_sign_up.dart';
-import 'package:graduation_project/views/reset_password.dart';
-import 'package:graduation_project/views/sign_up_doctor.dart';
-import 'package:graduation_project/views/sign_up_patient.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/about_diabelt.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/check_email.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/doctor_register.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/enter_code.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/erorr_email.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/forget_password.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/hemodialysis.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/patient_login.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/logo.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/patient_sign_up.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/reset_password.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/sign_up_doctor.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/sign_up_patient.dart';
 
-import '../views/doctor_login.dart';
-import '../views/patient_register.dart';
+import '../../Features/auth/peresentaion/views/doctor_login.dart';
+import '../../Features/auth/peresentaion/views/patient_register.dart';
 
 class RouterNames {
   static const LogoPage = '/';

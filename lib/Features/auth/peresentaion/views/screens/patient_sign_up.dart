@@ -3,7 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 
-import '../../peresentaion/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_button.dart';
+
 
 class PatientSignUp extends StatelessWidget {
   const PatientSignUp({super.key});

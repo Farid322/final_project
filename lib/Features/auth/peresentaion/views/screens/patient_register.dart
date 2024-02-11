@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
-import 'package:graduation_project/Features/auth/peresentaion/widgets/custom_button.dart';
+import 'package:graduation_project/core/widgets/custom_button.dart';
 import 'package:graduation_project/Features/auth/peresentaion/widgets/social_linkes_category.dart';
 
 class PatientRegisterPage extends StatelessWidget {

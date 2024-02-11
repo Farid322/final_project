@@ -1,20 +1,26 @@
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/about_diabelt.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/check_email.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/doctor_register.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/enter_code.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/erorr_email.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/forget_password.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/hemodialysis.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/patient_login.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/logo.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/patient_sign_up.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/reset_password.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/sign_up_doctor.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/sign_up_patient.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/hemodialysis.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/bluetooth_page.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/pressure_screen.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/temperature_screen.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/weight_screen.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/tests_page.dart';
 
-import '../../Features/auth/peresentaion/views/doctor_login.dart';
-import '../../Features/auth/peresentaion/views/patient_register.dart';
+import '../../Features/auth/peresentaion/views/screens/erorr_email.dart';
+import '../../Features/auth/peresentaion/views/screens/patient_login.dart';
+import '../../Features/auth/peresentaion/views/screens/patient_sign_up.dart';
+import '../../Features/auth/peresentaion/views/screens/about_diabelt.dart';
+import '../../Features/auth/peresentaion/views/screens/check_email.dart';
+import '../../Features/auth/peresentaion/views/screens/doctor_login.dart';
+import '../../Features/auth/peresentaion/views/screens/doctor_register.dart';
+import '../../Features/auth/peresentaion/views/screens/enter_code.dart';
+import '../../Features/auth/peresentaion/views/screens/forget_password.dart';
+import '../../Features/auth/peresentaion/views/screens/logo.dart';
+import '../../Features/auth/peresentaion/views/screens/patient_register.dart';
+import '../../Features/auth/peresentaion/views/screens/reset_password.dart';
+import '../../Features/auth/peresentaion/views/screens/sign_up_doctor.dart';
+import '../../Features/auth/peresentaion/views/screens/sign_up_patient.dart';
+
 
 class RouterNames {
   static const LogoPage = '/';
@@ -32,7 +38,12 @@ class RouterNames {
   static const CheckEmail = '/checkemail';
   static const EnterCode = '/entercode';
   static const ResetPassword = '/resrtpassword';
-  
+  static const Bluetoothpage = 'bluetoothpage';
+  static const PressurePage = 'pressurepage';
+ static const TemperaturePage = 'temperaturepage';
+ static const WeightPage = 'weightpage';
+ static const TestsPage = 'testpage';
+
 }
 
 abstract class AppRouter {
@@ -114,7 +125,35 @@ abstract class AppRouter {
         path: RouterNames.ResetPassword,
         builder: (context, state) => ResetPassword(),
         ),
- 
+
+        GoRoute(
+          path: RouterNames.Bluetoothpage,
+          builder: (context, state) => BluetoothPage(),
+           ),
+
+        GoRoute(
+            path:RouterNames.PressurePage,
+            builder: (context, state) =>PressurePage()
+            ),
+      
+    
+        GoRoute(
+            path:RouterNames.TemperaturePage,
+            builder: (context, state) =>TemperaturePage()
+            ),
+
+        GoRoute(
+           path:RouterNames.WeightPage,
+           builder: (context, state) => WeightPage() 
+           ),
+
+        GoRoute(
+          path:RouterNames.TestsPage,
+          builder: (context, state) => TestsPage() 
+          ),
+
+
+               
 
   ]);
 }

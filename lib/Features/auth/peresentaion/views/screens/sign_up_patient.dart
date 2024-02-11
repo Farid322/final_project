@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
-import 'package:graduation_project/Features/auth/peresentaion/widgets/custom_button.dart';
-import 'package:graduation_project/Features/auth/peresentaion/widgets/custom_text_form_field.dart';
+import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/core/widgets/custom_text_form_field.dart';
 
 class SignUppatient extends StatelessWidget {
   const SignUppatient({super.key});

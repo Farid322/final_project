@@ -18,7 +18,7 @@ class OtpForm extends StatelessWidget {
           },
           onSaved: (value) {},
           decoration: InputDecoration(
-            hintText: '0',
+            hintText: '_',
             hintStyle: const TextStyle(
               color: Color(0xFF6A6A6A),
             ),

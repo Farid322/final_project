@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/utils/app_asset.dart';
 
-import '../../../../core/routes/app_routes.dart';
+import '../../../../../core/routes/app_routes.dart';
 
 
-class hemodialysis extends StatelessWidget {
-  const hemodialysis({super.key});
+class BluetoothPage extends StatelessWidget {
+  const BluetoothPage({super.key});
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -41,7 +42,7 @@ class hemodialysis extends StatelessWidget {
                  Align(
                   alignment: Alignment.centerLeft,
                    child: Text(
-                     'Hemodialysis',
+                     'Bluetooth',
                      style: TextStyle(
                      color: Colors.white,
                       fontSize: 24,
@@ -60,7 +61,7 @@ class hemodialysis extends StatelessWidget {
                SizedBox(
                  height: 150,
                  width: 315,
-                 child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor sit amet, consectetur adipiscing elit, sed doeiusmod tempor',
+                 child: Text('We aim to save time by using dialysis belt: Using programming technology and artificial intelligence with easy application which the patient can follow up with the process of dialysis and his vital sign, please, turn on your bluetooth to let us help you.',
                  style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Roboto',
@@ -111,7 +112,7 @@ class hemodialysis extends StatelessWidget {
                 ),
       
        const SizedBox(height: 10,),
-      Image.asset('assets/images/Hypochondriac (10) 1 (1).png')
+      Image.asset(AppAssets.blutoothimage),
         ],
       ),
     );

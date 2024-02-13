@@ -12,7 +12,7 @@ static String id = 'Erorremail';
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 37, vertical: 92),
+        padding:  const EdgeInsets.symmetric(horizontal: 37, vertical: 65),
         child: Column(
           children: [
             Image.asset('assets/images/Character.jpg'),
@@ -58,9 +58,21 @@ static String id = 'Erorremail';
                 
         
                  const SizedBox(
-        height: 120,
+        height: 140,
                  ),
-                 const Text('Remember password ?login'),
+                 Align(
+                  alignment: Alignment.center,
+                   child: Row(
+                     children: [
+                       const Text('Remember password ?'),
+                       TextButton( onPressed: (){
+                                  GoRouter.of(context).go(RouterNames.DoctorLoginPage);
+                                 }, child:  const Text('login',style: TextStyle(color: Color(0xFF737373),
+                                                fontSize: 15,
+                                                   fontWeight: FontWeight.w600,),),),
+                     ],
+                   ),
+                 ),
           
         ],
                 ),

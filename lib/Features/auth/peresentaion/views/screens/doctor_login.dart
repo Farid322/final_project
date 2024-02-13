@@ -41,7 +41,7 @@ class DoctorLoginPage extends StatelessWidget {
                 height: 16.h,
               ),
               const Text(
-                'Hello, welcome back to our account',
+                'Hello, welcome back to your account',
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -93,7 +93,7 @@ class DoctorLoginPage extends StatelessWidget {
               SizedBox(
                 height: 32.h,
               ),
-              const CustomButton(text: 'log_in'),
+              const CustomButton(text: 'Login'),
               SizedBox(
                 height: 22.h,
               ),

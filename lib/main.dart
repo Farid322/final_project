@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/tests_page.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/accpted_result_page.dart';
 
 void main() {
   runApp( const Hemodialysis());
@@ -11,11 +11,11 @@ class Hemodialysis extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return     const ScreenUtilInit(
+    return      const ScreenUtilInit(
       designSize: Size(375, 812),
       minTextAdapt: true,
       child:  MaterialApp(
-        home: TestsPage(),
+        home: AccptedResultPage(),
         debugShowCheckedModeBanner: false,
       ),
     );

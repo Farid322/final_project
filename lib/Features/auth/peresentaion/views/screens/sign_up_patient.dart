@@ -61,7 +61,7 @@ class SignUppatient extends StatelessWidget {
                     child: Column(
                       children: [
                         const Align(  alignment: Alignment.centerLeft,
-                                  child: Text('contry code',)),
+                                  child: Text('Country code',)),
                                     CustomTextFormField(hintText: '+012',
                                     width:60,
                                     height: 56,),
@@ -93,7 +93,7 @@ class SignUppatient extends StatelessWidget {
                  const SizedBox(height: 30),
                  const Align(
               alignment: Alignment.centerLeft,
-              child: Text('password',)),
+              child: Text('Password',)),
               const SizedBox(height: 5,), 
               CustomTextFormField(hintText: '......'),
 
@@ -101,7 +101,7 @@ class SignUppatient extends StatelessWidget {
 
               const Align(
               alignment: Alignment.centerLeft,
-              child: Text(' confirm password',)),
+              child: Text(' Confirm Password',)),
               const SizedBox(height: 5,), 
               CustomTextFormField(hintText: '......'),
 

@@ -42,7 +42,7 @@ class PatientLoginPage extends StatelessWidget {
                 height: 16.h,
               ),
               const Text(
-                'Hello, welcome back to our account',
+                'Hello, welcome back to your account',
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -94,7 +94,7 @@ class PatientLoginPage extends StatelessWidget {
               SizedBox(
                 height: 32.h,
               ),
-              const CustomButton(text: 'log_in'),
+              const CustomButton(text: 'Login'),
               SizedBox(
                 height: 22.h,
               ),
@@ -185,23 +185,20 @@ class PatientLoginPage extends StatelessWidget {
               SizedBox(
                 height: 18.h,
               ),
-              const Row(
+               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Don’t have an account? ',
                     style: TextStyle(
                         color: Color(0xFF737373),
                         fontSize: 15,
                         fontWeight: FontWeight.w600),
                   ),
-                  Text(
-                    'sign-up',
-                    style: TextStyle(
-                      color: Color(0xFF737373),
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  )
+               TextButton( onPressed: (){
+                                GoRouter.of(context).go(RouterNames.PatientLoginPage);
+                }, child:  const Text('signup',style: TextStyle(color: Color(0xFF737373),
+                                              fontSize: 15,
+                                                 fontWeight: FontWeight.w600,),),),
                 ],
               )
             ],

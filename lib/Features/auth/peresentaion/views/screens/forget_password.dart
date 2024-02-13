@@ -54,7 +54,16 @@ static String id ='ForgetPassword';
          const SizedBox(
           height: 170,
          ),
-         const Text('Remember password ?login'),
+         Row(
+           children: [
+             const Text('Remember password ?'),
+              TextButton( onPressed: (){
+                                GoRouter.of(context).go(RouterNames.DoctorLoginPage);
+                }, child:  const Text('login',style: TextStyle(color: Color(0xFF737373),
+                                              fontSize: 15,
+                                                 fontWeight: FontWeight.w600,),),),
+           ],
+         ),
             
           ],
         ),

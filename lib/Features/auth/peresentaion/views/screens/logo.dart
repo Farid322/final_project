@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/utils/app_asset.dart';
 
 class LogoPage extends StatelessWidget {
   const LogoPage({super.key});
@@ -10,22 +11,14 @@ class LogoPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFF0E5C6D),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 40),
+        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 91),
         child: Column(
           children: [
+            Image.asset(AppAssets.logoimage),
             const SizedBox(
-              height: 120,
+              height: 131,
             ),
-            const Text(
-              'Logo',
-              style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.white),
-            ),
-            const SizedBox(
-              height: 400,
-            ),
+          
             InkWell(
               onTap: () {
                 GoRouter.of(context).go(RouterNames.DoctorRegisterPage);

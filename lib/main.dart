@@ -1,12 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/firebase_options.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/chat.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/patient_login.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/accpted_result_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_session.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const Hemodialysis());
 }
 

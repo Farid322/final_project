@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDNWN822yuEy8koY89MBmQdltbgj4URcbo',
-    appId: '1:561345133345:web:3a10878724ae339ece5c60',
-    messagingSenderId: '561345133345',
-    projectId: 'graduation-project-f4664',
-    authDomain: 'graduation-project-f4664.firebaseapp.com',
-    storageBucket: 'graduation-project-f4664.appspot.com',
-    measurementId: 'G-TQN7D3XE4J',
+    apiKey: 'AIzaSyBUSS40amuWNjSfW-QBWKWrLRLH1QuuUhg',
+    appId: '1:543868082257:web:e6817e490c873d0c158070',
+    messagingSenderId: '543868082257',
+    projectId: 'final-project-760c2',
+    authDomain: 'final-project-760c2.firebaseapp.com',
+    storageBucket: 'final-project-760c2.appspot.com',
+    measurementId: 'G-P143MRWFB0',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDxXfJabUH0CnFmsAG_MadE2R8MHptPrcA',
-    appId: '1:561345133345:android:3adde721f6f77765ce5c60',
-    messagingSenderId: '561345133345',
-    projectId: 'graduation-project-f4664',
-    storageBucket: 'graduation-project-f4664.appspot.com',
+    apiKey: 'AIzaSyBgpQrqq7pOFxlu36m3xtUnfEJnK0t9Jao',
+    appId: '1:543868082257:android:a5e040643215e017158070',
+    messagingSenderId: '543868082257',
+    projectId: 'final-project-760c2',
+    storageBucket: 'final-project-760c2.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBBpsjyqhqDxVTWOQOrUnYqLHQhPEQ-43I',
-    appId: '1:561345133345:ios:e10eb5751703280dce5c60',
-    messagingSenderId: '561345133345',
-    projectId: 'graduation-project-f4664',
-    storageBucket: 'graduation-project-f4664.appspot.com',
+    apiKey: 'AIzaSyBC9fa6PcblbGsKAwWj26tWwY00EAn0NsI',
+    appId: '1:543868082257:ios:0e18d83df05660de158070',
+    messagingSenderId: '543868082257',
+    projectId: 'final-project-760c2',
+    storageBucket: 'final-project-760c2.appspot.com',
     iosBundleId: 'com.example.graduationProject',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBBpsjyqhqDxVTWOQOrUnYqLHQhPEQ-43I',
-    appId: '1:561345133345:ios:f301cfa982ffe2eace5c60',
-    messagingSenderId: '561345133345',
-    projectId: 'graduation-project-f4664',
-    storageBucket: 'graduation-project-f4664.appspot.com',
+    apiKey: 'AIzaSyBC9fa6PcblbGsKAwWj26tWwY00EAn0NsI',
+    appId: '1:543868082257:ios:df9f6ee424afd671158070',
+    messagingSenderId: '543868082257',
+    projectId: 'final-project-760c2',
+    storageBucket: 'final-project-760c2.appspot.com',
     iosBundleId: 'com.example.graduationProject.RunnerTests',
   );
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Custombutton extends StatelessWidget {
-  const Custombutton({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
     required this.text,
     this.onTap,
@@ -14,7 +14,6 @@ class Custombutton extends StatelessWidget {
     required this.icon,
     this.schedulewidth,
     required this.herozintal,
-    required this.textcolor,
   });
   final double herozintal;
   final String text;
@@ -27,17 +26,18 @@ class Custombutton extends StatelessWidget {
   final List<BoxShadow>? shadow;
   final void Function()? onTap;
   final double? schedulewidth;
-  final Color? textcolor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
       height: hieght,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(radius),
-      ),
+      decoration: ShapeDecoration(
+          color: color,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(radius),
+          ),
+          shadows: shadow),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
@@ -59,7 +59,7 @@ class Custombutton extends StatelessWidget {
                   text,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: textcolor,
+                    color: Colors.white,
                     fontFamily: 'Roboto',
                     fontSize: fontsize,
                     fontWeight: FontWeight.w500,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/chat.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/accpted_result_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_session.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
@@ -14,11 +15,11 @@ class Hemodialysis extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenUtilInit(
+    return ScreenUtilInit(
       designSize: Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-        home: session(),
+        home: ChatScreen(),
         debugShowCheckedModeBanner: false,
       ),
     );

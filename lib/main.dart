@@ -8,6 +8,8 @@ import 'package:graduation_project/Features/auth/peresentaion/views/screens/pati
 import 'package:graduation_project/Features/patienthome/screens/views/accpted_result_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_session.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/patient_profile.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,8 +29,7 @@ class Hemodialysis extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         home: ChatScreen(),
-        debugShowCheckedModeBanner: false,
-      ),
-    );
+      )
+      );
   }
 }

@@ -21,7 +21,7 @@ class LogoPage extends StatelessWidget {
           
             InkWell(
               onTap: () {
-                GoRouter.of(context).go(RouterNames.DoctorRegisterPage);
+                GoRouter.of(context).push(RouterNames.DoctorRegisterPage);
               },
               child: Container(
                   width: 330,
@@ -56,7 +56,7 @@ class LogoPage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                GoRouter.of(context).go(RouterNames.AboutDiabelt);
+                GoRouter.of(context).push(RouterNames.AboutDiabelt);
               },
               child: Container(
                   width: 330,

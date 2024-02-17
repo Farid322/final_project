@@ -1,14 +1,35 @@
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/AppiontmentsCP.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/BasicSession.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/abutus/first_about_us.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/abutus/second_about_us.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/abutus/third_about_us.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/Notification.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/messanger.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Appointments.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Featuers.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Patient_Pofile.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/patient_home.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/schedule.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/Privacy.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/setting.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/hemodialysis.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/accpted_result_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/bluetooth_page.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/patient_medicine.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/refuesd_result_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/pressure_screen.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/temperature_screen.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/weight_screen.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/tests_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/upload_test.dart';
 
+import '../../Features/Doctorhome/screens/patient_pages/my_medical_test.dart';
 import '../../Features/auth/peresentaion/views/screens/erorr_email.dart';
 import '../../Features/auth/peresentaion/views/screens/patient_login.dart';
 import '../../Features/auth/peresentaion/views/screens/patient_sign_up.dart';
@@ -43,12 +64,33 @@ class RouterNames {
   static const ResetPassword = '/resrtpassword';
   static const Bluetoothpage = '/bluetoothpage';
   static const PressurePage = '/pressurepage';
- static const TemperaturePage = '/temperaturepage';
- static const WeightPage = '/weightpage';
- static const TestsPage = '/testpage';
- static const UploadTestPage = '/uploadtestpage';
- static const AccptedResultPage = '/accptedresultpage';
- static const RefuesdResultPage = '/refuesedresultpage';
+  static const TemperaturePage = '/temperaturepage';
+  static const WeightPage = '/weightpage';
+  static const TestsPage = '/testpage';
+  static const UploadTestPage = '/uploadtestpage';
+  static const AccptedResultPage = '/accptedresultpage';
+  static const RefuesdResultPage = '/refuesedresultpage';
+  static const AboutUs = '/aboutus';
+  static const SecondAboutUs = '/secondaboutus';
+  static const ThirdAboutUs = '/thirdaboutus';
+  static const Appointmentcp ='/appointmentcp';
+  static const BasicSession ='/basicsession';
+  static const Appointments = '/appoinment';
+  static const SessionFeatures = '/sessionfeatures';
+  static const MedicalTest = '/medicaltest';
+  static const Medicine = '/medicine';
+  static const Patientprofile = '/patientprofile';
+  static const Sessions = '/sessions';
+  static const Schedule = '/schedule';
+  static const AccountInfo = '/accountinfo';
+  static const Privacy = '/privacy';
+  static const SettingPage = '/settingpage';
+  static const DoctorHome = '/doctorhome';
+  static const Messanger = '/messanger';
+  static const NotificationScreen = '/notificationscreen';
+  static const  MyMedicalTest  ='/mymedicaltest';
+  static const PatientHome = '/patienthome';
+  static const PatientMedicine = '/patientmedicine';
 
 }
 
@@ -175,6 +217,109 @@ abstract class AppRouter {
           path:RouterNames.RefuesdResultPage,
           builder: (context, state) => const RefuesdResultPage() 
           ),
+        
+              GoRoute(
+          path:RouterNames.AboutUs,
+          builder: (context, state) => const AboutUs() 
+          ),
 
+               GoRoute(
+          path:RouterNames.SecondAboutUs,
+          builder: (context, state) => const SecondAboutUs() 
+          ),
+
+              GoRoute(
+          path:RouterNames.ThirdAboutUs,
+          builder: (context, state) => const ThirdAboutUs() 
+          ),
+       
+               GoRoute(
+          path:RouterNames.Appointmentcp,
+          builder: (context, state) => const Appointmentcp() 
+          ),
+
+            GoRoute(
+          path:RouterNames.BasicSession,
+          builder: (context, state) => const BasicSession() 
+          ),
+
+             GoRoute(
+          path:RouterNames.Appointments,
+          builder: (context, state) => const Appointments() 
+          ),
+
+            GoRoute(
+          path:RouterNames.SessionFeatures,
+          builder: (context, state) => const SessionFeatures() 
+          ),
+
+            GoRoute(
+          path:RouterNames.MedicalTest,
+          builder: (context, state) => const MedicalTest() 
+          ),
+
+            GoRoute(
+          path:RouterNames.Medicine,
+          builder: (context, state) => const Medicine() 
+          ),
+
+            GoRoute(
+          path:RouterNames.Patientprofile,
+          builder: (context, state) => const Patientprofile() 
+          ),
+
+            GoRoute(
+          path:RouterNames.Sessions,
+          builder: (context, state) => const session() 
+          ),
+
+            GoRoute(
+          path:RouterNames.Schedule,
+          builder: (context, state) => const Schedule() 
+          ),
+          
+             GoRoute(
+          path:RouterNames.AccountInfo,
+          builder: (context, state) => const AccountInfo() 
+          ),
+
+            GoRoute(
+          path:RouterNames.Privacy,
+          builder: (context, state) => const Privacy() 
+          ),
+
+           GoRoute(
+          path:RouterNames.SettingPage,
+          builder: (context, state) => const SettingPage() 
+          ),
+
+           GoRoute(
+          path:RouterNames.DoctorHome,
+          builder: (context, state) => const DoctorHome() 
+          ),
+
+           GoRoute(
+          path:RouterNames.Messanger,
+          builder: (context, state) => const Messanger() 
+          ),
+
+           GoRoute(
+          path:RouterNames.NotificationScreen,
+          builder: (context, state) => const NotificationScreen() 
+          ),
+
+           GoRoute(
+          path:RouterNames.MyMedicalTest,
+          builder: (context, state) => const MyMedicalTest() 
+          ),
+
+           GoRoute(
+          path:RouterNames.PatientHome,
+          builder: (context, state) => const PatientHome() 
+          ),
+
+          GoRoute(
+          path:RouterNames.PatientMedicine,
+          builder: (context, state) => const PatientMedicine()),
   ]);
 }

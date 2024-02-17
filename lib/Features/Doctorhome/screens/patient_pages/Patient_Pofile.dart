@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/CustomPatientMed.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
@@ -10,26 +11,23 @@ class Patientprofile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 85,
+        toolbarHeight: 85.h,
         automaticallyImplyLeading: true,
         leading: const Row(
           children: [
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
-              ),
+            Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+              size: 30,
             ),
           ],
         ),
         shadowColor: const Color.fromARGB(31, 255, 255, 255),
-        title: const Text(
+        title:  Text(
           'Ahmed aly',
           style: TextStyle(
-            color: Color(0xFF35364F),
-            fontSize: 20,
+            color: const Color(0xFF35364F),
+            fontSize: 20.sp,
             fontFamily: 'Roboto',
             fontWeight: FontWeight.w600,
             height: 1.5,
@@ -44,57 +42,57 @@ class Patientprofile extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
           child: Image.asset(
-            'assets/images/Patient.png',
-            width: 80,
-            height: 80,
+            'assets/images/Ellipse 18.png',
+            width: 80.w,
+            height: 80.h,
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(bottom: 15),
+       Padding(
+          padding: const EdgeInsets.only(bottom: 15),
           child: Text(
             '248 845 888',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
           ),
         ),
-        const Row(
+         Row(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 30, right: 5),
+              padding: const EdgeInsets.only(left: 30, right: 5),
               child: Custombutton(
                 text: 'Voice Call',
-                width: 102,
-                hieght: 38,
-                fontsize: 11,
+                width: 102.w,
+                hieght: 38.h,
+                fontsize: 11.sp,
                 radius: 8,
-                color: Color.fromRGBO(81, 190, 251, 0.74),
+                color: const Color.fromRGBO(81, 190, 251, 0.74),
                 icon: Icons.call,
                 herozintal: 10,
                 textcolor: null,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(right: 5, left: 5),
+             Padding(
+              padding: const EdgeInsets.only(right: 5, left: 5),
               child: Custombutton(
                 text: 'Video Call',
-                width: 102,
-                hieght: 38,
+                width: 102.w,
+                hieght: 38.h,
                 fontsize: 11,
                 radius: 8,
-                color: Color.fromRGBO(126, 81, 251, 0.72),
+                color: const Color.fromRGBO(126, 81, 251, 0.72),
                 icon: Icons.video_call_rounded,
                 herozintal: 10,
                 textcolor: null,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 5, right: 20),
+             Padding(
+              padding: const EdgeInsets.only(left: 5, right: 20),
               child: Custombutton(
                 text: 'Message',
-                width: 102,
-                hieght: 38,
-                fontsize: 11,
+                width: 102.w,
+                hieght: 38.h,
+                fontsize: 11.sp,
                 radius: 8,
-                color: Color.fromRGBO(251, 136, 81, 0.72),
+                color: const Color.fromRGBO(251, 136, 81, 0.72),
                 icon: Icons.message,
                 herozintal: 10,
                 textcolor: null,
@@ -122,12 +120,12 @@ class Patientprofile extends StatelessWidget {
                 child: InkWell(
                   // Within the `FirstRoute` widget
                   onTap: () {},
-                  child: const Text(
+                  child:  Text(
                     'Veiw all',
                     style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
-                        color: Color.fromRGBO(14, 92, 109, 1)),
+                        color: const Color.fromRGBO(14, 92, 109, 1)),
                   ),
                 ),
               ),
@@ -151,23 +149,23 @@ class Patientprofile extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Text(
+               Text(
                 'Medicine',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 18.sp,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               InkWell(
                 onTap: () {},
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 210),
+                child:  Padding(
+                  padding: const EdgeInsets.only(left: 210),
                   child: Text(
                     'Veiw all',
                     style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
-                        color: Color.fromRGBO(14, 92, 109, 1)),
+                        color: const Color.fromRGBO(14, 92, 109, 1)),
                   ),
                 ),
               ),
@@ -185,10 +183,10 @@ class Patientprofile extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Text(
+               Text(
                 'Medical Test',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 18.sp,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -196,12 +194,12 @@ class Patientprofile extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 185),
                 child: InkWell(
                   onTap: () {},
-                  child: const Text(
+                  child:  Text(
                     'Veiw all',
                     style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
-                        color: Color.fromRGBO(14, 92, 109, 1)),
+                        color: const Color.fromRGBO(14, 92, 109, 1)),
                   ),
                 ),
               ),

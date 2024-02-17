@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -10,30 +12,33 @@ class NavBar extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Container(
         color: Colors.white,
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        child:  Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           child: GNav(
             selectedIndex: 0,
             backgroundColor: Colors.white,
-            color: Color.fromRGBO(14, 92, 109, 1),
-            activeColor: Color.fromRGBO(255, 255, 255, 1),
+            color: const Color.fromRGBO(14, 92, 109, 1),
+            activeColor: const Color.fromRGBO(255, 255, 255, 1),
             gap: 8,
-            padding: EdgeInsets.all(16),
-            tabBackgroundColor: Color.fromARGB(255, 14, 91, 109),
+            padding: const EdgeInsets.all(16),
+            tabBackgroundColor: const Color.fromARGB(255, 14, 91, 109),
             tabs: [
               GButton(
+              onPressed: (){
+                GoRouter.of(context).go(RouterNames.DoctorHome);
+              },
                 icon: Icons.home,
                 text: 'Home',
               ),
-              GButton(
+              const GButton(
                 icon: Icons.notifications,
                 text: 'Notifcation',
               ),
-              GButton(
+              const GButton(
                 icon: FontAwesomeIcons.message,
                 text: 'Message',
               ),
-              GButton(
+              const GButton(
                 icon: Icons.person,
                 text: 'Profile',
               )

@@ -4,11 +4,14 @@ import 'package:graduation_project/Features/Doctorhome/screens/models/message.da
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/widgets/ChatBuble.dart';
 import 'package:graduation_project/constant/constant.dart';
 
+// ignore: must_be_immutable
 class ChatScreen extends StatelessWidget {
   CollectionReference messeges =
       FirebaseFirestore.instance.collection(kMessegesCollection);
   TextEditingController controller = TextEditingController();
   final ScrollController _controller = ScrollController();
+
+  ChatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

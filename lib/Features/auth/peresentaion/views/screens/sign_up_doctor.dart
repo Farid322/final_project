@@ -53,7 +53,7 @@ class SignUpdoctor extends StatelessWidget {
               
                const Align(
               alignment: Alignment.centerLeft,
-              child: Text('Email adress',)),
+              child: Text('Email address',)),
               const SizedBox(height: 5,), 
               CustomTextFormField(hintText: 'Your email'),
                const SizedBox(
@@ -139,7 +139,9 @@ class SignUpdoctor extends StatelessWidget {
                 height: 64,
               ),
 
-              const CustomButton(text: 'sign Up'),
+               CustomButton(text: 'sign Up',onTap: () {
+                GoRouter.of(context).go(RouterNames.DoctorHome);
+              },),
             const SizedBox(
                 height: 47,
               ),
@@ -225,19 +227,22 @@ class SignUpdoctor extends StatelessWidget {
                 height: 39,
               ),
           
-                  Row(
-                  children: [
-                    const Text('Already have an account? ',style: TextStyle(color:Color(0xFF737373),
-                                fontSize: 15, fontWeight: FontWeight.w600),),
-                               TextButton( onPressed: (){
-                                GoRouter.of(context).go(RouterNames.DoctorLoginPage);
-                               },
-                                 child: const Text('login',style: TextStyle(color: Color(0xFF737373),
-                                              fontSize: 15,
-                                                 fontWeight: FontWeight.w600,),),
-                               )
-                  ],
-                 )
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                    children: [
+                      const Text('Already have an account?',style: TextStyle(color:Color(0xFF737373),
+                                  fontSize: 15, fontWeight: FontWeight.w600),),
+                                 TextButton( onPressed: (){
+                                  GoRouter.of(context).go(RouterNames.DoctorLoginPage);
+                                 },
+                                   child: const Text('login',style: TextStyle(color: Color(0xFF737373),
+                                                fontSize: 15,
+                                                   fontWeight: FontWeight.w600,),),
+                                 )
+                    ],
+                                   ),
+                  )
               
           
             ],

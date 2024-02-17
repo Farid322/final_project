@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 
 class DoctorHome extends StatelessWidget {
   const DoctorHome({super.key});
@@ -39,6 +41,9 @@ class DoctorHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               InkWell(
+                onTap: () {
+                  GoRouter.of(context).push(RouterNames.Appointments);
+                },
                 child: Container(
                   width: 151,
                   height: 223,
@@ -63,6 +68,9 @@ class DoctorHome extends StatelessWidget {
                 ),
               ),
               InkWell(
+                onTap: () {
+                  GoRouter.of(context).push(RouterNames.Appointmentcp);
+                },
                 child: Container(
                   width: 151,
                   height: 223,
@@ -95,6 +103,9 @@ class DoctorHome extends StatelessWidget {
             ],
           ),
           InkWell(
+            onTap: () {
+              GoRouter.of(context).push(RouterNames.Schedule);
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -13,7 +13,7 @@ class ChatBubble extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 10, top: 30),
           child: Image.asset(
-            'assets/images/adamsmith .png',
+            'assets/images/Rectangle 78.png',
           ),
         ),
         Align(

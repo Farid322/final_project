@@ -3,14 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/firebase_options.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/navbar/chat.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/screens/patient_login.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/accpted_result_page.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/My_session.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/patient_profile.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -24,11 +17,13 @@ class Hemodialysis extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: Size(375, 812),
-      minTextAdapt: true,
-      child: MaterialApp(
-        home: ChatScreen(),
+    return    ScreenUtilInit(
+      designSize: const Size(375, 993),
+       minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp.router(
+        routerConfig: AppRouter.router,
+        debugShowCheckedModeBanner: false,
       )
       );
   }

@@ -158,7 +158,9 @@ class PatientSignUp extends StatelessWidget {
 
             const SizedBox(height: 30),
               
-                      const CustomButton(text: 'Sign Up'),
+                       CustomButton(text: 'Sign Up',onTap: () {
+                        GoRouter.of(context).go(RouterNames.PatientHome);
+                      },),
                 
                   const SizedBox(height: 30),
                 

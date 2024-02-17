@@ -28,7 +28,6 @@ class Custombutton extends StatelessWidget {
   final void Function()? onTap;
   final double? schedulewidth;
   final Color? textcolor;
-
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 class CustomContainer extends StatelessWidget {
@@ -156,7 +158,9 @@ class CustomContainer extends StatelessWidget {
                 color: const Color(0xFF0E5C6D),
                 icon: null,
                 herozintal: 13,
-                onTap: () {},
+                onTap: () {
+                  GoRouter.of(context).go(RouterNames.Patientprofile);
+                },
                 textcolor: null,
               )
             ],

@@ -56,7 +56,7 @@ class PatientLoginPage extends StatelessWidget {
               SizedBox(
                 height: 5.h,
               ),
-              CustomTextFormField(hintText: 'ex.Email@gmail.com'),
+              CustomTextFormField(hintText: 'Enter Your Email'),
               SizedBox(
                 height: 33.h,
               ),
@@ -67,7 +67,7 @@ class PatientLoginPage extends StatelessWidget {
                   )),
               SizedBox(height: 5.h),
               CustomTextFormField(
-                hintText: '......',
+                hintText: 'Enter Your Password',
               ),
               SizedBox(
                 height: 19.h,
@@ -79,7 +79,7 @@ class PatientLoginPage extends StatelessWidget {
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                   ),
                   SizedBox(
-                    width: 55.w,
+                    width: ScreenUtil().setWidth(130),
                   ),
                   TextButton(
                     onPressed: () {
@@ -191,29 +191,32 @@ class PatientLoginPage extends StatelessWidget {
               SizedBox(
                 height: 18.h,
               ),
-              Row(
-                children: [
-                  const Text(
-                    'Don’t have an account? ',
-                    style: TextStyle(
-                        color: Color(0xFF737373),
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      GoRouter.of(context).go(RouterNames.PatientLoginPage);
-                    },
-                    child: const Text(
-                      'signup',
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 70),
+                child: Row(
+                  children: [
+                    const Text(
+                      'Don’t have an account? ',
                       style: TextStyle(
-                        color: Color(0xFF737373),
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
+                          color: Color(0xFF737373),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        GoRouter.of(context).go(RouterNames.PatientLoginPage);
+                      },
+                      child: const Text(
+                        'signup',
+                        style: TextStyle(
+                          color: Color(0xFF737373),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               )
             ],
           ),

@@ -162,7 +162,7 @@ class CustomMyAppoint extends StatelessWidget {
                       shadow: null,
                       icon: Icons.call,
                       herozintal: 2,
-                      textcolor: null,
+                      textcolor: Colors.white,
                     ),
                     SizedBox(
                       width: 10,
@@ -178,7 +178,7 @@ class CustomMyAppoint extends StatelessWidget {
                       shadow: null,
                       icon: Icons.message_rounded,
                       herozintal: 2,
-                      textcolor: null,
+                      textcolor: Colors.white,
                     ),
                     SizedBox(
                       width: 10,
@@ -194,7 +194,7 @@ class CustomMyAppoint extends StatelessWidget {
                       shadow: null,
                       icon: null,
                       herozintal: 2,
-                      textcolor: null,
+                      textcolor: Colors.white,
                     ),
                   ],
                 ),

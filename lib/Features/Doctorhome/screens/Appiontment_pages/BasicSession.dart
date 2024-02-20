@@ -88,7 +88,7 @@ class BasicSession extends StatelessWidget {
                     color: Color.fromRGBO(81, 190, 251, 0.74),
                     icon: Icons.call,
                     herozintal: 10,
-                    textcolor: null,
+                    textcolor: Colors.white,
                   ),
                 ),
                 Padding(
@@ -102,7 +102,7 @@ class BasicSession extends StatelessWidget {
                     color: Color.fromRGBO(126, 81, 251, 0.72),
                     icon: Icons.video_call_rounded,
                     herozintal: 10,
-                    textcolor: null,
+                    textcolor: Colors.white,
                   ),
                 ),
                 Padding(
@@ -116,7 +116,7 @@ class BasicSession extends StatelessWidget {
                     color: Color.fromRGBO(251, 136, 81, 0.72),
                     icon: Icons.message,
                     herozintal: 10,
-                    textcolor: null,
+                    textcolor: Colors.white,
                   ),
                 ),
               ],

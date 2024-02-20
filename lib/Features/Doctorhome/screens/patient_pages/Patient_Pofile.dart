@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Featuers.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/CustomPatientMed.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
@@ -13,17 +19,25 @@ class Patientprofile extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 85.h,
         automaticallyImplyLeading: true,
-        leading: const Row(
+        leading: Row(
           children: [
-            Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-              size: 30,
+            InkWell(
+              onTap: () {
+                Navigator.pop(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DoctorHome()),
+                );
+              },
+              child: const Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+                size: 30,
+              ),
             ),
           ],
         ),
         shadowColor: const Color.fromARGB(31, 255, 255, 255),
-        title:  Text(
+        title: Text(
           'Ahmed aly',
           style: TextStyle(
             color: const Color(0xFF35364F),
@@ -40,62 +54,65 @@ class Patientprofile extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
+          padding: EdgeInsets.symmetric(
+            horizontal: ScreenUtil().setWidth(20),
+            vertical: ScreenUtil().setHeight(20),
+          ),
           child: Image.asset(
             'assets/images/Ellipse 18.png',
-            width: 80.w,
-            height: 80.h,
+            width: ScreenUtil().setWidth(80.w),
+            height: ScreenUtil().setWidth(80.h),
           ),
         ),
-       Padding(
+        Padding(
           padding: const EdgeInsets.only(bottom: 15),
           child: Text(
             '248 845 888',
             style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
           ),
         ),
-         Row(
+        Row(
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30, right: 5),
               child: Custombutton(
                 text: 'Voice Call',
-                width: 102.w,
-                hieght: 38.h,
+                width: ScreenUtil().setWidth(102),
+                hieght: ScreenUtil().setHeight(38),
                 fontsize: 11.sp,
                 radius: 8,
                 color: const Color.fromRGBO(81, 190, 251, 0.74),
                 icon: Icons.call,
                 herozintal: 10,
-                textcolor: null,
+                textcolor: const Color.fromARGB(255, 255, 255, 255),
               ),
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.only(right: 5, left: 5),
               child: Custombutton(
                 text: 'Video Call',
-                width: 102.w,
-                hieght: 38.h,
+                width: ScreenUtil().setWidth(102),
+                hieght: ScreenUtil().setHeight(38),
                 fontsize: 11,
                 radius: 8,
                 color: const Color.fromRGBO(126, 81, 251, 0.72),
                 icon: Icons.video_call_rounded,
                 herozintal: 10,
-                textcolor: null,
+                textcolor: Colors.white,
               ),
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 5, right: 20),
               child: Custombutton(
                 text: 'Message',
-                width: 102.w,
-                hieght: 38.h,
+                width: ScreenUtil().setWidth(102),
+                hieght: ScreenUtil().setHeight(38),
                 fontsize: 11.sp,
                 radius: 8,
                 color: const Color.fromRGBO(251, 136, 81, 0.72),
                 icon: Icons.message,
                 herozintal: 10,
-                textcolor: null,
+                textcolor: Colors.white,
               ),
             ),
           ],
@@ -103,7 +120,7 @@ class Patientprofile extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
             left: 20,
-            top: 15,
+            top: 20,
             bottom: 10,
           ),
           child: Row(
@@ -119,8 +136,13 @@ class Patientprofile extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 210),
                 child: InkWell(
                   // Within the `FirstRoute` widget
-                  onTap: () {},
-                  child:  Text(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Sessions()),
+                    );
+                  },
+                  child: Text(
                     'Veiw all',
                     style: TextStyle(
                         fontSize: 12.sp,
@@ -144,12 +166,12 @@ class Patientprofile extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
             left: 20,
-            top: 15,
+            top: 20,
             bottom: 10,
           ),
           child: Row(
             children: [
-               Text(
+              Text(
                 'Medicine',
                 style: TextStyle(
                   fontSize: 18.sp,
@@ -157,8 +179,13 @@ class Patientprofile extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
-                child:  Padding(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Medicine()),
+                  );
+                },
+                child: Padding(
                   padding: const EdgeInsets.only(left: 210),
                   child: Text(
                     'Veiw all',
@@ -178,12 +205,12 @@ class Patientprofile extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
             left: 20,
-            top: 15,
+            top: 20,
             bottom: 10,
           ),
           child: Row(
             children: [
-               Text(
+              Text(
                 'Medical Test',
                 style: TextStyle(
                   fontSize: 18.sp,
@@ -193,8 +220,14 @@ class Patientprofile extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 185),
                 child: InkWell(
-                  onTap: () {},
-                  child:  Text(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MedicalTest()),
+                    );
+                  },
+                  child: Text(
                     'Veiw all',
                     style: TextStyle(
                         fontSize: 12.sp,
@@ -206,14 +239,13 @@ class Patientprofile extends StatelessWidget {
             ],
           ),
         ),
-        const CustomPatientSession(
+        const CustomMedical(
           sessions: 'Test 1',
           date: 'Data',
           yourdate: '03 August 2020',
           time: 'Time',
           yourtime: '2.20 Pm',
           icon: null,
-          text: null,
         )
       ]),
     );

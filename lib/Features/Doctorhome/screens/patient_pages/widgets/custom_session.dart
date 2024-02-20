@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Featuers.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
@@ -24,18 +25,19 @@ class CustomSession extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 345,
-          height: 128,
+          width: ScreenUtil().setWidth(345),
+          height: ScreenUtil().setHeight(140),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              side: const BorderSide(color: Color.fromARGB(39, 10, 10, 1)),
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
           child: Column(
             children: [
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: ScreenUtil().setHeight(10),
               ),
               Row(
                 children: [
@@ -44,20 +46,22 @@ class CustomSession extends StatelessWidget {
                     sessions,
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(
-                    width: 190,
+                  SizedBox(
+                    width: ScreenUtil().setWidth(190),
                   ),
                   Icon(
                     icon,
                     color: const Color(0xFF0E5C6D),
                     size: 27,
                   ),
-                  const SizedBox(
-                    height: 40,
+                  SizedBox(
+                    height: ScreenUtil().setHeight(40),
                   )
                 ],
               ),
-              const Divider(),
+              const Divider(
+                thickness: 2,
+              ),
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: Row(
@@ -66,8 +70,8 @@ class CustomSession extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 5),
                       child: Column(
                         children: [
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: ScreenUtil().setHeight(10),
                           ),
                           Text(
                             date,
@@ -80,8 +84,8 @@ class CustomSession extends StatelessWidget {
                               height: 0,
                             ),
                           ),
-                          const SizedBox(
-                            height: 5,
+                          SizedBox(
+                            height: ScreenUtil().setHeight(5),
                           ),
                           Text(
                             yourdate,
@@ -97,8 +101,8 @@ class CustomSession extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      width: 40,
+                    SizedBox(
+                      width: ScreenUtil().setWidth(40),
                     ),
                     Column(
                       children: [
@@ -116,8 +120,8 @@ class CustomSession extends StatelessWidget {
                             height: 0,
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
+                        SizedBox(
+                          height: ScreenUtil().setHeight(5),
                         ),
                         Text(
                           yourtime,
@@ -132,8 +136,8 @@ class CustomSession extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      width: 40,
+                    SizedBox(
+                      width: ScreenUtil().setWidth(40),
                     ),
                     InkWell(
                       onTap: () {
@@ -153,7 +157,7 @@ class CustomSession extends StatelessWidget {
                         color: Color(0xFF0E5C6D),
                         icon: null,
                         herozintal: 5,
-                        textcolor: null,
+                        textcolor: Colors.white,
                       ),
                     ),
                   ],

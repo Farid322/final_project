@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 
@@ -19,13 +20,14 @@ class DoctorLoginPage extends StatelessWidget {
             children: [
               SizedBox(
                 width: 343.w,
-                child:  Row(
+                child: Row(
                   children: [
                     TextButton(
-                      onPressed: () {
-                        GoRouter.of(context).go(RouterNames.DoctorRegisterPage);
-                      },
-                      child: const Icon(Icons.arrow_back)),
+                        onPressed: () {
+                          GoRouter.of(context)
+                              .go(RouterNames.DoctorRegisterPage);
+                        },
+                        child: const Icon(Icons.arrow_back)),
                     const Text(
                       ' Log in',
                       style: TextStyle(
@@ -80,20 +82,26 @@ class DoctorLoginPage extends StatelessWidget {
                   SizedBox(
                     width: 55.w,
                   ),
-                   TextButton( onPressed: () {
-                     GoRouter.of(context).go(RouterNames.ForgetPassword);
-                   },
-                     child: const Text(
+                  TextButton(
+                    onPressed: () {
+                      GoRouter.of(context).go(RouterNames.ForgetPassword);
+                    },
+                    child: const Text(
                       'Forget password?',
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                                     ),
-                   ),
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
                 height: 32.h,
               ),
-              const CustomButton(text: 'Login'),
+              InkWell(
+                  onTap: () {
+                    GoRouter.of(context).push(RouterNames.DoctorHome);
+                  },
+                  child: const CustomButton(text: 'Login')),
               SizedBox(
                 height: 22.h,
               ),

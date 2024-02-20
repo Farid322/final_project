@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/BasicSession.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Featuers.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
@@ -26,8 +29,8 @@ class CustomPatientSession extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 345,
-          height: 128,
+          width: ScreenUtil().setWidth(345),
+          height: ScreenUtil().setHeight(140),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
@@ -37,8 +40,8 @@ class CustomPatientSession extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: ScreenUtil().setHeight(10),
               ),
               Row(
                 children: [
@@ -47,16 +50,16 @@ class CustomPatientSession extends StatelessWidget {
                     sessions,
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(
-                    width: 215,
+                  SizedBox(
+                    width: ScreenUtil().setWidth(215),
                   ),
                   Icon(
                     icon,
                     color: const Color(0xFF0E5C6D),
                     size: 35,
                   ),
-                  const SizedBox(
-                    height: 40,
+                  SizedBox(
+                    height: ScreenUtil().setHeight(40),
                   )
                 ],
               ),
@@ -67,8 +70,8 @@ class CustomPatientSession extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: ScreenUtil().setHeight(10),
                         ),
                         Text(
                           date,
@@ -81,8 +84,8 @@ class CustomPatientSession extends StatelessWidget {
                             height: 0,
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
+                        SizedBox(
+                          height: ScreenUtil().setHeight(5),
                         ),
                         Text(
                           yourdate,
@@ -97,13 +100,13 @@ class CustomPatientSession extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      width: 40,
+                    SizedBox(
+                      width: ScreenUtil().setWidth(50),
                     ),
                     Column(
                       children: [
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: ScreenUtil().setHeight(10),
                         ),
                         Text(
                           time,
@@ -116,8 +119,8 @@ class CustomPatientSession extends StatelessWidget {
                             height: 0,
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
+                        SizedBox(
+                          height: ScreenUtil().setHeight(5),
                         ),
                         Text(
                           yourtime,
@@ -132,15 +135,15 @@ class CustomPatientSession extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      width: 40,
+                    SizedBox(
+                      width: ScreenUtil().setWidth(50),
                     ),
                     InkWell(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Sessions()),
+                              builder: (context) => const SessionFeatures()),
                         );
                       },
                       child: const Custombutton(
@@ -152,7 +155,7 @@ class CustomPatientSession extends StatelessWidget {
                         color: Color(0xFF0E5C6D),
                         icon: null,
                         herozintal: 10,
-                        textcolor: null,
+                        textcolor: Colors.white,
                       ),
                     ),
                   ],

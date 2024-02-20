@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custom_session.dart';
 
 class Sessions extends StatelessWidget {
@@ -10,14 +11,19 @@ class Sessions extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 85,
         automaticallyImplyLeading: true,
-        leading: const Row(
+        leading: Row(
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
+              padding: const EdgeInsets.all(10),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
           ],
@@ -37,14 +43,14 @@ class Sessions extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           children: [
             SizedBox(
-              height: 30,
+              height: ScreenUtil().setHeight(30),
             ),
             Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-              CustomSession(
+              const CustomSession(
                 date: 'Date',
                 time: 'Time',
                 yourdate: '03 August 2020',
@@ -53,9 +59,9 @@ class Sessions extends StatelessWidget {
                 icon: null,
               ),
               SizedBox(
-                height: 30,
+                height: ScreenUtil().setHeight(30),
               ),
-              CustomSession(
+              const CustomSession(
                 date: 'Date',
                 time: 'Time',
                 yourdate: '03 August 2020',

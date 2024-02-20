@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 class CustomMedical extends StatelessWidget {
@@ -28,7 +29,8 @@ class CustomMedical extends StatelessWidget {
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              side: const BorderSide(color: Color.fromARGB(39, 10, 10, 1)),
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
           child: Column(
@@ -131,16 +133,24 @@ class CustomMedical extends StatelessWidget {
                     const SizedBox(
                       width: 40,
                     ),
-                    const Custombutton(
-                      text: 'veiw',
-                      width: 102,
-                      hieght: 38,
-                      fontsize: 12,
-                      radius: 8,
-                      color: Color(0xFF0E5C6D),
-                      icon: null,
-                      herozintal: 13,
-                      textcolor: null,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MedicalTest()));
+                      },
+                      child: const Custombutton(
+                        text: 'veiw',
+                        width: 102,
+                        hieght: 38,
+                        fontsize: 12,
+                        radius: 8,
+                        color: Color(0xFF0E5C6D),
+                        icon: null,
+                        herozintal: 13,
+                        textcolor: Colors.white,
+                      ),
                     ),
                   ],
                 ),

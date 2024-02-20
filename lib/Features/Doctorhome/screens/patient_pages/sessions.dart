@@ -11,19 +11,14 @@ class Sessions extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 85,
         automaticallyImplyLeading: true,
-        leading: Row(
+        leading: const Row(
           children: [
             Padding(
-              padding: const EdgeInsets.all(10),
-              child: InkWell(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
-                  size: 30,
-                ),
+              padding: EdgeInsets.all(10),
+              child: Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+                size: 30,
               ),
             ),
           ],

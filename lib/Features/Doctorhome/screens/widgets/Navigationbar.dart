@@ -12,7 +12,7 @@ class NavBar extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Container(
         color: Colors.white,
-        child:  Padding(
+        child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           child: GNav(
             selectedIndex: 0,
@@ -24,21 +24,30 @@ class NavBar extends StatelessWidget {
             tabBackgroundColor: const Color.fromARGB(255, 14, 91, 109),
             tabs: [
               GButton(
-              onPressed: (){
-                GoRouter.of(context).go(RouterNames.DoctorHome);
-              },
+                onPressed: () {
+                  GoRouter.of(context).go(RouterNames.DoctorHome);
+                },
                 icon: Icons.home,
                 text: 'Home',
               ),
-              const GButton(
+              GButton(
+                onPressed: () {
+                  GoRouter.of(context).go(RouterNames.NotificationScreen);
+                },
                 icon: Icons.notifications,
                 text: 'Notifcation',
               ),
-              const GButton(
+              GButton(
+                onPressed: () {
+                  GoRouter.of(context).go(RouterNames.Messanger);
+                },
                 icon: FontAwesomeIcons.message,
                 text: 'Message',
               ),
-              const GButton(
+              GButton(
+                onPressed: () {
+                  GoRouter.of(context).go(RouterNames.SettingPage);
+                },
                 icon: Icons.person,
                 text: 'Profile',
               )

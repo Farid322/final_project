@@ -73,26 +73,30 @@ class DoctorLoginPage extends StatelessWidget {
               SizedBox(
                 height: 19.h,
               ),
-              Row(
-                children: [
-                  const Text(
-                    'Remember me',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                  ),
-                  SizedBox(
-                    width: 55.w,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      GoRouter.of(context).go(RouterNames.ForgetPassword);
-                    },
-                    child: const Text(
-                      'Forget password?',
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: [
+                    const Text(
+                      'Remember me',
                       style:
                           TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      width: ScreenUtil().setWidth(120),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        GoRouter.of(context).go(RouterNames.ForgetPassword);
+                      },
+                      child: const Text(
+                        'Forget password?',
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w400),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 32.h,

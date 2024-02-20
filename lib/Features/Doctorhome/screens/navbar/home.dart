@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 
-class DoctorHome extends StatelessWidget {
+class DoctorHome extends StatefulWidget {
   const DoctorHome({super.key});
   static String id = 'DoctorHome';
+
+  @override
+  State<DoctorHome> createState() => _DoctorHomeState();
+}
+
+class _DoctorHomeState extends State<DoctorHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -132,9 +139,6 @@ class DoctorHome extends StatelessWidget {
                 )
               ],
             ),
-          ),
-          const SizedBox(
-            height: 5,
           ),
         ]),
       ),

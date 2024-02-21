@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Appointments.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Featuers.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
@@ -22,7 +24,7 @@ class Patientprofile extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                Navigator.pop(context);
+                Navigator.popAndPushNamed(context, Appointments.id);
               },
               child: const Icon(
                 Icons.arrow_back,

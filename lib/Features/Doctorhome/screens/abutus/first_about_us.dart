@@ -19,14 +19,19 @@ class _AboutUsState extends State<AboutUs> {
       appBar: AppBar(
         toolbarHeight: 85,
         automaticallyImplyLeading: true,
-        leading: const Row(
+        leading: Row(
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
+              padding: const EdgeInsets.all(10),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
           ],
@@ -87,9 +92,9 @@ class _AboutUsState extends State<AboutUs> {
             ),
           ),
           Image.asset(
-            'assets/images/World health day 2.png',
-            width: ScreenUtil().setWidth(290),
-            height: ScreenUtil().setHeight(290),
+            'assets/images/World health day 1.png',
+            width: ScreenUtil().setWidth(400),
+            height: ScreenUtil().setHeight(400),
             alignment: Alignment.bottomCenter,
           ),
           Padding(

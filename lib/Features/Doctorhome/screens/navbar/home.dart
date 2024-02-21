@@ -142,6 +142,7 @@ class _DoctorHomeState extends State<DoctorHome> {
           ),
         ]),
       ),
+      bottomNavigationBar: const NavBar(key: null),
     );
   }
 }

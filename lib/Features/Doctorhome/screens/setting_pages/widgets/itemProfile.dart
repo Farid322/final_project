@@ -23,7 +23,6 @@ Widget itemProfile(
         title,
         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
       ),
-      onTap: () {},
       subtitle: Text(subtitle),
       leading: Icon(
         iconData,

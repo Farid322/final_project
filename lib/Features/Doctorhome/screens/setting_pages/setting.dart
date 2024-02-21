@@ -1,16 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/widgets/itemProfile.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:unicons/unicons.dart';
 
-class SettingPage extends StatefulWidget {
+class SettingPage extends StatelessWidget {
   const SettingPage({Key? key}) : super(key: key);
 
-  @override
-  State<SettingPage> createState() => _SettingPageState();
-}
-
-class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,24 +54,32 @@ class _SettingPageState extends State<SettingPage> {
               height: 160,
             ),
             const SizedBox(height: 20),
-            itemProfile(
-              'Account info',
-              'name, age, gender,..etc',
-              CupertinoIcons.person,
-              // Within the `FirstRoute` widget
-              () {},
-            ),
-            const SizedBox(height: 10),
-            itemProfile(
-              'Privacy',
-              'email, password, mobile number',
-              UniconsLine.lock,
-              () {
-                // Call navigation method
+            InkWell(
+              onTap: () {
+                GoRouter.of(context).push(RouterNames.AccountInfo);
               },
+              child: itemProfile(
+                'Account info',
+                'name, age, gender,..etc',
+                CupertinoIcons.person,
+                () {},
+              ),
             ),
             const SizedBox(height: 10),
-            itemProfile('About us', '', UniconsLine.info_circle, () {}),
+            InkWell(
+              onTap: () {
+                GoRouter.of(context).push(RouterNames.Privacy);
+              }, // Call the navigation method on button press
+              child: itemProfile('Privacy', 'email, password, mobile number',
+                  UniconsLine.lock, () {}),
+            ),
+            const SizedBox(height: 10),
+            InkWell(
+                onTap: () {
+                  GoRouter.of(context).push(RouterNames.AboutUs);
+                },
+                child: itemProfile(
+                    'About us', '', UniconsLine.info_circle, () {})),
             const SizedBox(height: 10),
             itemProfile(
               'Logout',
@@ -86,6 +93,7 @@ class _SettingPageState extends State<SettingPage> {
           ],
         ),
       ),
+      bottomNavigationBar: const NavBar(key: null),
     );
   }
 }

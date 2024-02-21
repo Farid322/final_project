@@ -185,7 +185,7 @@ class CustomMyAppoint extends StatelessWidget {
                     ),
                     Custombutton(
                       schedulewidth: 15,
-                      text: 'Reschedule',
+                      text: 'Details',
                       width: 102,
                       hieght: 38,
                       fontsize: 12,
@@ -193,7 +193,7 @@ class CustomMyAppoint extends StatelessWidget {
                       color: Color.fromRGBO(37, 94, 214, 1),
                       shadow: null,
                       icon: null,
-                      herozintal: 2,
+                      herozintal: 12,
                       textcolor: Colors.white,
                     ),
                   ],

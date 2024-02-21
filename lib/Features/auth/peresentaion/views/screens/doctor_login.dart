@@ -13,6 +13,7 @@ class DoctorLoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 90.w),
         child: SingleChildScrollView(

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/chat.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/widgets/custommessanger.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 
 class Messanger extends StatelessWidget {
   const Messanger({super.key});
@@ -40,11 +43,17 @@ class Messanger extends StatelessWidget {
       ),
       body: Column(
         children: [
-          customMessanger(
-              'Adam Smith',
-              'It is a long established fact that a read and will be distracted lisece.',
-              '23:37',
-              Image.asset('assets/images/adamsmith .png')),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ChatScreen()));
+            },
+            child: customMessanger(
+                'Adam Smith',
+                'It is a long established fact that a read and will be distracted lisece.',
+                '23:37',
+                Image.asset('assets/images/adamsmith .png')),
+          ),
           customMessanger(
               'ahmed ali',
               'It is a long established fact that a read and will be distracted lisece.',

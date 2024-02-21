@@ -24,7 +24,7 @@ class Patientprofile extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                Navigator.popAndPushNamed(context, Appointments.id);
+                Navigator.pop(context);
               },
               child: const Icon(
                 Icons.arrow_back,
@@ -34,7 +34,7 @@ class Patientprofile extends StatelessWidget {
             ),
           ],
         ),
-        shadowColor: const Color.fromARGB(31, 255, 255, 255),
+        shadowColor: Color.fromARGB(0, 255, 255, 255),
         title: Text(
           'Ahmed aly',
           style: TextStyle(

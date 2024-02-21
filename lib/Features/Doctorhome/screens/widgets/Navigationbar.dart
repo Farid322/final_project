@@ -68,7 +68,7 @@ class _NavBarState extends State<NavBar> {
             text: 'Notifcation',
           ),
           GButton(
-            icon: FontAwesomeIcons.message,
+            icon: FontAwesomeIcons.facebookMessenger,
             text: 'Message',
           ),
           GButton(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/CustomPatientMed.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
@@ -119,7 +120,11 @@ class Patientprofile extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 210),
                 child: InkWell(
                   // Within the `FirstRoute` widget
-                  onTap: () {},
+                   onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Sessions()));},
                   child:  Text(
                     'Veiw all',
                     style: TextStyle(
@@ -157,7 +162,13 @@ class Patientprofile extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                
+                   onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Sessions()));
+                },
                 child:  Padding(
                   padding: const EdgeInsets.only(left: 210),
                   child: Text(

@@ -30,42 +30,45 @@ class Custombutton extends StatelessWidget {
   final Color? textcolor;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: hieght,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(radius),
-      ),
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
-          child: Row(
-            children: [
-              SizedBox(
-                width: schedulewidth,
-                height: 20,
-                child: Icon(
-                  icon,
-                  color: Colors.white,
-                  size: 20,
-                ),
-              ),
-              Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: herozintal, vertical: 5),
-                child: Text(
-                  text,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: textcolor,
-                    fontFamily: 'Roboto',
-                    fontSize: fontsize,
-                    fontWeight: FontWeight.w500,
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        height: hieght,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(radius),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: schedulewidth,
+                  height: 20,
+                  child: Icon(
+                    icon,
+                    color: Colors.white,
+                    size: 20,
                   ),
                 ),
-              ),
-            ],
+                Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: herozintal, vertical: 5),
+                  child: Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: textcolor,
+                      fontFamily: 'Roboto',
+                      fontSize: fontsize,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -19,7 +19,7 @@ class DoctorHome extends StatelessWidget {
               padding: EdgeInsets.all(10),
             ),
             Image.asset(
-              'assets/images/Patient.png',
+              'assets/images/Ellipse 18.png',
               height: 70,
               width: 70,
             ),

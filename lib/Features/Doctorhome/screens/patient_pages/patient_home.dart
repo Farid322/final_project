@@ -76,7 +76,7 @@ class PatientHome extends StatelessWidget {
                    Row(
                     children: [
                       Custombutton(onTap: () {
-                        GoRouter.of(context).go(RouterNames.MedicalTest);
+                        GoRouter.of(context).push(RouterNames.MyMedicalTest);
                       },
                         text: 'Medcial Tests',
                        width:151 ,

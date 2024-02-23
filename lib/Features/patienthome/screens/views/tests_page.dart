@@ -33,7 +33,7 @@ class TestsPage extends StatelessWidget {
           
                       InkWell(
                         onTap: () {
-                          GoRouter.of(context).go(RouterNames.PatientLoginPage);
+                          GoRouter.of(context).go(RouterNames.UploadTestPage);
                         },
                         child: Container(
                                  width: 330,

@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 
-class ResetPasswordPatient extends StatelessWidget {
-  const ResetPasswordPatient({super.key});
-  static String id = 'ResetPassword';
+class ResetPasswordDoctor extends StatelessWidget {
+  const ResetPasswordDoctor({super.key});
+  static String id = 'ResetPassworddoctor';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +45,7 @@ class ResetPasswordPatient extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                GoRouter.of(context).go(RouterNames.PatientLoginPage);
+                GoRouter.of(context).go(RouterNames.DoctorHome);
               },
               child: Container(
                   width: ScreenUtil().setWidth(330),

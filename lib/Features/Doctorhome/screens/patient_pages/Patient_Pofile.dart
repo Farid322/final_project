@@ -11,9 +11,14 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/wid
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
-class Patientprofile extends StatelessWidget {
+class Patientprofile extends StatefulWidget {
   const Patientprofile({super.key});
 
+  @override
+  State<Patientprofile> createState() => _PatientprofileState();
+}
+
+class _PatientprofileState extends State<Patientprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,9 +28,7 @@ class Patientprofile extends StatelessWidget {
         leading: Row(
           children: [
             InkWell(
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () {},
               child: const Icon(
                 Icons.arrow_back,
                 color: Colors.black,
@@ -34,7 +37,7 @@ class Patientprofile extends StatelessWidget {
             ),
           ],
         ),
-        shadowColor: Color.fromARGB(0, 255, 255, 255),
+        shadowColor: const Color.fromARGB(0, 255, 255, 255),
         title: Text(
           'Ahmed aly',
           style: TextStyle(

@@ -88,7 +88,8 @@ class DoctorLoginPage extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        GoRouter.of(context).go(RouterNames.ForgetPassword);
+                        GoRouter.of(context)
+                            .go(RouterNames.ForgetPasswordDoctor);
                       },
                       child: const Text(
                         'Forget password?',

@@ -17,6 +17,11 @@ import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/sc
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/Privacy.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/setting.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/RestPasswordDoctor.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/checkemaildoctor.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/entercodedoctor.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/error_email_doctor.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/forgetpasswoeddoctor.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/hemodialysis.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/accpted_result_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/bluetooth_page.dart';
@@ -45,7 +50,6 @@ import '../../Features/auth/peresentaion/views/screens/reset_password.dart';
 import '../../Features/auth/peresentaion/views/screens/sign_up_doctor.dart';
 import '../../Features/auth/peresentaion/views/screens/sign_up_patient.dart';
 
-
 class RouterNames {
   static const LogoPage = '/';
   static const AboutDiabelt = '/aboutdiablet';
@@ -57,7 +61,7 @@ class RouterNames {
   static const PatientSignUp = '/patientsignup';
   static const PatientLoginPage = '/patientloginpage';
   static const DoctorLoginPage = '/doctorloginpage';
-  static const ForgetPassword ='/forgetpassword';
+  static const ForgetPassword = '/forgetpassword';
   static const Erorremail = '/erroremail';
   static const CheckEmail = '/checkemail';
   static const EnterCode = '/entercode';
@@ -73,8 +77,8 @@ class RouterNames {
   static const AboutUs = '/aboutus';
   static const SecondAboutUs = '/secondaboutus';
   static const ThirdAboutUs = '/thirdaboutus';
-  static const Appointmentcp ='/appointmentcp';
-  static const BasicSession ='/basicsession';
+  static const Appointmentcp = '/appointmentcp';
+  static const BasicSession = '/basicsession';
   static const Appointments = '/appoinment';
   static const SessionFeatures = '/sessionfeatures';
   static const MedicalTest = '/medicaltest';
@@ -88,10 +92,14 @@ class RouterNames {
   static const DoctorHome = '/doctorhome';
   static const Messanger = '/messanger';
   static const NotificationScreen = '/notificationscreen';
-  static const  MyMedicalTest  ='/mymedicaltest';
+  static const MyMedicalTest = '/mymedicaltest';
   static const PatientHome = '/patienthome';
   static const PatientMedicine = '/patientmedicine';
-
+  static const ForgetPasswordDoctor = '/forgetpassworddoctor';
+  static const ErorremailDoctor = '/erroremaildoctor';
+  static const CheckEmailDoctor = '/checkemaildoctor';
+  static const EnterCodeDoctor = '/entercodedoctor';
+  static const ResetPasswordDoctor = '/resrtpassworddoctor';
 }
 
 abstract class AppRouter {
@@ -100,226 +108,169 @@ abstract class AppRouter {
       path: RouterNames.LogoPage,
       builder: (context, state) => const LogoPage(),
     ),
-
     GoRoute(
       path: RouterNames.AboutDiabelt,
       builder: (context, state) => const AboutDiabelt(),
     ),
-
-     GoRoute(
-      path:RouterNames.hemodialysis,
+    GoRoute(
+      path: RouterNames.hemodialysis,
       builder: (context, state) => const hemodialysis(),
-       ),  
-      
-       GoRoute(
+    ),
+    GoRoute(
       path: RouterNames.PatientRegisterPage,
       builder: (context, state) => const PatientRegisterPage(),
-      ),
-
-      GoRoute(
-        path: RouterNames.SignUppatient,
-        builder: (context, state) => const SignUppatient(),
-        ),
-
-          GoRoute(
-        path: RouterNames.PatientSignUp,
-        builder: (context, state) => const PatientSignUp(),
-        ),
-
-
-        GoRoute(
-          path: RouterNames.DoctorRegisterPage,
-          builder: (context, state) => const DoctorRegisterPage(), 
-        ),
-      
-       GoRoute(
-        path: RouterNames.SignUpdoctor,
-        builder: (context, state) => const SignUpdoctor(),
-        ),
-      
-    
-        GoRoute(
-        path: RouterNames.PatientLoginPage,
-        builder: (context, state) => const PatientLoginPage(),
-        ),
-
-         GoRoute(
-        path: RouterNames.DoctorLoginPage,
-        builder: (context, state) => const DoctorLoginPage(),
-        ),
-
-
-        GoRoute(
-        path: RouterNames.ForgetPassword,
-        builder: (context, state) =>const ForgetPassword (),
-        ),
-
-        GoRoute(
-        path: RouterNames.Erorremail,
-        builder: (context, state) =>const Erorremail (),
-        ),
-
-        GoRoute(
-        path: RouterNames.CheckEmail,
-        builder: (context, state) => const CheckEmail(),
-        ),
-
-         GoRoute(
-        path: RouterNames.EnterCode,
-        builder: (context, state) => const EnterCode(),
-        ),
-         
-          GoRoute(
-        path: RouterNames.ResetPassword,
-        builder: (context, state) => const ResetPassword(),
-        ),
-
-        GoRoute(
-          path: RouterNames.Bluetoothpage,
-          builder: (context, state) => const BluetoothPage(),
-           ),
-
-        GoRoute(
-            path:RouterNames.PressurePage,
-            builder: (context, state) =>const PressurePage()
-            ),
-      
-    
-        GoRoute(
-            path:RouterNames.TemperaturePage,
-            builder: (context, state) =>const TemperaturePage()
-            ),
-
-        GoRoute(
-           path:RouterNames.WeightPage,
-           builder: (context, state) => const WeightPage() 
-           ),
-
-        GoRoute(
-          path:RouterNames.TestsPage,
-          builder: (context, state) => const TestsPage() 
-          ),
-
-
-        GoRoute(
-          path:RouterNames.UploadTestPage,
-          builder: (context, state) => const UploadTestPage () 
-          ),
-
-          
-        GoRoute(
-          path:RouterNames.AccptedResultPage,
-          builder: (context, state) => const AccptedResultPage() 
-          ),     
-
-          
-        GoRoute(
-          path:RouterNames.RefuesdResultPage,
-          builder: (context, state) => const RefuesdResultPage() 
-          ),
-        
-              GoRoute(
-          path:RouterNames.AboutUs,
-          builder: (context, state) => const AboutUs() 
-          ),
-
-               GoRoute(
-          path:RouterNames.SecondAboutUs,
-          builder: (context, state) => const SecondAboutUs() 
-          ),
-
-              GoRoute(
-          path:RouterNames.ThirdAboutUs,
-          builder: (context, state) => const ThirdAboutUs() 
-          ),
-       
-               GoRoute(
-          path:RouterNames.Appointmentcp,
-          builder: (context, state) => const Appointmentcp() 
-          ),
-
-            GoRoute(
-          path:RouterNames.BasicSession,
-          builder: (context, state) => const BasicSession() 
-          ),
-
-             GoRoute(
-          path:RouterNames.Appointments,
-          builder: (context, state) => const Appointments() 
-          ),
-
-            GoRoute(
-          path:RouterNames.SessionFeatures,
-          builder: (context, state) => const SessionFeatures() 
-          ),
-
-            GoRoute(
-          path:RouterNames.MedicalTest,
-          builder: (context, state) => const MedicalTest() 
-          ),
-
-            GoRoute(
-          path:RouterNames.Medicine,
-          builder: (context, state) => const Medicine() 
-          ),
-
-            GoRoute(
-          path:RouterNames.Patientprofile,
-          builder: (context, state) => const Patientprofile() 
-          ),
-
-            GoRoute(
-          path:RouterNames.Sessions,
-          builder: (context, state) => const session() 
-          ),
-
-            GoRoute(
-          path:RouterNames.Schedule,
-          builder: (context, state) => const Schedule() 
-          ),
-          
-             GoRoute(
-          path:RouterNames.AccountInfo,
-          builder: (context, state) => const AccountInfo() 
-          ),
-
-            GoRoute(
-          path:RouterNames.Privacy,
-          builder: (context, state) => const Privacy() 
-          ),
-
-           GoRoute(
-          path:RouterNames.SettingPage,
-          builder: (context, state) => const SettingPage() 
-          ),
-
-           GoRoute(
-          path:RouterNames.DoctorHome,
-          builder: (context, state) => const DoctorHome() 
-          ),
-
-           GoRoute(
-          path:RouterNames.Messanger,
-          builder: (context, state) => const Messanger() 
-          ),
-
-           GoRoute(
-          path:RouterNames.NotificationScreen,
-          builder: (context, state) => const NotificationScreen() 
-          ),
-
-           GoRoute(
-          path:RouterNames.MyMedicalTest,
-          builder: (context, state) => const MyMedicalTest() 
-          ),
-
-           GoRoute(
-          path:RouterNames.PatientHome,
-          builder: (context, state) => const PatientHome() 
-          ),
-
-          GoRoute(
-          path:RouterNames.PatientMedicine,
-          builder: (context, state) => const PatientMedicine()),
+    ),
+    GoRoute(
+      path: RouterNames.SignUppatient,
+      builder: (context, state) => const SignUppatient(),
+    ),
+    GoRoute(
+      path: RouterNames.PatientSignUp,
+      builder: (context, state) => const PatientSignUp(),
+    ),
+    GoRoute(
+      path: RouterNames.DoctorRegisterPage,
+      builder: (context, state) => const DoctorRegisterPage(),
+    ),
+    GoRoute(
+      path: RouterNames.SignUpdoctor,
+      builder: (context, state) => const SignUpdoctor(),
+    ),
+    GoRoute(
+      path: RouterNames.PatientLoginPage,
+      builder: (context, state) => const PatientLoginPage(),
+    ),
+    GoRoute(
+      path: RouterNames.DoctorLoginPage,
+      builder: (context, state) => const DoctorLoginPage(),
+    ),
+    GoRoute(
+      path: RouterNames.ForgetPassword,
+      builder: (context, state) => const ForgetPassword(),
+    ),
+    GoRoute(
+      path: RouterNames.Erorremail,
+      builder: (context, state) => const Erorremail(),
+    ),
+    GoRoute(
+      path: RouterNames.CheckEmail,
+      builder: (context, state) => const CheckEmail(),
+    ),
+    GoRoute(
+      path: RouterNames.EnterCode,
+      builder: (context, state) => const EnterCode(),
+    ),
+    GoRoute(
+      path: RouterNames.ResetPassword,
+      builder: (context, state) => const ResetPasswordPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.Bluetoothpage,
+      builder: (context, state) => const BluetoothPage(),
+    ),
+    GoRoute(
+        path: RouterNames.PressurePage,
+        builder: (context, state) => const PressurePage()),
+    GoRoute(
+        path: RouterNames.TemperaturePage,
+        builder: (context, state) => const TemperaturePage()),
+    GoRoute(
+        path: RouterNames.WeightPage,
+        builder: (context, state) => const WeightPage()),
+    GoRoute(
+        path: RouterNames.TestsPage,
+        builder: (context, state) => const TestsPage()),
+    GoRoute(
+        path: RouterNames.UploadTestPage,
+        builder: (context, state) => const UploadTestPage()),
+    GoRoute(
+        path: RouterNames.AccptedResultPage,
+        builder: (context, state) => const AccptedResultPage()),
+    GoRoute(
+        path: RouterNames.RefuesdResultPage,
+        builder: (context, state) => const RefuesdResultPage()),
+    GoRoute(
+        path: RouterNames.AboutUs,
+        builder: (context, state) => const AboutUs()),
+    GoRoute(
+        path: RouterNames.SecondAboutUs,
+        builder: (context, state) => const SecondAboutUs()),
+    GoRoute(
+        path: RouterNames.ThirdAboutUs,
+        builder: (context, state) => const ThirdAboutUs()),
+    GoRoute(
+        path: RouterNames.Appointmentcp,
+        builder: (context, state) => const Appointmentcp()),
+    GoRoute(
+        path: RouterNames.BasicSession,
+        builder: (context, state) => const BasicSession()),
+    GoRoute(
+        path: RouterNames.Appointments,
+        builder: (context, state) => const Appointments()),
+    GoRoute(
+        path: RouterNames.SessionFeatures,
+        builder: (context, state) => const SessionFeatures()),
+    GoRoute(
+        path: RouterNames.MedicalTest,
+        builder: (context, state) => const MedicalTest()),
+    GoRoute(
+        path: RouterNames.Medicine,
+        builder: (context, state) => const Medicine()),
+    GoRoute(
+        path: RouterNames.Patientprofile,
+        builder: (context, state) => const Patientprofile()),
+    GoRoute(
+        path: RouterNames.Sessions,
+        builder: (context, state) => const session()),
+    GoRoute(
+        path: RouterNames.Schedule,
+        builder: (context, state) => const Schedule()),
+    GoRoute(
+        path: RouterNames.AccountInfo,
+        builder: (context, state) => const AccountInfo()),
+    GoRoute(
+        path: RouterNames.Privacy,
+        builder: (context, state) => const Privacy()),
+    GoRoute(
+        path: RouterNames.SettingPage,
+        builder: (context, state) => const SettingPage()),
+    GoRoute(
+        path: RouterNames.DoctorHome,
+        builder: (context, state) => const DoctorHome()),
+    GoRoute(
+        path: RouterNames.Messanger,
+        builder: (context, state) => const Messanger()),
+    GoRoute(
+        path: RouterNames.NotificationScreen,
+        builder: (context, state) => const NotificationScreen()),
+    GoRoute(
+        path: RouterNames.MyMedicalTest,
+        builder: (context, state) => const MyMedicalTest()),
+    GoRoute(
+        path: RouterNames.PatientHome,
+        builder: (context, state) => const PatientHome()),
+    GoRoute(
+        path: RouterNames.PatientMedicine,
+        builder: (context, state) => const PatientMedicine()),
+    GoRoute(
+      path: RouterNames.ForgetPasswordDoctor,
+      builder: (context, state) => const ForgetPasswordDoctor(),
+    ),
+    GoRoute(
+      path: RouterNames.ErorremailDoctor,
+      builder: (context, state) => const ErorremailDoctor(),
+    ),
+    GoRoute(
+      path: RouterNames.CheckEmailDoctor,
+      builder: (context, state) => const CheckEmailDoctor(),
+    ),
+    GoRoute(
+      path: RouterNames.EnterCodeDoctor,
+      builder: (context, state) => const EnterCodeDoctor(),
+    ),
+    GoRoute(
+      path: RouterNames.ResetPasswordDoctor,
+      builder: (context, state) => const ResetPasswordDoctor(),
+    ),
   ]);
 }

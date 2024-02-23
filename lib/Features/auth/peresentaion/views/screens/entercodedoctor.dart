@@ -5,9 +5,9 @@ import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 import 'package:graduation_project/core/widgets/custom_text_form_field.dart';
 
-class EnterCode extends StatelessWidget {
-  const EnterCode({super.key});
-  static String id = 'EnterCode';
+class EnterCodeDoctor extends StatelessWidget {
+  const EnterCodeDoctor({super.key});
+  static String id = 'EnterCodedoctor';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +69,7 @@ class EnterCode extends StatelessWidget {
             CustomButton(
               text: 'Rest Password',
               onTap: () {
-                GoRouter.of(context).go(RouterNames.ResetPassword);
+                GoRouter.of(context).go(RouterNames.ResetPasswordDoctor);
               },
             )
           ],

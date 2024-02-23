@@ -6,9 +6,9 @@ import 'package:graduation_project/core/widgets/custom_button.dart';
 
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
-class Erorremail extends StatelessWidget {
-  const Erorremail({super.key});
-  static String id = 'Erorremail';
+class ErorremailDoctor extends StatelessWidget {
+  const ErorremailDoctor({super.key});
+  static String id = 'Erorremaildoctor';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +58,7 @@ class Erorremail extends StatelessWidget {
             CustomButton(
               text: 'Send code',
               onTap: () {
-                GoRouter.of(context).go(RouterNames.EnterCode);
+                GoRouter.of(context).go(RouterNames.EnterCodeDoctor);
               },
             ),
             Padding(

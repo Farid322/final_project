@@ -4,9 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 
-class ForgetPassword extends StatelessWidget {
-  const ForgetPassword({super.key});
-  static String id = 'ForgetPassword';
+class ForgetPasswordDoctor extends StatelessWidget {
+  const ForgetPasswordDoctor({super.key});
+  static String id = 'forgetpassworddoctor';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +48,7 @@ class ForgetPassword extends StatelessWidget {
               CustomButton(
                 text: 'Send an email',
                 onTap: () {
-                  GoRouter.of(context).go(RouterNames.Erorremail);
+                  GoRouter.of(context).go(RouterNames.ErorremailDoctor);
                 },
               ),
               Padding(

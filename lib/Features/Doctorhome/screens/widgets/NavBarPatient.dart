@@ -5,14 +5,14 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 
-class NavBar extends StatefulWidget {
-  const NavBar({Key? key}) : super(key: key);
+class NavBarPatient extends StatefulWidget {
+  const NavBarPatient({Key? key}) : super(key: key);
 
   @override
   _NavBarState createState() => _NavBarState();
 }
 
-class _NavBarState extends State<NavBar> {
+class _NavBarState extends State<NavBarPatient> {
   int selectedIndex = 0;
 
   @override
@@ -43,17 +43,17 @@ class _NavBarState extends State<NavBar> {
           // Handle navigation based on the selected index
           switch (index) {
             case 0:
-              GoRouter.of(context).push(RouterNames.DoctorHome);
+              GoRouter.of(context).go(RouterNames.PatientHome);
 
               break;
             case 1:
-              GoRouter.of(context).push(RouterNames.NotificationScreen);
+              GoRouter.of(context).go(RouterNames.NotificationScreen);
               break;
             case 2:
-              GoRouter.of(context).push(RouterNames.Messanger);
+              GoRouter.of(context).go(RouterNames.Messanger);
               break;
             case 3:
-              GoRouter.of(context).push(RouterNames.SettingPage);
+              GoRouter.of(context).go(RouterNames.SettingPage);
               break;
           }
         },

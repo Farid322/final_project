@@ -33,7 +33,7 @@ class _NavBarState extends State<NavBar> {
         backgroundColor: Colors.white,
         color: const Color.fromRGBO(14, 92, 109, 1),
         activeColor: kPrimaryColor,
-        gap: 5,
+        gap: 8,
         padding: const EdgeInsets.all(20),
         onTabChange: (int index) {
           setState(() {
@@ -43,7 +43,7 @@ class _NavBarState extends State<NavBar> {
           // Handle navigation based on the selected index
           switch (index) {
             case 0:
-              GoRouter.of(context).push(RouterNames.DoctorHome);
+              GoRouter.of(context).push(RouterNames.PatientHome);
 
               break;
             case 1:

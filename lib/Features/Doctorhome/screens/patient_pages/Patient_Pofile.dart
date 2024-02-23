@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Appointments.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Featuers.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/CustomPatientMed.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+
+import 'Medical_test.dart';
 
 class Patientprofile extends StatefulWidget {
   const Patientprofile({super.key});
@@ -137,12 +133,7 @@ class _PatientprofileState extends State<Patientprofile> {
                 padding: const EdgeInsets.only(left: 210),
                 child: InkWell(
                   // Within the `FirstRoute` widget
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Sessions()),
-                    );
-                  },
+                  onTap: () {},
                   child: Text(
                     'Veiw all',
                     style: TextStyle(
@@ -180,12 +171,7 @@ class _PatientprofileState extends State<Patientprofile> {
                 ),
               ),
               InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Medicine()),
-                  );
-                },
+                onTap: () {},
                 child: Padding(
                   padding: const EdgeInsets.only(left: 210),
                   child: Text(

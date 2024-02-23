@@ -5,6 +5,8 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/wid
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
+import 'Medical_test.dart';
+
 class Patientprofile extends StatelessWidget {
   const Patientprofile({super.key});
 

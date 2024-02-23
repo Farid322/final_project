@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
 
 class MedicalTest extends StatelessWidget {

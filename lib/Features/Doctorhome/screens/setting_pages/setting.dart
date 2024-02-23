@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/widgets/itemProfile.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';

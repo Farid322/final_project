@@ -185,6 +185,6 @@ class PatientHome extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
   }
 }

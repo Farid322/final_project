@@ -27,14 +27,19 @@ class ChatScreen extends StatelessWidget {
               appBar: AppBar(
                 toolbarHeight: 85,
                 automaticallyImplyLeading: true,
-                leading: const Row(
+                leading: Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Colors.black,
-                        size: 30,
+                      padding: const EdgeInsets.all(10),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Icon(
+                          Icons.arrow_back,
+                          color: Colors.black,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ],
@@ -105,7 +110,7 @@ class ChatScreen extends StatelessWidget {
               ),
             );
           } else {
-            return const Text('Loading');
+            return const Text('');
           }
         });
   }

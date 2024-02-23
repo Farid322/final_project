@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/firebase_options.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -17,14 +18,14 @@ class Hemodialysis extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return    ScreenUtilInit(
+    return ScreenUtilInit(
       designSize: const Size(375, 993),
-       minTextAdapt: true,
+      minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
-      )
-      );
+      ),
+    );
   }
 }

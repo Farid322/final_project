@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custom_container_medicine.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
@@ -16,14 +17,19 @@ class _MedicineState extends State<Medicine> {
       appBar: AppBar(
         toolbarHeight: 85,
         automaticallyImplyLeading: true,
-        leading: const Row(
+        leading: Row(
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
+              padding: const EdgeInsets.all(10),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
           ],
@@ -81,7 +87,7 @@ class _MedicineState extends State<Medicine> {
               color: Color(0xFF0E5C6D),
               icon: null,
               herozintal: 5,
-              textcolor: null,
+              textcolor: Colors.white,
             )
           ],
         ),

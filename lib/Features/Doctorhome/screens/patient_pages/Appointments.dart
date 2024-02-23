@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/widgets/custom_containar_appoint.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
 
 class Appointments extends StatelessWidget {
   const Appointments({super.key});
@@ -11,14 +12,19 @@ class Appointments extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 85,
         automaticallyImplyLeading: true,
-        leading: const Row(
+        leading: Row(
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
+              padding: const EdgeInsets.all(10),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
           ],

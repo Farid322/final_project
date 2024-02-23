@@ -149,19 +149,21 @@ class CustomContainer extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              Custombutton(
-                text: 'veiw',
-                width: 102,
-                hieght: 38,
-                fontsize: 12,
-                radius: 8,
-                color: const Color(0xFF0E5C6D),
-                icon: null,
-                herozintal: 13,
+              InkWell(
                 onTap: () {
                   GoRouter.of(context).go(RouterNames.Patientprofile);
                 },
-                textcolor: null,
+                child: const Custombutton(
+                  text: 'veiw',
+                  width: 102,
+                  hieght: 38,
+                  fontsize: 12,
+                  radius: 8,
+                  color: Color(0xFF0E5C6D),
+                  icon: null,
+                  herozintal: 13,
+                  textcolor: Color.fromARGB(255, 255, 255, 255),
+                ),
               )
             ],
           ),

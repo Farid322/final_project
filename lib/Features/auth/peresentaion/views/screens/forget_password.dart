@@ -1,74 +1,78 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
-static String id ='ForgetPassword';
+  static String id = 'ForgetPassword';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 65),
+      body: Center(
         child: Padding(
-
-          padding: const EdgeInsets.only(top: 170),
+          padding: EdgeInsets.symmetric(
+              vertical: ScreenUtil().setHeight(200),
+              horizontal: ScreenUtil().setWidth(50)),
           child: Column(
             children: [
               Image.asset('assets/images/Character.jpg'),
-            const  SizedBox(
-                height: 50,
+              SizedBox(
+                height: ScreenUtil().setHeight(50),
               ),
-              const  SizedBox(
-                    height: 20,
+              SizedBox(
+                height: ScreenUtil().setHeight(20),
+              ),
+              const Text(
+                'Forget password ?',
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              SizedBox(
+                height: ScreenUtil().setHeight(8),
+              ),
+              const Text(
+                'please choose way from those options to rest your password',
+                maxLines: 2,
+                style: TextStyle(color: Colors.grey, fontSize: 14),
+              ),
+              SizedBox(
+                height: ScreenUtil().setHeight(50),
+              ),
+              CustomButton(
+                text: 'Send an email',
+                onTap: () {
+                  GoRouter.of(context).go(RouterNames.Erorremail);
+                },
+              ),
+              Row(
+                children: [
+                  const Text('Remember password ?'),
+                  TextButton(
+                    onPressed: () {
+                      GoRouter.of(context).go(RouterNames.DoctorLoginPage);
+                    },
+                    child: const Text(
+                      'login',
+                      style: TextStyle(
+                        color: Color(0xFF737373),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
-          const Text(
-             'Forget password ?',
-        maxLines: 2,
-        overflow: TextOverflow.ellipsis,
-        style: TextStyle(
-          color: Colors.black87,
-          fontSize: 20,
-          fontWeight: FontWeight.w700,
+                ],
+              ),
+            ],
+          ),
         ),
-        ),
-        const SizedBox(
-        height: 8,
-        ),
-        const Text(
-        'please choose way from those options to rest your password',
-        maxLines: 2,
-        style: TextStyle(color: Colors.grey, fontSize: 14),
-        ),
-
-          const SizedBox(
-            height: 60,
-          ), 
-           CustomButton(text:'Send an email',onTap: () {
-            GoRouter.of(context).go(RouterNames.Erorremail);
-          }, ),
-           
-        
-
-         const SizedBox(
-          height: 170,
-         ),
-         Row(
-           children: [
-             const Text('Remember password ?'),
-              TextButton( onPressed: (){
-                                GoRouter.of(context).go(RouterNames.DoctorLoginPage);
-                }, child:  const Text('login',style: TextStyle(color: Color(0xFF737373),
-                                              fontSize: 15,
-                                                 fontWeight: FontWeight.w600,),),),
-           ],
-         ),
-            
-          ],
-        ),
-        ),
-        ),
+      ),
     );
   }
 }

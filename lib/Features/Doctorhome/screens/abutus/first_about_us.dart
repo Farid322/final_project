@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/abutus/second_about_us.dart';
 import 'package:graduation_project/constant/constant.dart';
 
 class AboutUs extends StatefulWidget {
@@ -16,14 +19,19 @@ class _AboutUsState extends State<AboutUs> {
       appBar: AppBar(
         toolbarHeight: 85,
         automaticallyImplyLeading: true,
-        leading: const Row(
+        leading: Row(
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
+              padding: const EdgeInsets.all(10),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
           ],
@@ -64,8 +72,8 @@ class _AboutUsState extends State<AboutUs> {
                       Border.all(color: const Color.fromARGB(39, 10, 10, 1)),
                   borderRadius: BorderRadius.circular(10)),
               //color: Colors.white,
-              width: 327,
-              height: 200,
+              width: ScreenUtil().setWidth(327),
+              height: ScreenUtil().setHeight(200),
               child: const Center(
                 child: Padding(
                   padding: EdgeInsets.all(8.0),
@@ -84,9 +92,9 @@ class _AboutUsState extends State<AboutUs> {
             ),
           ),
           Image.asset(
-            'assets/images/World health day 2.png',
-            width: 290,
-            height: 290,
+            'assets/images/World health day 1.png',
+            width: ScreenUtil().setWidth(400),
+            height: ScreenUtil().setHeight(400),
             alignment: Alignment.bottomCenter,
           ),
           Padding(
@@ -98,7 +106,13 @@ class _AboutUsState extends State<AboutUs> {
                 minWidth: 293,
                 color: const Color.fromRGBO(14, 92, 109, 1),
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SecondAboutUs()),
+                  );
+                },
                 child: const Text('Next')),
           ),
         ],

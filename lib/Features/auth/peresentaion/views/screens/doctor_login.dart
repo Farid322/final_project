@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 
@@ -12,6 +13,7 @@ class DoctorLoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 90.w),
         child: SingleChildScrollView(
@@ -19,13 +21,14 @@ class DoctorLoginPage extends StatelessWidget {
             children: [
               SizedBox(
                 width: 343.w,
-                child:  Row(
+                child: Row(
                   children: [
                     TextButton(
-                      onPressed: () {
-                        GoRouter.of(context).go(RouterNames.DoctorRegisterPage);
-                      },
-                      child: const Icon(Icons.arrow_back)),
+                        onPressed: () {
+                          GoRouter.of(context)
+                              .go(RouterNames.DoctorRegisterPage);
+                        },
+                        child: const Icon(Icons.arrow_back)),
                     const Text(
                       ' Log in',
                       style: TextStyle(
@@ -71,29 +74,39 @@ class DoctorLoginPage extends StatelessWidget {
               SizedBox(
                 height: 19.h,
               ),
-              Row(
-                children: [
-                  const Text(
-                    'Remember me',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                  ),
-                  SizedBox(
-                    width: 55.w,
-                  ),
-                   TextButton( onPressed: () {
-                     GoRouter.of(context).go(RouterNames.ForgetPassword);
-                   },
-                     child: const Text(
-                      'Forget password?',
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                                     ),
-                   ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: [
+                    const Text(
+                      'Remember me',
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    ),
+                    SizedBox(
+                      width: ScreenUtil().setWidth(120),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        GoRouter.of(context).go(RouterNames.ForgetPassword);
+                      },
+                      child: const Text(
+                        'Forget password?',
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w400),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 32.h,
               ),
-              const CustomButton(text: 'Login'),
+              InkWell(
+                  onTap: () {
+                    GoRouter.of(context).push(RouterNames.DoctorHome);
+                  },
+                  child: const CustomButton(text: 'Login')),
               SizedBox(
                 height: 22.h,
               ),

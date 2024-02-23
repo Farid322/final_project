@@ -197,23 +197,28 @@ class DoctorLoginPage extends StatelessWidget {
               SizedBox(
                 height: 18.h,
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 75),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 75),
                 child: Row(
                   children: [
-                    Text(
+                    const Text(
                       'Don’t have an account? ',
                       style: TextStyle(
                           color: Color(0xFF737373),
                           fontSize: 15,
                           fontWeight: FontWeight.w600),
                     ),
-                    Text(
-                      'sign-up',
-                      style: TextStyle(
-                        color: Color(0xFF737373),
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
+                    InkWell(
+                      onTap: () {
+                        GoRouter.of(context).push(RouterNames.SignUpdoctor);
+                      },
+                      child: const Text(
+                        'sign-up',
+                        style: TextStyle(
+                          color: Color(0xFF737373),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     )
                   ],

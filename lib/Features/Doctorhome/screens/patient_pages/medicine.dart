@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custom_container_medicine.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 class Medicine extends StatefulWidget {
@@ -87,10 +88,11 @@ class _MedicineState extends State<Medicine> {
               icon: null,
               herozintal: 5,
               textcolor: Colors.white,
-            )
+            ),
           ],
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

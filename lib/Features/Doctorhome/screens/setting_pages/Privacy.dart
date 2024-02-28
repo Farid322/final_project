@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 import 'package:graduation_project/core/widgets2/costom_text_feild.dart';
@@ -237,6 +238,7 @@ class Privacy extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

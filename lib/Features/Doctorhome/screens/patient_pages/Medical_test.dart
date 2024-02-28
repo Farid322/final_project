@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 
 class MedicalTest extends StatelessWidget {
   const MedicalTest({super.key});
@@ -61,7 +62,7 @@ class MedicalTest extends StatelessWidget {
                 yourdate: '03 August 2020',
                 yourtime: '2.20 Pm',
                 sessions: 'Test 1',
-                icon: Icons.drive_folder_upload_outlined,
+                icon: null,
               ),
               SizedBox(
                 height: 30,
@@ -72,12 +73,13 @@ class MedicalTest extends StatelessWidget {
                 yourdate: '03 August 2020',
                 yourtime: '2.20 Pm',
                 sessions: ' Test 2',
-                icon: Icons.drive_folder_upload_outlined,
+                icon: null,
               )
             ]),
           )
         ],
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

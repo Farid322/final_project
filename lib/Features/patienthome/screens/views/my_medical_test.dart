@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
@@ -46,7 +47,7 @@ class MyMedicalTest extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      body:  Column(
+      body: Column(
         children: [
           const Padding(
             padding: EdgeInsets.only(top: 20, bottom: 20, right: 120),
@@ -79,23 +80,24 @@ class MyMedicalTest extends StatelessWidget {
                 icon: Icons.drive_folder_upload_outlined,
               ),
               SizedBox(height: 100.h),
-               Custombutton(
-                onTap: () {
-                  GoRouter.of(context).push(RouterNames.TestsPage);
-                },
-                text: 'Upload',
-                width:151 ,
-                hieght: 46,
-                fontsize: 21, 
-                radius: 15,
-                color: Color(0xffDF7861),
-                icon: null, 
-                herozintal: 10,
-                textcolor: Colors.white)
+              Custombutton(
+                  onTap: () {
+                    GoRouter.of(context).push(RouterNames.TestsPage);
+                  },
+                  text: 'Upload',
+                  width: 151,
+                  hieght: 46,
+                  fontsize: 21,
+                  radius: 15,
+                  color: Color(0xffDF7861),
+                  icon: null,
+                  herozintal: 10,
+                  textcolor: Colors.white)
             ]),
           )
         ],
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

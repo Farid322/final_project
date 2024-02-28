@@ -24,7 +24,7 @@ class DoctorRegisterPage extends StatelessWidget {
               height: ScreenUtil().setHeight(29),
             ),
             CustomButton(
-              text: 'log-in',
+              text: 'Log-in',
               onTap: () {
                 GoRouter.of(context).go(RouterNames.DoctorLoginPage);
               },
@@ -33,7 +33,7 @@ class DoctorRegisterPage extends StatelessWidget {
               height: ScreenUtil().setHeight(20),
             ),
             CustomButton(
-              text: 'sign-up',
+              text: 'Sign-up',
               onTap: () {
                 GoRouter.of(context).go(RouterNames.SignUpdoctor);
               },
@@ -84,7 +84,7 @@ class DoctorRegisterPage extends StatelessWidget {
               height: ScreenUtil().setHeight(9),
             ),
             const Text(
-              'contniue with Registration ',
+              'Contniue with Registration ',
               style: TextStyle(
                   color: Color(0xFF737373),
                   fontSize: 15,

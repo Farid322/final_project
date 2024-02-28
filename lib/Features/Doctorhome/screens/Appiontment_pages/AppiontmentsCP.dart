@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/widgets/past_myappointment.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/widgets/upcoming_myappointment.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 
 class Appointmentcp extends StatefulWidget {
   const Appointmentcp({super.key});
@@ -66,6 +67,7 @@ class _UpcomingAppiontmentsState extends State<Appointmentcp> {
         body: const TabBarView(
           children: [UpcomingAppiontments(), PastAppiontments()],
         ),
+        bottomNavigationBar: const NavBar(),
       ),
     );
   }

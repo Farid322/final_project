@@ -39,11 +39,14 @@ class CustomCategory extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
-                    Text(
-                      text,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          fontSize: 12, fontWeight: FontWeight.w500),
+                    InkWell(
+                      onTap: () {},
+                      child: Text(
+                        text,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ],
                 ),

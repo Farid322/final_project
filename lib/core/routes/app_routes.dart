@@ -12,7 +12,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Fea
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Patient_Pofile.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/patient_home.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/patient_home.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/schedule.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/Privacy.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
@@ -34,7 +34,7 @@ import 'package:graduation_project/Features/patienthome/screens/views/session.da
 import 'package:graduation_project/Features/patienthome/screens/views/tests_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/upload_test.dart';
 
-import '../../Features/Doctorhome/screens/patient_pages/my_medical_test.dart';
+import '../../Features/patienthome/screens/views/my_medical_test.dart';
 import '../../Features/auth/peresentaion/views/screens/erorr_email.dart';
 import '../../Features/auth/peresentaion/views/screens/patient_login.dart';
 import '../../Features/auth/peresentaion/views/screens/patient_sign_up.dart';

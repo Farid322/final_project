@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/widgets/custom_containar_appoint.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 
 class Appointments extends StatelessWidget {
   const Appointments({super.key});
@@ -73,17 +74,20 @@ class Appointments extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            CustomContainer(
-              name: 'Name',
-              yourname: 'Yara',
-              parcode: 'ParCode',
-              yourparcode: '125 369 058',
-              id: 'ID',
-              yourid: '21358726902',
+            InkWell(
+              child: CustomContainer(
+                name: 'Name',
+                yourname: 'Yara',
+                parcode: 'ParCode',
+                yourparcode: '125 369 058',
+                id: 'ID',
+                yourid: '21358726902',
+              ),
             ),
           ],
         )
       ])),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

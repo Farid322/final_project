@@ -45,7 +45,7 @@ class ResetPasswordDoctor extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                GoRouter.of(context).go(RouterNames.DoctorHome);
+                GoRouter.of(context).go(RouterNames.DoctorLoginPage);
               },
               child: Container(
                   width: ScreenUtil().setWidth(330),

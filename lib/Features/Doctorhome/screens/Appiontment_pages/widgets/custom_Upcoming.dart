@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 class Customupcoming extends StatelessWidget {
@@ -23,8 +24,8 @@ class Customupcoming extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 345,
-          height: 128,
+          width: ScreenUtil().setWidth(345),
+          height: ScreenUtil().setHeight(182),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(

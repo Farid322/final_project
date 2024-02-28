@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/widgets/NavBarPatient.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 import 'package:graduation_project/utils/app_asset.dart';
@@ -197,7 +196,6 @@ class PatientHome extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

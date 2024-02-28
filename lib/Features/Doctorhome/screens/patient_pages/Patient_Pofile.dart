@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/AppiontmentsCP.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Appointments.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/CustomPatientMed.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 import 'Medical_test.dart';
 
-class Patientprofile extends StatefulWidget {
+class Patientprofile extends StatelessWidget {
   const Patientprofile({super.key});
 
-  @override
-  State<Patientprofile> createState() => _PatientprofileState();
-}
-
-class _PatientprofileState extends State<Patientprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +50,7 @@ class _PatientprofileState extends State<Patientprofile> {
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       backgroundColor: Colors.white,
-      body: Column(children: [
+      body: ListView(children: [
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: ScreenUtil().setWidth(20),
@@ -62,7 +63,7 @@ class _PatientprofileState extends State<Patientprofile> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 148, vertical: 5),
           child: Text(
             '248 845 888',
             style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
@@ -133,7 +134,12 @@ class _PatientprofileState extends State<Patientprofile> {
                 padding: const EdgeInsets.only(left: 210),
                 child: InkWell(
                   // Within the `FirstRoute` widget
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Sessions()),
+                    );
+                  },
                   child: Text(
                     'Veiw all',
                     style: TextStyle(
@@ -147,7 +153,7 @@ class _PatientprofileState extends State<Patientprofile> {
           ),
         ),
         const CustomPatientSession(
-          sessions: 'Session 1',
+          sessions: 'Session 2',
           date: 'Data',
           yourdate: '03 August 2020',
           time: 'Time',
@@ -171,7 +177,12 @@ class _PatientprofileState extends State<Patientprofile> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Medicine()),
+                  );
+                },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 210),
                   child: Text(
@@ -235,6 +246,7 @@ class _PatientprofileState extends State<Patientprofile> {
           icon: null,
         )
       ]),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

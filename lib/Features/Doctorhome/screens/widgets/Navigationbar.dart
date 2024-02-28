@@ -43,7 +43,7 @@ class _NavBarState extends State<NavBar> {
           // Handle navigation based on the selected index
           switch (index) {
             case 0:
-              GoRouter.of(context).push(RouterNames.PatientHome);
+              GoRouter.of(context).push(RouterNames.DoctorHome);
 
               break;
             case 1:

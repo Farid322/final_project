@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/Notification.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/messanger.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/patient_home.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/setting.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/widgets/NavBarPatient.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 // Import your screens
 
@@ -17,7 +15,7 @@ class AppWrapper extends StatelessWidget {
       body: Stack(
         children: [
           // Add your screens here
-          PatientHome(),
+          DoctorHome(),
           NotificationScreen(),
           Messanger(),
           SettingPage(),

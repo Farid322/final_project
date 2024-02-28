@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Custom_timer.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
@@ -324,6 +325,7 @@ class BasicSession extends StatelessWidget {
             ),
           ],
         ),
+        bottomNavigationBar: const NavBar(),
       ),
     );
   }

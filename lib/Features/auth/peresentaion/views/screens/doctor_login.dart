@@ -57,7 +57,7 @@ class DoctorLoginPage extends StatelessWidget {
               SizedBox(
                 height: 5.h,
               ),
-              CustomTextFormField(hintText: 'ex.Email@gmail.com'),
+              CustomTextFormField(hintText: 'Enter Your Email'),
               SizedBox(
                 height: 33.h,
               ),
@@ -68,7 +68,7 @@ class DoctorLoginPage extends StatelessWidget {
                   )),
               SizedBox(height: 5.h),
               CustomTextFormField(
-                hintText: '......',
+                hintText: 'Enter Your Password',
               ),
               SizedBox(
                 height: 19.h,
@@ -91,7 +91,7 @@ class DoctorLoginPage extends StatelessWidget {
                             .go(RouterNames.ForgetPasswordDoctor);
                       },
                       child: const Text(
-                        'Forget password?',
+                        'Forget Password?',
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.w400),
                       ),
@@ -106,7 +106,7 @@ class DoctorLoginPage extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).push(RouterNames.DoctorHome);
                   },
-                  child: const CustomButton(text: 'Login')),
+                  child: const CustomButton(text: 'Log-In')),
               SizedBox(
                 height: 22.h,
               ),

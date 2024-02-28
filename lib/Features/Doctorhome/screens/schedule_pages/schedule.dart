@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/widgets/CustomCategory.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/widgets/time%20picker.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:table_calendar/table_calendar.dart';
 
-class Schedule extends StatelessWidget {
+class Schedule extends StatefulWidget {
   const Schedule({super.key});
+
+  @override
+  State<Schedule> createState() => _ScheduleState();
+}
+
+class _ScheduleState extends State<Schedule> {
+  DateTime today = DateTime.now();
+
+  void _onDaySelected(DateTime day, DateTime focusedDay) {
+    setState(() {
+      today = day;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,133 +66,22 @@ class Schedule extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 20, bottom: 10),
-            child: Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    'Select the date',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 20,
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: 73,
-                  height: 120,
-                  decoration: BoxDecoration(
-                      color: const Color.fromRGBO(241, 245, 249, 1),
-                      border: Border.all(
-                        color: const Color.fromARGB(31, 255, 255, 255),
-                      ),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: const Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 40),
-                        child: Text(
-                          '22',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w600),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Text('fr'),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 73,
-                    height: 120,
-                    decoration: BoxDecoration(
-                        color: const Color.fromRGBO(14, 92, 109, 1),
-                        border: Border.all(
-                          color: const Color.fromARGB(31, 255, 255, 255),
-                        ),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: const Column(children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 40),
-                        child: Text(
-                          '23',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Text(
-                        'sa',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255)),
-                      ),
-                    ])),
-                const SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 73,
-                    height: 120,
-                    decoration: BoxDecoration(
-                        color: const Color.fromRGBO(241, 245, 249, 1),
-                        border: Border.all(
-                          color: const Color.fromARGB(31, 255, 255, 255),
-                        ),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: const Column(children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 40),
-                        child: Text(
-                          '24',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w600),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Text('su'),
-                    ])),
-                const SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 73,
-                    height: 120,
-                    decoration: BoxDecoration(
-                        color: const Color.fromRGBO(241, 245, 249, 1),
-                        border: Border.all(
-                          color: const Color.fromARGB(31, 255, 255, 255),
-                        ),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: const Column(children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 40),
-                        child: Text(
-                          'Other',
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w600),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Text(
-                        'Date',
-                        style: TextStyle(fontSize: 12),
-                      ),
-                    ])),
-              ],
-            ),
+          SizedBox(
+            child: TableCalendar(
+                calendarStyle: const CalendarStyle(
+                    selectedDecoration: BoxDecoration(
+                        color: kPrimaryColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)))),
+                locale: 'en-us',
+                rowHeight: 35,
+                headerStyle: const HeaderStyle(
+                    formatButtonVisible: false, titleCentered: true),
+                focusedDay: today,
+                onDaySelected: _onDaySelected,
+                availableGestures: AvailableGestures.all,
+                selectedDayPredicate: (day) => isSameDay(day, today),
+                firstDay: DateTime.utc(2000, 01, 01),
+                lastDay: DateTime.utc(2030, 01, 01)),
           ),
           const SizedBox(
             height: 25,
@@ -191,83 +97,7 @@ class Schedule extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25),
-            child: Row(
-              children: [
-                Container(
-                  width: 335,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: const Color.fromRGBO(241, 245, 249, 1),
-                      border: Border.all(
-                        color: const Color.fromARGB(31, 255, 255, 255),
-                      ),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: const Padding(
-                    padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsets.only(right: 80, left: 30, top: 10),
-                              child: Text(
-                                'Form',
-                                style: TextStyle(
-                                    fontSize: 10, fontWeight: FontWeight.w300),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsets.only(left: 80, right: 20, top: 10),
-                              child: Text(
-                                'To',
-                                style: TextStyle(
-                                    fontSize: 10, fontWeight: FontWeight.w300),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(right: 30, left: 30),
-                              child: Text(
-                                '12.00',
-                                style: TextStyle(
-                                    fontSize: 25, fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              child: Text(
-                                '>',
-                                style: TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(right: 30, left: 30),
-                              child: Text(
-                                '14.00',
-                                style: TextStyle(
-                                    fontSize: 25, fontWeight: FontWeight.w800),
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 25,
-          ),
+          TimeRangePicker(),
           const Padding(
             padding: EdgeInsets.only(left: 20, bottom: 10, top: 10),
             child: Row(
@@ -397,6 +227,7 @@ class Schedule extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

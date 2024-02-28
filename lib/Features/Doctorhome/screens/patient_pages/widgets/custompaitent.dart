@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Featuers.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 class CustomPatientSession extends StatelessWidget {
@@ -141,7 +141,7 @@ class CustomPatientSession extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Sessions()),
+                              builder: (context) => const SessionFeatures()),
                         );
                       },
                       child: const Custombutton(

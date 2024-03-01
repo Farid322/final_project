@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/AppiontmentsCP.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Appointments.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/CustomPatientMed.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 import 'Medical_test.dart';

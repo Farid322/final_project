@@ -26,7 +26,7 @@ class LogoPage extends StatelessWidget {
                 },
                 child: Container(
                     width: ScreenUtil().setWidth(330),
-                    height: ScreenUtil().setWidth(32),
+                    height: ScreenUtil().setWidth(52),
                     decoration: ShapeDecoration(
                       color: const Color(0xFFDA7761),
                       shape: RoundedRectangleBorder(
@@ -61,7 +61,7 @@ class LogoPage extends StatelessWidget {
                 },
                 child: Container(
                     width: ScreenUtil().setWidth(330),
-                    height: ScreenUtil().setHeight(52),
+                    height: ScreenUtil().setHeight(57),
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
                           side: const BorderSide(width: 1, color: Colors.white),

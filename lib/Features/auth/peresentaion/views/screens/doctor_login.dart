@@ -2,13 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
-class DoctorLoginPage extends StatelessWidget {
+class DoctorLoginPage extends StatefulWidget {
   const DoctorLoginPage({super.key});
+
+  @override
+  State<DoctorLoginPage> createState() => _DoctorLoginPageState();
+}
+
+class _DoctorLoginPageState extends State<DoctorLoginPage> {
+  bool rememberMe = false;
+
+  void _onRememberMeChanged(bool? newValue) {
+    setState(() {
+      rememberMe = newValue ?? false;
+      if (rememberMe) {
+        // TODO: Implement functionality to remember the user
+        print("User wants to be remembered");
+      } else {
+        // TODO: Implement functionality to forget the user
+        print("User does not want to be remembered");
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,16 +96,22 @@ class DoctorLoginPage extends StatelessWidget {
                 height: 19.h,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 2),
                 child: Row(
                   children: [
+                    Checkbox(
+                      shape: const CircleBorder(),
+                      activeColor: kPrimaryColor,
+                      value: rememberMe,
+                      onChanged: _onRememberMeChanged,
+                    ),
                     const Text(
                       'Remember me',
                       style:
                           TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                     SizedBox(
-                      width: ScreenUtil().setWidth(120),
+                      width: ScreenUtil().setWidth(80),
                     ),
                     TextButton(
                       onPressed: () {
@@ -93,7 +121,9 @@ class DoctorLoginPage extends StatelessWidget {
                       child: const Text(
                         'Forget Password?',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w400),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black),
                       ),
                     ),
                   ],

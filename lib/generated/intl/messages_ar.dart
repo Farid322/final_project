@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "about": MessageLookupByLibrary.simpleMessage("عن"),
         "aboutHemo": MessageLookupByLibrary.simpleMessage(
             "غسيل الكلى هو آلة تقوم بتصفية الدم من خلال جهاز غسيل الكلى ، المعروف أيضا باسم الكلى الاصطناعية ، مع فحوصات سلامة مدمجة للتأكد من أن العملية آمنة وفعالة. تتشابه آلات غسيل الكلى المنزلية والمركزية إلى حد كبير في الوظيفة ، على الرغم من أن الجهاز المنزلي أصغر بكثير."),
-        "loginP": MessageLookupByLibrary.simpleMessage("تسجيل الدخول")
+        "loginP": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "start": MessageLookupByLibrary.simpleMessage("ابدأ")
       };
 }

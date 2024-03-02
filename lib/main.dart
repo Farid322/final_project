@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/firebase_options.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/intl.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +28,19 @@ class Hemodialysis extends StatelessWidget {
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
+        locale: const Locale('ar'),
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
       ),
     );
   }
+}
+
+bool isArabic() {
+  return Intl.getCurrentLocale() == 'ar';
 }

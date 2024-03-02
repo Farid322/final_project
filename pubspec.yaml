@@ -50,7 +50,6 @@ dependencies:
   localization: ^2.1.1
   flutter_localization: ^0.1.10
 
-
 dev_dependencies:
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -67,7 +66,6 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -77,6 +75,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -101,3 +100,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true

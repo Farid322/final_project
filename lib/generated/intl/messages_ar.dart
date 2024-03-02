@@ -21,6 +21,18 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) =>
-      <String, Function>{"text": MessageLookupByLibrary.simpleMessage("دكتور")};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ContinueWithoutRegisteration":
+            MessageLookupByLibrary.simpleMessage("الاستمرار بدون تسجيل"),
+        "GetStarted": MessageLookupByLibrary.simpleMessage("ابدأ"),
+        "Hemodialysis": MessageLookupByLibrary.simpleMessage(
+            "غسيل الكلى: هو النوع الأكثر شيوعا من غسيل الكلى والذي يعرفه معظم الناس. "),
+        "LogoD": MessageLookupByLibrary.simpleMessage("دكتور"),
+        "LogoP": MessageLookupByLibrary.simpleMessage("  مريض"),
+        "SignupP": MessageLookupByLibrary.simpleMessage("اشتراك"),
+        "about": MessageLookupByLibrary.simpleMessage("عن"),
+        "aboutHemo": MessageLookupByLibrary.simpleMessage(
+            "غسيل الكلى هو آلة تقوم بتصفية الدم من خلال جهاز غسيل الكلى ، المعروف أيضا باسم الكلى الاصطناعية ، مع فحوصات سلامة مدمجة للتأكد من أن العملية آمنة وفعالة. تتشابه آلات غسيل الكلى المنزلية والمركزية إلى حد كبير في الوظيفة ، على الرغم من أن الجهاز المنزلي أصغر بكثير."),
+        "loginP": MessageLookupByLibrary.simpleMessage("تسجيل الدخول")
+      };
 }

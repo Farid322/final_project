@@ -22,6 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "text": MessageLookupByLibrary.simpleMessage("Doctor")
+        "ContinueWithoutRegisteration": MessageLookupByLibrary.simpleMessage(
+            "Continue Without Registeration"),
+        "GetStarted": MessageLookupByLibrary.simpleMessage("Get started"),
+        "Hemodialysis": MessageLookupByLibrary.simpleMessage(
+            "Hemodialysis: is the most common type of dialysis and the one most people are aware of. "),
+        "LogoD": MessageLookupByLibrary.simpleMessage("Doctor"),
+        "LogoP": MessageLookupByLibrary.simpleMessage("Patient"),
+        "SignupP": MessageLookupByLibrary.simpleMessage("Sign-Up"),
+        "about": MessageLookupByLibrary.simpleMessage("About\n"),
+        "aboutHemo": MessageLookupByLibrary.simpleMessage(
+            "Hemodialysis is a machine filters your blood through a dialyzer, also known as an artificial kidney, with built-in safety checks to be sure the process is safe and effective. Home and in-center hemodialysis machines are very similar in function, though the home machine is much smaller."),
+        "loginP": MessageLookupByLibrary.simpleMessage("Log-In"),
+        "start": MessageLookupByLibrary.simpleMessage("Start")
       };
 }

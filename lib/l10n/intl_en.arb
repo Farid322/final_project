@@ -1,3 +1,14 @@
 {
-    "text" : "Doctor"
+    "LogoD" : "Doctor",
+    "LogoP": "Patient",
+    "loginP": "Log-In",
+    "SignupP":"Sign-Up",
+    "GetStarted":"Get started",
+    "ContinueWithoutRegisteration":"Continue Without Registeration",
+    "aboutHemo":"Hemodialysis is a machine filters your blood through a dialyzer, also known as an artificial kidney, with built-in safety checks to be sure the process is safe and effective. Home and in-center hemodialysis machines are very similar in function, though the home machine is much smaller.",
+
+    "about":"About\n",
+    "Hemodialysis":"Hemodialysis: is the most common type of dialysis and the one most people are aware of. ",
+    "start":"Start"
+
 }

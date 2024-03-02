@@ -42,7 +42,7 @@ class LogoPage extends StatelessWidget {
                     ],
                   ),
                   child: Center(
-                      child: Text(S.of(context).text,
+                      child: Text(S.of(context).LogoD,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
                             color: Colors.white,
@@ -74,11 +74,11 @@ class LogoPage extends StatelessWidget {
                         )
                       ],
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
-                        'patient',
+                        S.of(context).LogoP,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.w300,

@@ -51,10 +51,100 @@ class S {
   }
 
   /// `Doctor`
-  String get text {
+  String get LogoD {
     return Intl.message(
       'Doctor',
-      name: 'text',
+      name: 'LogoD',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patient`
+  String get LogoP {
+    return Intl.message(
+      'Patient',
+      name: 'LogoP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log-In`
+  String get loginP {
+    return Intl.message(
+      'Log-In',
+      name: 'loginP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign-Up`
+  String get SignupP {
+    return Intl.message(
+      'Sign-Up',
+      name: 'SignupP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get started`
+  String get GetStarted {
+    return Intl.message(
+      'Get started',
+      name: 'GetStarted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue Without Registeration`
+  String get ContinueWithoutRegisteration {
+    return Intl.message(
+      'Continue Without Registeration',
+      name: 'ContinueWithoutRegisteration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hemodialysis is a machine filters your blood through a dialyzer, also known as an artificial kidney, with built-in safety checks to be sure the process is safe and effective. Home and in-center hemodialysis machines are very similar in function, though the home machine is much smaller.`
+  String get aboutHemo {
+    return Intl.message(
+      'Hemodialysis is a machine filters your blood through a dialyzer, also known as an artificial kidney, with built-in safety checks to be sure the process is safe and effective. Home and in-center hemodialysis machines are very similar in function, though the home machine is much smaller.',
+      name: 'aboutHemo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About\n`
+  String get about {
+    return Intl.message(
+      'About\n',
+      name: 'about',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hemodialysis: is the most common type of dialysis and the one most people are aware of. `
+  String get Hemodialysis {
+    return Intl.message(
+      'Hemodialysis: is the most common type of dialysis and the one most people are aware of. ',
+      name: 'Hemodialysis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start`
+  String get start {
+    return Intl.message(
+      'Start',
+      name: 'start',
       desc: '',
       args: [],
     );

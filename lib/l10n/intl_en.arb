@@ -9,6 +9,41 @@
 
     "about":"About\n",
     "Hemodialysis":"Hemodialysis: is the most common type of dialysis and the one most people are aware of. ",
-    "start":"Start"
+    "start":"Start",
+    "Hemo":"Hemodialysis",
+    "skip":"Skip",
+    "createaccount":"Create account",
+    "username":"User Name",
+    "emailaddress":"Email Address",
+    "Countrycode":"Country Code",
+    "Mobilenumber":"Mobile Number",
+    "password":"Password",
+    "ConfirmPassword":"Confirm Password",
+    "age":"Age",
+    "Gender":"Gender",
+    "Female":"Female",
+    "Male":"Male",
+    "Barcode":"Barcode",
+    "Next":"Next",
+    "YourUsername":"'Your User Name",
+    "YourEmail":"Your Email",
+    "code":"+012",
+    "number":"1024165373",
+    "YourPassword":"Your Password",
+    "ConfirmYourPassword":"Confirm Your Password",
+    "YourAge":"Your Age",
+    "yourbarcode":"Your Barcode",
+    "Pleaseanswer":"Please answer those Questions To get more details ..",
+    "Doyousuffer":"'Do you suffer from any disease?",
+    "ex":"ex. I suffer from diabetes",
+    "back":"Back",
+    "done":"Done",
+    "Donthave":"Don’t have an account?",
+    "or":"or",
+    "RegisterwithFacebook":"Register with Facebook",
+    "Registerwithgoogle":"Register with Google",
+    "signin":"signin"
+
+
 
 }

@@ -4,6 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
@@ -48,11 +50,10 @@ class PatientLoginPage extends StatelessWidget {
               SizedBox(
                 height: 46.h,
               ),
-              const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Email adress',
-                  )),
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
+                  child: Text(S.of(context).emailaddress)),
               SizedBox(
                 height: 5.h,
               ),
@@ -60,11 +61,10 @@ class PatientLoginPage extends StatelessWidget {
               SizedBox(
                 height: 33.h,
               ),
-              const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'password',
-                  )),
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
+                  child: Text(S.of(context).password)),
               SizedBox(height: 5.h),
               CustomTextFormField(
                 hintText: 'Enter Your Password',
@@ -100,7 +100,7 @@ class PatientLoginPage extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).go(RouterNames.PatientHome);
                   },
-                  child: const CustomButton(text: 'Login')),
+                  child: CustomButton(text: S.of(context).signin)),
               SizedBox(
                 height: 22.h,
               ),
@@ -115,7 +115,7 @@ class PatientLoginPage extends StatelessWidget {
                       thickness: 1,
                     ),
                   ),
-                  const Text('OR'),
+                  Text(S.of(context).or),
                   SizedBox(
                     width: 110.w,
                     child: const Divider(
@@ -153,7 +153,7 @@ class PatientLoginPage extends StatelessWidget {
                       height: 50,
                       width: 45,
                     ),
-                    const Text('Login with Google')
+                    Text(S.of(context).Registerwithgoogle)
                   ],
                 ),
               ),
@@ -184,7 +184,7 @@ class PatientLoginPage extends StatelessWidget {
                       height: 50,
                       width: 45,
                     ),
-                    const Text('Login with Facebook')
+                    Text(S.of(context).RegisterwithFacebook)
                   ],
                 ),
               ),

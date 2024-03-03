@@ -25,18 +25,18 @@ class hemodialysis extends StatelessWidget {
                 const SizedBox(
                   height: 60,
                 ),
-                const Row(
+                Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 6,
                     ),
-                    Icon(Icons.arrow_back, color: Colors.white),
-                    SizedBox(
+                    const Icon(Icons.arrow_back, color: Colors.white),
+                    const SizedBox(
                       width: 7,
                     ),
                     Text(
-                      'Hemodialysis',
-                      style: TextStyle(
+                      S.of(context).Hemo,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 24,
                         fontFamily: 'Roboto',

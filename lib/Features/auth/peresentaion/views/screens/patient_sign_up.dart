@@ -13,6 +13,7 @@ class PatientSignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 70),
         child: SingleChildScrollView(

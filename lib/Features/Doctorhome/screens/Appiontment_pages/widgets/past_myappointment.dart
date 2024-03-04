@@ -11,10 +11,10 @@ class PastAppiontments extends StatefulWidget {
 class _PastAppiontmentsState extends State<PastAppiontments> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Column(
-          children: [
+        child: ListView(
+          children: const [
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [

@@ -470,11 +470,31 @@ class S {
     );
   }
 
-  /// `signin`
+  /// `Sign In`
   String get signin {
     return Intl.message(
-      'signin',
+      'Sign In',
       name: 'signin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget password?`
+  String get Forgetpassword {
+    return Intl.message(
+      'Forget password?',
+      name: 'Forgetpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember me`
+  String get Rememberme {
+    return Intl.message(
+      'Remember me',
+      name: 'Rememberme',
       desc: '',
       args: [],
     );

@@ -171,12 +171,12 @@ class SignUpdoctor extends StatelessWidget {
               const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'Exprience',
+                    'Age',
                   )),
               const SizedBox(
                 height: 5,
               ),
-              CustomTextFormField(hintText: 'ex.7years'),
+              CustomTextFormField(hintText: '20 y'),
               const SizedBox(
                 height: 64,
               ),

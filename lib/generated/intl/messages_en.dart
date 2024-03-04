@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Doyousuffer": MessageLookupByLibrary.simpleMessage(
             "\'Do you suffer from any disease?"),
         "Female": MessageLookupByLibrary.simpleMessage("Female"),
+        "Forgetpassword":
+            MessageLookupByLibrary.simpleMessage("Forget password?"),
         "Gender": MessageLookupByLibrary.simpleMessage("Gender"),
         "GetStarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "Hemo": MessageLookupByLibrary.simpleMessage("Hemodialysis"),
@@ -51,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Register with Facebook"),
         "Registerwithgoogle":
             MessageLookupByLibrary.simpleMessage("Register with Google"),
+        "Rememberme": MessageLookupByLibrary.simpleMessage("Remember me"),
         "SignupP": MessageLookupByLibrary.simpleMessage("Sign-Up"),
         "YourAge": MessageLookupByLibrary.simpleMessage("Your Age"),
         "YourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
@@ -72,7 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "number": MessageLookupByLibrary.simpleMessage("1024165373"),
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
-        "signin": MessageLookupByLibrary.simpleMessage("signin"),
+        "signin": MessageLookupByLibrary.simpleMessage("Sign In"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "username": MessageLookupByLibrary.simpleMessage("User Name"),

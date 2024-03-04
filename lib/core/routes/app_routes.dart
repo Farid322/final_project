@@ -12,7 +12,11 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Fea
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Patient_Pofile.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/patient_home.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/navbar/Notification.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/navbar/messanger.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/Privacy.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/accountinfo.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/patient_home.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/schedule.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/Privacy.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
@@ -31,6 +35,7 @@ import 'package:graduation_project/Features/patienthome/screens/views/requirment
 import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/temperature_screen.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/requirmentsscreens/weight_screen.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/session.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/setting.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/tests_page.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/upload_test.dart';
 
@@ -100,6 +105,11 @@ class RouterNames {
   static const CheckEmailDoctor = '/checkemaildoctor';
   static const EnterCodeDoctor = '/entercodedoctor';
   static const ResetPasswordDoctor = '/resrtpassworddoctor';
+  static const NotificationScreenPatient = '/NotificationScreenPatient';
+  static const MessangerPatient = '/MessangerPatient';
+  static const AccountInfoPatient = '/AccountInfoPatient';
+  static const PrivacyPatient = '/PrivacyPatient';
+  static const SettingPagePatient = '/SettingPagePatient';
 }
 
 abstract class AppRouter {
@@ -269,8 +279,24 @@ abstract class AppRouter {
       builder: (context, state) => const EnterCodeDoctor(),
     ),
     GoRoute(
-      path: RouterNames.ResetPasswordDoctor,
-      builder: (context, state) => const ResetPasswordDoctor(),
+      path: RouterNames.AccountInfoPatient,
+      builder: (context, state) => const AccountInfoPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.PrivacyPatient,
+      builder: (context, state) => const PrivacyPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.SettingPagePatient,
+      builder: (context, state) => const SettingPagePatient(),
+    ),
+    GoRoute(
+      path: RouterNames.MessangerPatient,
+      builder: (context, state) => const MessangerPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.NotificationScreenPatient,
+      builder: (context, state) => const NotificationScreenPatient(),
     ),
   ]);
 }

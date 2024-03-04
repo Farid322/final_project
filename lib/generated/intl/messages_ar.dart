@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Doyousuffer":
             MessageLookupByLibrary.simpleMessage("هل تعاني من أي مرض؟"),
         "Female": MessageLookupByLibrary.simpleMessage("أنثى"),
+        "Forgetpassword":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمه السر"),
         "Gender": MessageLookupByLibrary.simpleMessage("الجنس"),
         "GetStarted": MessageLookupByLibrary.simpleMessage("ابدأ"),
         "Hemo": MessageLookupByLibrary.simpleMessage("الغسيل الكلوي"),
@@ -50,7 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سجل مع الفيسبوك"),
         "Registerwithgoogle":
             MessageLookupByLibrary.simpleMessage("سجل مع جوجل"),
-        "SignupP": MessageLookupByLibrary.simpleMessage("اشتراك"),
+        "Rememberme": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "SignupP": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "YourAge": MessageLookupByLibrary.simpleMessage("عمرك"),
         "YourEmail": MessageLookupByLibrary.simpleMessage("بريدك الإلكتروني"),
         "YourPassword":
@@ -59,7 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اسم المستخدم الخاص بك"),
         "about": MessageLookupByLibrary.simpleMessage("عن"),
         "aboutHemo": MessageLookupByLibrary.simpleMessage(
-            "غسيل الكلى هو آلة تقوم بتصفية الدم من خلال جهاز غسيل الكلى ، المعروف أيضا باسم الكلى الاصطناعية ، مع فحوصات سلامة مدمجة للتأكد من أن العملية آمنة وفعالة. تتشابه آلات غسيل الكلى المنزلية والمركزية إلى حد كبير في الوظيفة ، على الرغم من أن الجهاز المنزلي أصغر بكثير."),
+            "غسيل الكلى هو آلة تقوم بتنقيه الدم من خلال جهاز غسيل الكلى ، المعروف أيضا باسم الكلى الاصطناعية ، مع فحوصات سلامة مدمجة للتأكد من أن العملية آمنة وفعالة.لذلك يقوم حزام غسيل الكلى بنفس الوظيفة وبطريقة امنة بالاضافة الى متابعة الطبيب مع المريض "),
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "back": MessageLookupByLibrary.simpleMessage("رجوع"),
         "code": MessageLookupByLibrary.simpleMessage("+٠١٢"),

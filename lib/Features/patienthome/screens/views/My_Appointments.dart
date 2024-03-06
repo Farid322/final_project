@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/widgets/custom_containar_appoint.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
-import 'package:graduation_project/core/routes/app_routes.dart';
 
-class Appointments extends StatelessWidget {
-  const Appointments({super.key});
+class MyAppointments extends StatelessWidget {
+  const MyAppointments({super.key});
   static String id = 'Appointments';
 
   @override
@@ -20,7 +18,7 @@ class Appointments extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: InkWell(
                 onTap: () {
-                  GoRouter.of(context).go(RouterNames.Patientprofile);
+                  Navigator.pop(context);
                 },
                 child: const Icon(
                   Icons.arrow_back,

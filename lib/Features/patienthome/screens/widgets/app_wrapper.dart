@@ -6,7 +6,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/set
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/Notification.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/messanger.dart';
-import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/patient_home.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/navbar/patient_home.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/setting.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 // Import your screens

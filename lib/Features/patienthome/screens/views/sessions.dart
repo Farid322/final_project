@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custom_session.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/custom_session.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
-import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
-class MyMedicalTest extends StatelessWidget {
-  const MyMedicalTest({super.key});
+class SessionsPatient extends StatelessWidget {
+  const SessionsPatient({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,7 @@ class MyMedicalTest extends StatelessWidget {
         ),
         shadowColor: const Color.fromARGB(31, 255, 255, 255),
         title: const Text(
-          'Medical Test',
+          'Sessions',
           style: TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
@@ -47,57 +48,50 @@ class MyMedicalTest extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      body: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.only(top: 20, bottom: 20, right: 120),
-            child: Text(
-              'My Medical Tests',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
-              textAlign: TextAlign.left,
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(
+              height: ScreenUtil().setHeight(30),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25),
-            child: Column(children: [
-              const CustomMedical(
+            const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Next Session at 2:00 pm',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+              const CustomSessionPatient(
                 date: 'Date',
                 time: 'Time',
                 yourdate: '03 August 2020',
                 yourtime: '2.20 Pm',
-                sessions: 'Test 1',
-                icon: Icons.drive_folder_upload_outlined,
+                sessions: ' Session 1',
+                icon: null,
               ),
-              const SizedBox(
-                height: 30,
+              SizedBox(
+                height: ScreenUtil().setHeight(30),
               ),
-              const CustomMedical(
+              const CustomSessionPatient(
                 date: 'Date',
                 time: 'Time',
                 yourdate: '03 August 2020',
                 yourtime: '2.20 Pm',
-                sessions: ' Test 2',
-                icon: Icons.drive_folder_upload_outlined,
+                sessions: ' Session 2',
+                icon: null,
               ),
-              SizedBox(height: 100.h),
-              Custombutton(
-                  onTap: () {
-                    GoRouter.of(context).push(RouterNames.TestsPage);
-                  },
-                  text: 'Upload',
-                  width: 151,
-                  hieght: 46,
-                  fontsize: 21,
-                  radius: 15,
-                  color: Color(0xffDF7861),
-                  icon: null,
-                  herozintal: 10,
-                  textcolor: Colors.white)
-            ]),
-          )
-        ],
+            ])
+          ],
+        ),
       ),
-      bottomNavigationBar: const NavBar(),
+      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

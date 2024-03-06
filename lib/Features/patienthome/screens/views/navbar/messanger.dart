@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/chat.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/widgets/custommessanger.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 
 class MessangerPatient extends StatelessWidget {
   const MessangerPatient({super.key});
@@ -35,7 +36,7 @@ class MessangerPatient extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => ChatScreen()));
             },
             child: customMessanger(
-                'Mohamed Magdy',
+                'Ahmed Magdy',
                 'It is a long established fact that a read and will be distracted lisece.',
                 '23:37',
                 Image.asset('assets/images/adamsmith .png')),
@@ -61,7 +62,7 @@ class MessangerPatient extends StatelessWidget {
               )),
         ],
       ),
-      bottomNavigationBar: const NavBar(key: null),
+      bottomNavigationBar: const NavBarPatient(key: null),
     );
   }
 }

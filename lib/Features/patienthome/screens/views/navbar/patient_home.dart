@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 import 'package:graduation_project/utils/app_asset.dart';
 import 'package:graduation_project/utils/app_styles.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class PatientHome extends StatelessWidget {
   const PatientHome({super.key});
@@ -40,31 +43,79 @@ class PatientHome extends StatelessWidget {
                     'Muhammed',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                   ),
-                ])
+                ]),
+                const SizedBox(
+                  width: 150,
+                ),
+                const SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: Icon(
+                    FontAwesomeIcons.facebookMessenger,
+                    color: kPrimaryColor,
+                  ),
+                )
               ]),
               SizedBox(height: 46.h),
               const Align(
                   alignment: Alignment.topLeft,
                   child: Text('Your session at 2:00 pm', style: AppStyels.s18)),
               SizedBox(height: 13.h),
-              Image.asset(AppAssets.patienthomeimage),
-              SizedBox(height: 17.h),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                child: Row(
+                  children: [
+                    CircularPercentIndicator(
+                      radius: 60.0,
+                      animation: true,
+                      animationDuration: 1200,
+                      lineWidth: 15.0,
+                      percent: 0.4,
+                      center: const Text(
+                        "12 hours",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20.0),
+                      ),
+                      circularStrokeCap: CircularStrokeCap.butt,
+                      backgroundColor: const Color(0xffDF7861),
+                      progressColor: kPrimaryColor,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Custombutton(
+                          onTap: () {
+                            GoRouter.of(context).go(RouterNames.Bluetoothpage);
+                          },
+                          text: 'Start',
+                          width: 120,
+                          hieght: 46,
+                          fontsize: 18,
+                          radius: 15,
+                          color: kPrimaryColor,
+                          icon: null,
+                          herozintal: 15,
+                          textcolor: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Row(
                   children: [
-                    SizedBox(width: ScreenUtil().setWidth(33)),
+                    SizedBox(width: ScreenUtil().setWidth(20)),
                     Text('3',
-                        style: AppStyels.s23.copyWith(color: Colors.black)),
-                    SizedBox(width: ScreenUtil().setWidth(55)),
+                        style: AppStyels.s23.copyWith(color: kPrimaryColor)),
+                    SizedBox(width: ScreenUtil().setWidth(66)),
                     Text('2',
                         style: AppStyels.s23.copyWith(color: Colors.green)),
-                    SizedBox(width: ScreenUtil().setWidth(55)),
-                    Text('1',
-                        style: AppStyels.s23.copyWith(color: Colors.yellow)),
-                    SizedBox(width: ScreenUtil().setWidth(55)),
+                    SizedBox(width: ScreenUtil().setWidth(66)),
+                    Text('1', style: AppStyels.s23.copyWith(color: Colors.red)),
+                    SizedBox(width: ScreenUtil().setWidth(50)),
                     Text('12',
-                        style: AppStyels.s23.copyWith(color: Colors.orange)),
+                        style: AppStyels.s23.copyWith(
+                            color: const Color.fromARGB(255, 255, 203, 59))),
                   ],
                 ),
               ),
@@ -93,21 +144,21 @@ class PatientHome extends StatelessWidget {
                   children: [
                     Custombutton(
                         onTap: () {
-                          GoRouter.of(context).go(RouterNames.MedicalTest);
+                          GoRouter.of(context).go(RouterNames.MyMedicalTest);
                         },
-                        text: 'Medcial Tests',
+                        text: 'Medcial Test',
                         width: 151,
                         hieght: 46,
                         fontsize: 18,
                         radius: 15,
-                        color: Color(0xffDF7861),
+                        color: const Color(0xffDF7861),
                         icon: null,
                         herozintal: 1,
                         textcolor: Colors.white),
                     const SizedBox(width: 16),
                     Custombutton(
                         onTap: () {
-                          GoRouter.of(context).go(RouterNames.Appointments);
+                          GoRouter.of(context).go(RouterNames.SessionsPatient);
                         },
                         text: 'Sessions',
                         width: 151,
@@ -116,7 +167,7 @@ class PatientHome extends StatelessWidget {
                         radius: 15,
                         color: const Color(0xff265FD6),
                         icon: null,
-                        herozintal: 11,
+                        herozintal: 15,
                         textcolor: Colors.white),
                   ],
                 ),
@@ -124,9 +175,9 @@ class PatientHome extends StatelessWidget {
               SizedBox(height: 25.h),
               Custombutton(
                   onTap: () {
-                    GoRouter.of(context).go(RouterNames.PatientMedicine);
+                    GoRouter.of(context).go(RouterNames.MyMedicine);
                   },
-                  text: 'My medicine',
+                  text: 'My Medicine',
                   width: 151,
                   hieght: 46,
                   fontsize: 18,
@@ -220,7 +271,7 @@ class PatientHome extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: NavBarPatient(),
+      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

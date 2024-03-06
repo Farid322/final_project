@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
@@ -184,7 +185,7 @@ class AccountInfoPatient extends StatelessWidget {
               textcolor: Colors.white,
             )
           ]))),
-      bottomNavigationBar: const NavBar(),
+      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

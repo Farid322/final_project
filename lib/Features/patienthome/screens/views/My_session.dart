@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Custom_timer.dart';
 import 'package:graduation_project/constant/constant.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
 void main() {
@@ -23,14 +25,19 @@ class _Paitentsession extends State<Paitentsession> {
         appBar: AppBar(
           toolbarHeight: 85,
           automaticallyImplyLeading: true,
-          leading: const Row(
+          leading: Row(
             children: [
               Padding(
-                padding: EdgeInsets.all(10),
-                child: Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
-                  size: 30,
+                padding: const EdgeInsets.all(10),
+                child: InkWell(
+                  onTap: () {
+                    GoRouter.of(context).go(RouterNames.PatientHome);
+                  },
+                  child: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                    size: 30,
+                  ),
                 ),
               ),
             ],

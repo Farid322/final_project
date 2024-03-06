@@ -49,6 +49,7 @@ dependencies:
   http: ^1.1.0
   localization: ^2.1.1
   flutter_localization: ^0.1.10
+  percent_indicator: ^4.2.3
 
 dev_dependencies:
 

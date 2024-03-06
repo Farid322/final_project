@@ -1,29 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custom_container_medicine.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
-class PatientMedicine extends StatefulWidget {
-  const PatientMedicine({super.key});
+class MyMedicine extends StatefulWidget {
+  const MyMedicine({super.key});
 
   @override
-  State<PatientMedicine> createState() => _PatientMedicineState();
+  State<MyMedicine> createState() => _MedicineState();
 }
 
-class _PatientMedicineState extends State<PatientMedicine> {
+class _MedicineState extends State<MyMedicine> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 85,
         automaticallyImplyLeading: true,
-        leading: const Row(
+        leading: Row(
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 30,
+              padding: const EdgeInsets.all(10),
+              child: InkWell(
+                onTap: () {
+                  GoRouter.of(context).go(RouterNames.PatientHome);
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
           ],
@@ -46,6 +55,14 @@ class _PatientMedicineState extends State<PatientMedicine> {
       body: const Center(
         child: Column(
           children: [
+            Padding(
+              padding: EdgeInsets.only(top: 20, bottom: 20, right: 180),
+              child: Text(
+                'Ahmed’s Medicine',
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+                textAlign: TextAlign.left,
+              ),
+            ),
             CustomMedicine(
               text: 'Med 1 ',
             ),
@@ -61,23 +78,10 @@ class _PatientMedicineState extends State<PatientMedicine> {
             CustomMedicine(
               text: 'Med 3',
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Custombutton(
-              text: 'Add Medicine',
-              width: 151,
-              hieght: 46,
-              fontsize: 16,
-              radius: 20,
-              color: Color(0xFF0E5C6D),
-              icon: null,
-              herozintal: 5,
-              textcolor: null,
-            )
           ],
         ),
       ),
+      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

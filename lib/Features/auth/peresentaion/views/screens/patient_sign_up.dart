@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/main.dart';
@@ -22,31 +23,46 @@ class PatientSignUp extends StatelessWidget {
               const SizedBox(
                 width: 375,
               ),
-              Align(
-                alignment:
-                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
-                child: Text(S.of(context).skip,
-                    style: const TextStyle(
-                        color: Color(0xFF0E5C6D),
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500)),
-              ),
-              const SizedBox(width: 17),
-              SizedBox(
-                height: 58,
-                width: 276,
-                child: Text(
-                  S.of(context).Pleaseanswer,
-                  maxLines: 2,
-                  style: const TextStyle(
-                    color: Colors.grey,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  ),
+              Padding(
+                padding: const EdgeInsets.only(left: 300),
+                child: InkWell(
+                  onTap: () {
+                    GoRouter.of(context).go(RouterNames.PatientHome);
+                  },
+                  child: Text(S.of(context).skip,
+                      style: const TextStyle(
+                          color: Color(0xFF0E5C6D),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500)),
                 ),
               ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                        onTap: () {
+                          GoRouter.of(context).go(RouterNames.SignUppatient);
+                        },
+                        child: const Icon(Icons.arrow_back)),
+                  ),
+                  SizedBox(
+                    width: 250,
+                    child: Text(
+                      S.of(context).Pleaseanswer,
+                      maxLines: 2,
+                      style: const TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(
-                height: 92,
+                height: 80,
               ),
               Container(
                   width: 293,
@@ -76,7 +92,7 @@ class PatientSignUp extends StatelessWidget {
                             fontWeight: FontWeight.w500),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 238,
                       height: 56,
                       child: TextFormField(
@@ -98,6 +114,13 @@ class PatientSignUp extends StatelessWidget {
                     ),
                     Row(
                       children: [
+                        const Padding(
+                          padding: EdgeInsets.only(left: 7),
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            color: kPrimaryColor,
+                          ),
+                        ),
                         TextButton(
                           onPressed: () {
                             GoRouter.of(context).go(RouterNames.SignUppatient);
@@ -112,7 +135,7 @@ class PatientSignUp extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          width: 87,
+                          width: 65,
                         ),
                         Container(
                             width: 124,
@@ -131,14 +154,20 @@ class PatientSignUp extends StatelessWidget {
                               ],
                             ),
                             child: Center(
-                              child: Text(
-                                S.of(context).done,
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
+                              child: InkWell(
+                                onTap: () {
+                                  GoRouter.of(context)
+                                      .go(RouterNames.PatientHome);
+                                },
+                                child: Text(
+                                  S.of(context).done,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                  ),
                                 ),
                               ),
                             )),
@@ -234,24 +263,27 @@ class PatientSignUp extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 39),
-              Row(
-                children: [
-                  Text(
-                    S.of(context).Donthave,
-                    style: const TextStyle(
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 70),
+                child: Row(
+                  children: [
+                    Text(
+                      S.of(context).Donthave,
+                      style: const TextStyle(
+                          color: Color(0xFF737373),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      S.of(context).SignupP,
+                      style: const TextStyle(
                         color: Color(0xFF737373),
                         fontSize: 15,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  Text(
-                    S.of(context).SignupP,
-                    style: const TextStyle(
-                      color: Color(0xFF737373),
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  )
-                ],
+                        fontWeight: FontWeight.w600,
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),

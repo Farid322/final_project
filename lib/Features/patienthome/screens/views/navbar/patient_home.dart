@@ -47,12 +47,17 @@ class PatientHome extends StatelessWidget {
                 const SizedBox(
                   width: 150,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 20,
                   height: 20,
-                  child: Icon(
-                    FontAwesomeIcons.facebookMessenger,
-                    color: kPrimaryColor,
+                  child: InkWell(
+                    onTap: () {
+                      GoRouter.of(context).go(RouterNames.MessangerPatient);
+                    },
+                    child: const Icon(
+                      FontAwesomeIcons.facebookMessenger,
+                      color: kPrimaryColor,
+                    ),
                   ),
                 )
               ]),
@@ -71,7 +76,7 @@ class PatientHome extends StatelessWidget {
                       animation: true,
                       animationDuration: 1200,
                       lineWidth: 15.0,
-                      percent: 0.4,
+                      percent: 0.6,
                       center: const Text(
                         "12 hours",
                         style: TextStyle(
@@ -200,7 +205,7 @@ class PatientHome extends StatelessWidget {
               ),
               SizedBox(height: 17.h),
               Container(
-                width: 350,
+                width: 335,
                 height: 185,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
@@ -215,56 +220,53 @@ class PatientHome extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
-                        child: Column(
-                          children: [
-                            const Text(
-                              'Dr. Serena Gome',
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      child: Column(
+                        children: [
+                          const Text(
+                            'Dr. Serena Gome',
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w600),
+                          ),
+                          const Text('Medicine Specialist',
                               style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w600),
-                            ),
-                            const Text('Medicine Specialist',
-                                style: TextStyle(
-                                    fontSize: 10, fontWeight: FontWeight.w500)),
-                            SizedBox(height: 9.h),
-                            Image.asset(AppAssets.ratingimage),
-                            SizedBox(height: 27.h),
-                            const Text('Experience',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.grey)),
-                            SizedBox(height: 9.h),
-                            Text('8 Years',
-                                style: AppStyels.s18
-                                    .copyWith(fontWeight: FontWeight.normal)),
-                            SizedBox(height: 17.h),
-                            const Custombutton(
-                                text: 'Details',
-                                width: 100,
-                                hieght: 30,
-                                fontsize: 15,
-                                radius: 10,
-                                color: Color(0xff0E5C6D),
-                                icon: null,
-                                herozintal: 5,
-                                textcolor: Colors.white),
-                          ],
-                        ),
+                                  fontSize: 10, fontWeight: FontWeight.w500)),
+                          SizedBox(height: 9.h),
+                          Image.asset(AppAssets.ratingimage),
+                          SizedBox(height: 27.h),
+                          const Text('Experience',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.grey)),
+                          SizedBox(height: 9.h),
+                          Text('8 Years',
+                              style: AppStyels.s18
+                                  .copyWith(fontWeight: FontWeight.normal)),
+                          SizedBox(height: 17.h),
+                          const Custombutton(
+                              text: 'Details',
+                              width: 100,
+                              hieght: 30,
+                              fontsize: 15,
+                              radius: 10,
+                              color: Color(0xff0E5C6D),
+                              icon: null,
+                              herozintal: 5,
+                              textcolor: Colors.white),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 25, vertical: 8),
-                        child: Image.asset(
-                            'assets/images/5175-removebg-preview 1.png'),
-                      )
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 6),
+                      child: Image.asset(
+                          'assets/images/5175-removebg-preview 1.png'),
+                    )
+                  ],
                 ),
               )
             ]),

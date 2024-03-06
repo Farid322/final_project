@@ -64,14 +64,14 @@ class SettingPagePatient extends StatelessWidget {
             const SizedBox(height: 10),
             InkWell(
                 onTap: () {
-                  GoRouter.of(context).push(RouterNames.AboutUs);
+                  GoRouter.of(context).push(RouterNames.AboutUsPatient);
                 },
                 child: itemProfile(
                     'About us', '', UniconsLine.info_circle, () {})),
             const SizedBox(height: 10),
             InkWell(
               onTap: () {
-                GoRouter.of(context).push(RouterNames.DoctorLoginPage);
+                GoRouter.of(context).push(RouterNames.PatientLoginPage);
               },
               child: itemProfile(
                 'Logout',

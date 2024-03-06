@@ -42,17 +42,17 @@ class MessangerPatient extends StatelessWidget {
                 Image.asset('assets/images/adamsmith .png')),
           ),
           customMessanger(
-              'ahmed ali',
+              'omar ali',
               'It is a long established fact that a read and will be distracted lisece.',
               '23:37',
               Image.asset('assets/images/patientpic1.png')),
           customMessanger(
-              'muhammed ahmed',
+              'sally ahmed',
               'It is a long established fact that a read and will be distracted lisece.',
               '23:37',
               Image.asset('assets/images/patientpic2.png')),
           customMessanger(
-              'adam osama',
+              'rahma osama',
               'It is a long established fact that a read and will be distracted lisece.',
               '23:37',
               Image.asset(

@@ -15,6 +15,9 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/med
 import 'package:graduation_project/Features/patienthome/screens/views/My_Appointments.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_medicine.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_session.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/abutus/first_about_us.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/abutus/second_about_us.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/abutus/third_about_us.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/Notification.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/messanger.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/Privacy.dart';
@@ -117,6 +120,9 @@ class RouterNames {
   static const MyAppointments = '/MyAppointments';
   static const MyMedicine = '/MyMedicine';
   static const SessionsPatient = '/SessionsPatient';
+  static const AboutUsPatient = '/AboutUsPatient';
+  static const SecondAboutUsPatient = '/SecondAboutUsPatient';
+  static const ThirdAboutUsPatient = '/ThirdAboutUsPatient';
 }
 
 abstract class AppRouter {
@@ -317,6 +323,18 @@ abstract class AppRouter {
     GoRoute(
       path: RouterNames.SessionsPatient,
       builder: (context, state) => const SessionsPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.AboutUsPatient,
+      builder: (context, state) => const AboutUsPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.SecondAboutUsPatient,
+      builder: (context, state) => const SecondAboutUsPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.ThirdAboutUsPatient,
+      builder: (context, state) => const ThirdAboutUsPatient(),
     ),
   ]);
 }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/constant/constant.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 import 'package:graduation_project/core/widgets2/costom_text_feild.dart';
 
@@ -20,7 +22,7 @@ class PrivacyPatient extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: InkWell(
                 onTap: () {
-                  Navigator.pop(context);
+                  GoRouter.of(context).go(RouterNames.SettingPagePatient);
                 },
                 child: const Icon(
                   Icons.arrow_back,

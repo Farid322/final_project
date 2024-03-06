@@ -35,6 +35,7 @@ class _PatientLoginPageState extends State<PatientLoginPage> {
     }
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 90.w),
         child: SingleChildScrollView(

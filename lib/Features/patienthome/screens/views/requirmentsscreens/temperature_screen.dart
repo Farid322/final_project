@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/requirments_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 
 import '../../../../../core/routes/app_routes.dart';
@@ -19,9 +20,9 @@ class TemperaturePage extends StatelessWidget {
           child: Column(children: [
             const Center(child: Text('Diabelt', style: AppStyels.s23)),
             const SizedBox(height: 47),
-            const Center(
-                child: Text(
-                    'Please answer those Questions .To get more details ..')),
+            Center(
+              child: Text(S.of(context).PleaseAnswer),
+            ),
             const SizedBox(height: 33),
             Container(
               width: 293,
@@ -54,7 +55,7 @@ class TemperaturePage extends StatelessWidget {
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-                  child: Text('what is your temperature?',
+                  child: Text(S.of(context).temperature,
                       style:
                           AppStyels.s18.copyWith(fontWeight: FontWeight.w500)),
                 ),
@@ -84,9 +85,9 @@ class TemperaturePage extends StatelessWidget {
                 onPressed: () {
                   GoRouter.of(context).go(RouterNames.PressurePage);
                 },
-                child: const Text(
-                  'Back',
-                  style: TextStyle(
+                child: Text(
+                  S.of(context).back,
+                  style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                       color: Color(0xFF0E5C6D),
@@ -97,7 +98,7 @@ class TemperaturePage extends StatelessWidget {
                 width: ScreenUtil().setWidth(140),
               ),
               Button(
-                text: 'Next',
+                text: S.of(context).Next,
                 onTap: () {
                   GoRouter.of(context).go(RouterNames.WeightPage);
                 },

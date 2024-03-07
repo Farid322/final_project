@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class ResetPasswordPatient extends StatelessWidget {
   const ResetPasswordPatient({super.key});
@@ -20,11 +21,11 @@ class ResetPasswordPatient extends StatelessWidget {
             const SizedBox(
               height: 53,
             ),
-            const Text(
-              'password changed',
+            Text(
+              S.of(context).Passwordchanged,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
@@ -34,7 +35,7 @@ class ResetPasswordPatient extends StatelessWidget {
               height: 8,
             ),
             Text(
-              'Your password has been changed successfully',
+              S.of(context).yourpassword,
               maxLines: 2,
               style: TextStyle(
                   color: Colors.white.withOpacity(0.800000011920929),
@@ -63,11 +64,11 @@ class ResetPasswordPatient extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: const Center(
+                  child: Center(
                     child: Text(
-                      'Go back to login',
+                      S.of(context).Gobacktologin,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xFF496664),
                         fontSize: 20,
                         fontWeight: FontWeight.w300,

@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 import 'package:graduation_project/core/widgets/custom_text_form_field.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 class EnterCode extends StatelessWidget {
   const EnterCode({super.key});
@@ -21,11 +23,11 @@ class EnterCode extends StatelessWidget {
             const SizedBox(
               height: 38,
             ),
-            const Text(
-              'Reset your password',
+            Text(
+              S.of(context).Restpassword,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black87,
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
@@ -34,40 +36,44 @@ class EnterCode extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            const Text(
-              'Please type something  you’ll remember',
+            Text(
+              S.of(context).pleasetype,
               maxLines: 2,
-              style: TextStyle(color: Colors.grey, fontSize: 14),
+              style: const TextStyle(color: Colors.grey, fontSize: 14),
             ),
             const SizedBox(
               height: 40,
             ),
-            const Align(
-                alignment: Alignment.centerLeft,
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                 child: Text(
-                  'New Password',
+                  S.of(context).Newpassword,
                 )),
             const SizedBox(
               height: 5,
             ),
-            CustomTextFormField(hintText: 'must be 8 characters'),
+            CustomTextFormField(
+              hintText: S.of(context).mustbe8characters,
+            ),
             const SizedBox(
               height: 43,
             ),
-            const Align(
-                alignment: Alignment.centerLeft,
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                 child: Text(
-                  'Confirm New Password',
+                  S.of(context).ConfirmPassword,
                 )),
             const SizedBox(
               height: 5,
             ),
-            CustomTextFormField(hintText: 'repeate password'),
+            CustomTextFormField(hintText: S.of(context).repeatpassword),
             const SizedBox(
               height: 49,
             ),
             CustomButton(
-              text: 'Rest Password',
+              text: S.of(context).Restpassword,
               onTap: () {
                 GoRouter.of(context).go(RouterNames.ResetPassword);
               },

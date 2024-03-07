@@ -51,9 +51,9 @@ class _PatientLoginPageState extends State<PatientLoginPage> {
                               .go(RouterNames.PatientRegisterPage);
                         },
                         child: const Icon(Icons.arrow_back)),
-                    const Text(
-                      ' Log in',
-                      style: TextStyle(
+                    Text(
+                      S.of(context).loginP,
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
@@ -65,8 +65,8 @@ class _PatientLoginPageState extends State<PatientLoginPage> {
               SizedBox(
                 height: 16.h,
               ),
-              const Text(
-                'Hello, welcome back to your account',
+              Text(
+                S.of(context).Hellowelcomebacktoouraccount,
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -79,7 +79,9 @@ class _PatientLoginPageState extends State<PatientLoginPage> {
               SizedBox(
                 height: 5.h,
               ),
-              CustomTextFormField(hintText: 'Enter Your Email'),
+              CustomTextFormField(
+                hintText: S.of(context).enteryouremail,
+              ),
               SizedBox(
                 height: 33.h,
               ),
@@ -89,7 +91,7 @@ class _PatientLoginPageState extends State<PatientLoginPage> {
                   child: Text(S.of(context).password)),
               SizedBox(height: 5.h),
               CustomTextFormField(
-                hintText: 'Enter Your Password',
+                hintText: S.of(context).enteryourpassword,
               ),
               SizedBox(
                 height: 19.h,
@@ -108,7 +110,7 @@ class _PatientLoginPageState extends State<PatientLoginPage> {
                         fontSize: 14, fontWeight: FontWeight.w400),
                   ),
                   SizedBox(
-                    width: ScreenUtil().setWidth(80),
+                    width: ScreenUtil().setWidth(isArabic() ? (150) : (80)),
                   ),
                   TextButton(
                     onPressed: () {

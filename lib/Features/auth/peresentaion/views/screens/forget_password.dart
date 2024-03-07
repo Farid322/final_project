@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -24,11 +25,11 @@ class ForgetPassword extends StatelessWidget {
               SizedBox(
                 height: ScreenUtil().setHeight(20),
               ),
-              const Text(
-                'Forget password ?',
+              Text(
+                S.of(context).Forgetpassword,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black87,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -37,16 +38,16 @@ class ForgetPassword extends StatelessWidget {
               SizedBox(
                 height: ScreenUtil().setHeight(8),
               ),
-              const Text(
-                'please choose way from those options to rest your password',
+              Text(
+                S.of(context).Pleasechoose,
                 maxLines: 2,
-                style: TextStyle(color: Colors.grey, fontSize: 14),
+                style: const TextStyle(color: Colors.grey, fontSize: 14),
               ),
               SizedBox(
                 height: ScreenUtil().setHeight(50),
               ),
               CustomButton(
-                text: 'Send an email',
+                text: S.of(context).Sendanemail,
                 onTap: () {
                   GoRouter.of(context).go(RouterNames.Erorremail);
                 },
@@ -54,17 +55,17 @@ class ForgetPassword extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(
                     vertical: ScreenUtil().setHeight(20),
-                    horizontal: ScreenUtil().setWidth(50)),
+                    horizontal: ScreenUtil().setWidth(40)),
                 child: Row(
                   children: [
-                    const Text('Remember password ?'),
+                    Text(S.of(context).Rememberpassword),
                     InkWell(
                       onTap: () {
                         GoRouter.of(context).go(RouterNames.DoctorLoginPage);
                       },
-                      child: const Text(
-                        'login',
-                        style: TextStyle(
+                      child: Text(
+                        S.of(context).loginP,
+                        style: const TextStyle(
                           color: Color(0xFF737373),
                           fontSize: 15,
                           fontWeight: FontWeight.w600,

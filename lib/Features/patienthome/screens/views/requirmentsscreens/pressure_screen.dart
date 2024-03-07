@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/requirments_button.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 
 class PressurePage extends StatelessWidget {
@@ -18,9 +20,7 @@ class PressurePage extends StatelessWidget {
             children: [
               const Center(child: Text('Diabelt', style: AppStyels.s23)),
               const SizedBox(height: 47),
-              const Center(
-                  child: Text(
-                      'Please answer those Questions .To get more details ..')),
+              Center(child: Text(S.of(context).PleaseAnswer)),
               const SizedBox(height: 40),
               Container(
                 width: 293,
@@ -53,12 +53,12 @@ class PressurePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20, vertical: 30),
-                    child: Text('what is your pressure rate?',
+                    child: Text(S.of(context).pressure,
                         style: AppStyels.s18
                             .copyWith(fontWeight: FontWeight.w500)),
                   ),
                   const SizedBox(height: 32),
-                  Container(
+                  SizedBox(
                     width: 238,
                     height: 56,
                     child: TextFormField(
@@ -79,9 +79,10 @@ class PressurePage extends StatelessWidget {
               ),
               const SizedBox(height: 21),
               Align(
-                  alignment: Alignment.bottomRight,
+                  alignment:
+                      isArabic() ? Alignment.bottomLeft : Alignment.bottomRight,
                   child: Button(
-                    text: 'Next',
+                    text: S.of(context).Next,
                     onTap: () {
                       GoRouter.of(context).go(RouterNames.TemperaturePage);
                     },

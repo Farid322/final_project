@@ -6,6 +6,8 @@ import 'package:graduation_project/Features/patienthome/screens/widgets/Navigati
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 import 'package:graduation_project/utils/app_asset.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -17,54 +19,60 @@ class PatientHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(13),
+        padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: ScreenUtil().setHeight(33)),
+            padding: EdgeInsets.symmetric(vertical: ScreenUtil().setHeight(40)),
             child: Column(children: [
               SizedBox(
-                width: ScreenUtil().setWidth(10),
+                width: ScreenUtil().setWidth(80),
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                Image.asset(
-                  'assets/images/Ellipse 18.png',
-                  height: ScreenUtil().setHeight(70),
-                  width: ScreenUtil().setWidth(70),
-                ),
-                const SizedBox(
-                  width: 5,
-                ),
-                const Column(children: [
-                  Text(
-                    ' Hi,Welcome Back',
-                    style: TextStyle(color: Colors.grey),
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Image.asset(
+                    'assets/images/Ellipse 18.png',
+                    height: ScreenUtil().setHeight(70),
+                    width: ScreenUtil().setWidth(70),
                   ),
-                  Text(
-                    'Muhammed',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  const SizedBox(
+                    width: 5,
                   ),
-                ]),
-                const SizedBox(
-                  width: 150,
-                ),
-                SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: InkWell(
-                    onTap: () {
-                      GoRouter.of(context).go(RouterNames.MessangerPatient);
-                    },
-                    child: const Icon(
-                      FontAwesomeIcons.facebookMessenger,
-                      color: kPrimaryColor,
+                  Column(children: [
+                    Text(
+                      S.of(context).HiWelcomeBack,
+                      style: const TextStyle(color: Colors.grey),
                     ),
+                    Text(
+                      S.of(context).Muhammed,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 15),
+                    ),
+                  ]),
+                  SizedBox(
+                    width: isArabic() ? (90) : (150),
                   ),
-                )
-              ]),
+                  SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: InkWell(
+                      onTap: () {
+                        GoRouter.of(context).go(RouterNames.MessangerPatient);
+                      },
+                      child: const Icon(
+                        FontAwesomeIcons.facebookMessenger,
+                        color: kPrimaryColor,
+                      ),
+                    ),
+                  )
+                ]),
+              ),
               SizedBox(height: 46.h),
-              const Align(
-                  alignment: Alignment.topLeft,
-                  child: Text('Your session at 2:00 pm', style: AppStyels.s18)),
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.topRight : Alignment.topLeft,
+                  child: Text(S.of(context).yoursession, style: AppStyels.s18)),
               SizedBox(height: 13.h),
               Padding(
                 padding:
@@ -77,9 +85,9 @@ class PatientHome extends StatelessWidget {
                       animationDuration: 1200,
                       lineWidth: 15.0,
                       percent: 0.6,
-                      center: const Text(
-                        "12 hours",
-                        style: TextStyle(
+                      center: Text(
+                        S.of(context).hours,
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20.0),
                       ),
                       circularStrokeCap: CircularStrokeCap.butt,
@@ -92,30 +100,34 @@ class PatientHome extends StatelessWidget {
                           onTap: () {
                             GoRouter.of(context).go(RouterNames.Bluetoothpage);
                           },
-                          text: 'Start',
+                          text: S.of(context).start,
                           width: 120,
                           hieght: 46,
                           fontsize: 18,
                           radius: 15,
                           color: kPrimaryColor,
                           icon: null,
-                          herozintal: 15,
+                          herozintal: isArabic() ? (25) : (15),
                           textcolor: Colors.white),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
+                padding:
+                    EdgeInsets.symmetric(horizontal: isArabic() ? (20) : (25)),
                 child: Row(
                   children: [
-                    SizedBox(width: ScreenUtil().setWidth(20)),
+                    SizedBox(
+                        width: ScreenUtil().setWidth(isArabic() ? (20) : (20))),
                     Text('3',
                         style: AppStyels.s23.copyWith(color: kPrimaryColor)),
-                    SizedBox(width: ScreenUtil().setWidth(66)),
+                    SizedBox(
+                        width: ScreenUtil().setWidth(isArabic() ? (75) : (66))),
                     Text('2',
                         style: AppStyels.s23.copyWith(color: Colors.green)),
-                    SizedBox(width: ScreenUtil().setWidth(66)),
+                    SizedBox(
+                        width: ScreenUtil().setWidth(isArabic() ? (45) : (66))),
                     Text('1', style: AppStyels.s23.copyWith(color: Colors.red)),
                     SizedBox(width: ScreenUtil().setWidth(50)),
                     Text('12',
@@ -125,19 +137,23 @@ class PatientHome extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
+                padding:
+                    EdgeInsets.symmetric(horizontal: isArabic() ? (20) : (25)),
                 child: Row(
                   children: [
-                    Text('Total sessions',
+                    Text(S.of(context).Totalsessions,
                         style: AppStyels.s14.copyWith(color: Colors.grey)),
-                    SizedBox(width: ScreenUtil().setWidth(10)),
-                    Text('Completed',
+                    SizedBox(
+                        width: ScreenUtil().setWidth(isArabic() ? (20) : (10))),
+                    Text(S.of(context).Completed,
                         style: AppStyels.s14.copyWith(color: Colors.grey)),
-                    SizedBox(width: ScreenUtil().setWidth(10)),
-                    Text('Delayed',
+                    SizedBox(
+                        width: ScreenUtil().setWidth(isArabic() ? (20) : (10))),
+                    Text(S.of(context).Delayed,
                         style: AppStyels.s14.copyWith(color: Colors.grey)),
-                    SizedBox(width: ScreenUtil().setWidth(10)),
-                    Text('Min hours',
+                    SizedBox(
+                        width: ScreenUtil().setWidth(isArabic() ? (20) : (10))),
+                    Text(S.of(context).Minhours,
                         style: AppStyels.s14.copyWith(color: Colors.grey)),
                   ],
                 ),
@@ -151,28 +167,28 @@ class PatientHome extends StatelessWidget {
                         onTap: () {
                           GoRouter.of(context).go(RouterNames.MyMedicalTest);
                         },
-                        text: 'Medcial Test',
+                        text: S.of(context).MedicalTests,
                         width: 151,
                         hieght: 46,
                         fontsize: 18,
                         radius: 15,
                         color: const Color(0xffDF7861),
                         icon: null,
-                        herozintal: 1,
+                        herozintal: isArabic() ? (1) : (1),
                         textcolor: Colors.white),
                     const SizedBox(width: 16),
                     Custombutton(
                         onTap: () {
                           GoRouter.of(context).go(RouterNames.SessionsPatient);
                         },
-                        text: 'Sessions',
+                        text: S.of(context).Sessions,
                         width: 151,
                         hieght: 46,
                         fontsize: 18,
                         radius: 15,
                         color: const Color(0xff265FD6),
                         icon: null,
-                        herozintal: 15,
+                        herozintal: isArabic() ? (23) : (15),
                         textcolor: Colors.white),
                   ],
                 ),
@@ -182,23 +198,23 @@ class PatientHome extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).go(RouterNames.MyMedicine);
                   },
-                  text: 'My Medicine',
+                  text: S.of(context).Mymedicine,
                   width: 151,
                   hieght: 46,
                   fontsize: 18,
                   radius: 15,
                   color: const Color(0xff0E5C6D),
                   icon: null,
-                  herozintal: 2,
+                  herozintal: isArabic() ? (25) : (2),
                   textcolor: Colors.white),
               SizedBox(height: 13.h),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   children: [
-                    Text('My Doctor',
+                    Text(S.of(context).MyDoctor,
                         style: AppStyels.s18.copyWith(color: Colors.grey)),
-                    SizedBox(width: 207.w),
+                    SizedBox(width: isArabic() ? (270) : (207)),
                     const Icon(Icons.search, size: 32)
                   ],
                 ),

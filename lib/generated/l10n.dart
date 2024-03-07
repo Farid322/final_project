@@ -499,6 +499,460 @@ class S {
       args: [],
     );
   }
+
+  // skipped getter for the 'Log-In' key
+
+  /// `Login with Google`
+  String get LoginwithGoogle {
+    return Intl.message(
+      'Login with Google',
+      name: 'LoginwithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login with Facebook`
+  String get LoginwithFacebook {
+    return Intl.message(
+      'Login with Facebook',
+      name: 'LoginwithFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'Don’thaveanaccount?' key
+
+  /// `Hello, welcome back to our account`
+  String get Hellowelcomebacktoouraccount {
+    return Intl.message(
+      'Hello, welcome back to our account',
+      name: 'Hellowelcomebacktoouraccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please choose way from those options to rest your password`
+  String get Pleasechoose {
+    return Intl.message(
+      'Please choose way from those options to rest your password',
+      name: 'Pleasechoose',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send an email`
+  String get Sendanemail {
+    return Intl.message(
+      'Send an email',
+      name: 'Sendanemail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember password?`
+  String get Rememberpassword {
+    return Intl.message(
+      'Remember password?',
+      name: 'Rememberpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t worry! It happens. Please enter the email associated with your account.`
+  String get Dontworry {
+    return Intl.message(
+      'Don’t worry! It happens. Please enter the email associated with your account.',
+      name: 'Dontworry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Code`
+  String get SendCode {
+    return Intl.message(
+      'Send Code',
+      name: 'SendCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check Your Email`
+  String get CheckYourEmail {
+    return Intl.message(
+      'Check Your Email',
+      name: 'CheckYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We’ve sent a code to `
+  String get Wevesent {
+    return Intl.message(
+      'We’ve sent a code to ',
+      name: 'Wevesent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I didn’t receive a code`
+  String get Ididnt {
+    return Intl.message(
+      'I didn’t receive a code',
+      name: 'Ididnt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend`
+  String get Resend {
+    return Intl.message(
+      'Resend',
+      name: 'Resend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset your password`
+  String get Reset {
+    return Intl.message(
+      'Reset your password',
+      name: 'Reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please type something you’ll remember`
+  String get pleasetype {
+    return Intl.message(
+      'Please type something you’ll remember',
+      name: 'pleasetype',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New password`
+  String get Newpassword {
+    return Intl.message(
+      'New password',
+      name: 'Newpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `must be 8 characters`
+  String get mustbe8characters {
+    return Intl.message(
+      'must be 8 characters',
+      name: 'mustbe8characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm new password`
+  String get Confirm {
+    return Intl.message(
+      'Confirm new password',
+      name: 'Confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `repeat password`
+  String get repeatpassword {
+    return Intl.message(
+      'repeat password',
+      name: 'repeatpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rest password`
+  String get Restpassword {
+    return Intl.message(
+      'Rest password',
+      name: 'Restpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password changed`
+  String get Passwordchanged {
+    return Intl.message(
+      'Password changed',
+      name: 'Passwordchanged',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your password has been changed successfully`
+  String get yourpassword {
+    return Intl.message(
+      'Your password has been changed successfully',
+      name: 'yourpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go back to login`
+  String get Gobacktologin {
+    return Intl.message(
+      'Go back to login',
+      name: 'Gobacktologin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Email`
+  String get enteryouremail {
+    return Intl.message(
+      'Enter Your Email',
+      name: 'enteryouremail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Password`
+  String get enteryourpassword {
+    return Intl.message(
+      'Enter Your Password',
+      name: 'enteryourpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hi,Welcome Back,`
+  String get HiWelcomeBack {
+    return Intl.message(
+      'Hi,Welcome Back,',
+      name: 'HiWelcomeBack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Muhammed`
+  String get Muhammed {
+    return Intl.message(
+      'Muhammed',
+      name: 'Muhammed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your session at 2:00 pm`
+  String get yoursession {
+    return Intl.message(
+      'Your session at 2:00 pm',
+      name: 'yoursession',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total sessions`
+  String get Totalsessions {
+    return Intl.message(
+      'Total sessions',
+      name: 'Totalsessions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completed`
+  String get Completed {
+    return Intl.message(
+      'Completed',
+      name: 'Completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delayed`
+  String get Delayed {
+    return Intl.message(
+      'Delayed',
+      name: 'Delayed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Min hours`
+  String get Minhours {
+    return Intl.message(
+      'Min hours',
+      name: 'Minhours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medical Test`
+  String get MedicalTests {
+    return Intl.message(
+      'Medical Test',
+      name: 'MedicalTests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Sessions`
+  String get Sessions {
+    return Intl.message(
+      ' Sessions',
+      name: 'Sessions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Medicine`
+  String get Mymedicine {
+    return Intl.message(
+      'My Medicine',
+      name: 'Mymedicine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Doctor`
+  String get MyDoctor {
+    return Intl.message(
+      'My Doctor',
+      name: 'MyDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `12 hours`
+  String get hours {
+    return Intl.message(
+      '12 hours',
+      name: 'hours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bluetooth`
+  String get Bluetooth {
+    return Intl.message(
+      'Bluetooth',
+      name: 'Bluetooth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We aim to save time by using dialysis belt: Using programming technology and artificial intelligence with easy application which the patient can follow up with the process of dialysis and his vital sign, please, turn on your bluetooth to let us help you. `
+  String get BluetoothInfo {
+    return Intl.message(
+      'We aim to save time by using dialysis belt: Using programming technology and artificial intelligence with easy application which the patient can follow up with the process of dialysis and his vital sign, please, turn on your bluetooth to let us help you. ',
+      name: 'BluetoothInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please answer those Questions .To get more details ..`
+  String get PleaseAnswer {
+    return Intl.message(
+      'Please answer those Questions .To get more details ..',
+      name: 'PleaseAnswer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is your pressure rate?`
+  String get pressure {
+    return Intl.message(
+      'What is your pressure rate?',
+      name: 'pressure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is your temperature?`
+  String get temperature {
+    return Intl.message(
+      'What is your temperature?',
+      name: 'temperature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is your weight ?`
+  String get waight {
+    return Intl.message(
+      'What is your weight ?',
+      name: 'waight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Result is `
+  String get YourResultis {
+    return Intl.message(
+      'Your Result is ',
+      name: 'YourResultis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You are ready to start session`
+  String get Acceptedresult {
+    return Intl.message(
+      'You are ready to start session',
+      name: 'Acceptedresult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can’t start the session, call the doctor please.`
+  String get refuseresult {
+    return Intl.message(
+      'You can’t start the session, call the doctor please.',
+      name: 'refuseresult',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

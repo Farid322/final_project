@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 import 'package:graduation_project/utils/app_asset.dart';
 
 import '../../../../../core/routes/app_routes.dart';
@@ -19,25 +21,27 @@ class BluetoothPage extends StatelessWidget {
                   image: AssetImage("assets/images/Ellipse 63.png"),
                   fit: BoxFit.cover),
             ),
-            child: const Column(
+            child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 60,
                 ),
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 6,
                     ),
-                    Icon(Icons.arrow_back, color: Colors.white),
-                    SizedBox(
+                    const Icon(Icons.arrow_back, color: Colors.white),
+                    const SizedBox(
                       width: 7,
                     ),
                     Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: isArabic()
+                          ? Alignment.topRight
+                          : Alignment.bottomLeft,
                       child: Text(
-                        'Bluetooth',
-                        style: TextStyle(
+                        S.of(context).Bluetooth,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 24,
                           fontFamily: 'Roboto',
@@ -48,15 +52,15 @@ class BluetoothPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 SizedBox(
                     height: 150,
                     width: 315,
                     child: Text(
-                      'We aim to save time by using dialysis belt: Using programming technology and artificial intelligence with easy application which the patient can follow up with the process of dialysis and his vital sign, please, turn on your bluetooth to let us help you.',
-                      style: TextStyle(
+                      S.of(context).BluetoothInfo,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontFamily: 'Roboto',
                           fontSize: 15,
@@ -85,11 +89,11 @@ class BluetoothPage extends StatelessWidget {
                     )
                   ],
                 ),
-                child: const Center(
+                child: Center(
                   child: Text(
-                    'Start',
+                    S.of(context).start,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontFamily: 'Roboto',
                       fontSize: 20,

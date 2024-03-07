@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 
 class AccptedResultPage extends StatelessWidget {
@@ -17,11 +19,13 @@ class AccptedResultPage extends StatelessWidget {
             vertical: ScreenUtil().setHeight(79)),
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 40),
+            Padding(
+              padding: const EdgeInsets.only(top: 40),
               child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text('Your Result is', style: AppStyels.s18)),
+                  alignment:
+                      isArabic() ? Alignment.topRight : Alignment.topLeft,
+                  child:
+                      Text(S.of(context).YourResultis, style: AppStyels.s18)),
             ),
             SizedBox(height: ScreenUtil().setHeight(80)),
             Container(
@@ -40,10 +44,10 @@ class AccptedResultPage extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Align(
+              child: Align(
                 alignment: Alignment.center,
-                child: Text('You are ready to start session',
-                    style: TextStyle(
+                child: Text(S.of(context).Acceptedresult,
+                    style: const TextStyle(
                         color: Color.fromRGBO(151, 151, 151, 1),
                         fontSize: 17,
                         fontWeight: FontWeight.w500)),
@@ -54,13 +58,13 @@ class AccptedResultPage extends StatelessWidget {
                 onTap: () {
                   GoRouter.of(context).go(RouterNames.WeightPage);
                 },
-                child: const CustomButton(text: 'Go back ')),
+                child: CustomButton(text: S.of(context).back)),
             const SizedBox(height: 16),
             InkWell(
                 onTap: () {
                   GoRouter.of(context).go(RouterNames.Paitentsession);
                 },
-                child: const CustomButton(text: 'Start'))
+                child: CustomButton(text: S.of(context).start))
           ],
         ),
       ),

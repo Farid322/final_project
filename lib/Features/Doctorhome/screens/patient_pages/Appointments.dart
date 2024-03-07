@@ -20,7 +20,7 @@ class Appointments extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: InkWell(
                 onTap: () {
-                  GoRouter.of(context).go(RouterNames.Patientprofile);
+                  GoRouter.of(context).go(RouterNames.DoctorHome);
                 },
                 child: const Icon(
                   Icons.arrow_back,

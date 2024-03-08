@@ -6,6 +6,8 @@ import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigatio
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/custom_session.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 class SessionsPatient extends StatelessWidget {
   const SessionsPatient({super.key});
@@ -34,9 +36,9 @@ class SessionsPatient extends StatelessWidget {
           ],
         ),
         shadowColor: const Color.fromARGB(31, 255, 255, 255),
-        title: const Text(
-          'Sessions',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Sessions,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -54,13 +56,17 @@ class SessionsPatient extends StatelessWidget {
             SizedBox(
               height: ScreenUtil().setHeight(30),
             ),
-            const Padding(
-              padding: EdgeInsets.all(15.0),
+            Padding(
+              padding: EdgeInsets.only(
+                  top: 20,
+                  bottom: 20,
+                  right: isArabic() ? (0) : (180),
+                  left: isArabic() ? (140) : (0)),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  'Next Session at 2:00 pm',
-                  style: TextStyle(
+                  S.of(context).NextSession,
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                   ),
@@ -68,23 +74,23 @@ class SessionsPatient extends StatelessWidget {
               ),
             ),
             Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-              const CustomSessionPatient(
-                date: 'Date',
-                time: 'Time',
-                yourdate: '03 August 2020',
-                yourtime: '2.20 Pm',
-                sessions: ' Session 1',
+              CustomSessionPatient(
+                date: S.of(context).Date,
+                time: S.of(context).Time,
+                yourdate: S.of(context).august,
+                yourtime: S.of(context).pm,
+                sessions: S.of(context).Test,
                 icon: null,
               ),
               SizedBox(
                 height: ScreenUtil().setHeight(30),
               ),
-              const CustomSessionPatient(
-                date: 'Date',
-                time: 'Time',
-                yourdate: '03 August 2020',
-                yourtime: '2.20 Pm',
-                sessions: ' Session 2',
+              CustomSessionPatient(
+                date: S.of(context).Date,
+                time: S.of(context).Time,
+                yourdate: S.of(context).august,
+                yourtime: S.of(context).pm,
+                sessions: S.of(context).Test,
                 icon: null,
               ),
             ])

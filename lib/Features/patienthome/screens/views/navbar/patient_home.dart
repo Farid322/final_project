@@ -51,7 +51,7 @@ class PatientHome extends StatelessWidget {
                     ),
                   ]),
                   SizedBox(
-                    width: isArabic() ? (90) : (150),
+                    width: isArabic() ? (150) : (150),
                   ),
                   SizedBox(
                     width: 20,

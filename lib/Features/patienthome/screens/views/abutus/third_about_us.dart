@@ -6,6 +6,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/set
 import 'package:graduation_project/Features/patienthome/screens/views/setting_pages/setting.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class ThirdAboutUsPatient extends StatelessWidget {
   const ThirdAboutUsPatient({super.key});
@@ -33,9 +34,9 @@ class ThirdAboutUsPatient extends StatelessWidget {
           ],
         ),
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'About Us',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Aboutus,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -70,13 +71,13 @@ class ThirdAboutUsPatient extends StatelessWidget {
               //color: Colors.white,
               width: ScreenUtil().setWidth(327),
               height: ScreenUtil().setHeight(200),
-              child: const Center(
+              child: Center(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Because kidneys are vital to so many of the bodys functions, kidney disease also increases your risk of having heart and blood vessel disease',
+                    S.of(context).Because,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ksecondryColor,
                       fontFamily: 'Roboto',
                       fontSize: 16,
@@ -105,7 +106,9 @@ class ThirdAboutUsPatient extends StatelessWidget {
                 onPressed: () {
                   GoRouter.of(context).go(RouterNames.SettingPagePatient);
                 },
-                child: const Text('Done')),
+                child: Text(
+                  S.of(context).done,
+                )),
           ),
         ],
       ),

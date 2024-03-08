@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/utils/app_asset.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 
@@ -33,16 +34,18 @@ class UploadTestPage extends StatelessWidget {
               padding: const EdgeInsets.all(21),
               child: Column(
                 children: [
-                  const Text('To upload your test', style: AppStyels.s18),
+                  Text(S.of(context).Toupload, style: AppStyels.s18),
                   const SizedBox(height: 17),
                   Image.asset(AppAssets.uploadtestimage),
                   const SizedBox(height: 21),
-                  const CustomButton(text: 'Use camera'),
+                  CustomButton(
+                    text: S.of(context).Usecamera,
+                  ),
                   const SizedBox(height: 12),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 110,
                         child: Divider(
                           color: Color(0xFF5D5D5D),
@@ -50,8 +53,10 @@ class UploadTestPage extends StatelessWidget {
                           thickness: 1,
                         ),
                       ),
-                      Text('OR'),
-                      SizedBox(
+                      Text(
+                        S.of(context).or,
+                      ),
+                      const SizedBox(
                         width: 110,
                         child: Divider(
                           color: Color(0xFF5D5D5D),
@@ -61,8 +66,10 @@ class UploadTestPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 12),
-                  const CustomButton(text: 'Upload file / photo')
+                  const SizedBox(height: 12),
+                  CustomButton(
+                    text: S.of(context).UploadF,
+                  )
                 ],
               ),
             )),

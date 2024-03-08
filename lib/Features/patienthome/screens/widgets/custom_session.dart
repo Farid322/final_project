@@ -29,7 +29,7 @@ class CustomSessionPatient extends StatelessWidget {
       children: [
         Container(
           width: ScreenUtil().setWidth(345),
-          height: ScreenUtil().setHeight(140),
+          height: ScreenUtil().setHeight(160),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(

@@ -5,6 +5,8 @@ import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigatio
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 class MyMedicine extends StatefulWidget {
   const MyMedicine({super.key});
@@ -38,9 +40,9 @@ class _MedicineState extends State<MyMedicine> {
           ],
         ),
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'Medicine',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Medicine,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -52,31 +54,36 @@ class _MedicineState extends State<MyMedicine> {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 20, bottom: 20, right: 180),
+              padding: EdgeInsets.only(
+                  top: 20,
+                  bottom: 20,
+                  right: isArabic() ? (0) : (180),
+                  left: isArabic() ? (250) : (0)),
               child: Text(
-                'Ahmed’s Medicine',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+                S.of(context).Mymedicine,
+                style:
+                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
                 textAlign: TextAlign.left,
               ),
             ),
             CustomMedicine(
-              text: 'Med 1 ',
+              text: S.of(context).Med1,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CustomMedicine(
-              text: 'Med 2',
+              text: S.of(context).Med2,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CustomMedicine(
-              text: 'Med 3',
+              text: S.of(context).Med3,
             ),
           ],
         ),

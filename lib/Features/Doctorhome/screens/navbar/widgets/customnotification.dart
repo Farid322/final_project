@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/main.dart';
 
 Widget customNotification(
     String title, String subtitle, Color color, String time) {
   return Padding(
-    padding: const EdgeInsets.only(left: 15, top: 10, bottom: 15),
+    padding: EdgeInsets.only(
+        left: isArabic() ? (15) : (0),
+        top: 10,
+        bottom: 15,
+        right: isArabic() ? (15) : (0)),
     child: Row(
       children: [
         Container(
@@ -21,7 +26,10 @@ Widget customNotification(
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(left: 15, top: 5),
+            padding: EdgeInsets.only(
+                left: isArabic() ? (0) : (16),
+                right: isArabic() ? (16) : (0),
+                top: 5),
             child: Column(
               children: [
                 Row(

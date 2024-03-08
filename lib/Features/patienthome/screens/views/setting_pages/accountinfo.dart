@@ -5,6 +5,8 @@ import 'package:graduation_project/Features/patienthome/screens/widgets/Navigati
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 class AccountInfoPatient extends StatelessWidget {
   const AccountInfoPatient({super.key});
@@ -33,9 +35,9 @@ class AccountInfoPatient extends StatelessWidget {
           ],
         ),
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'Account Info',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Accountinfo,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -52,17 +54,18 @@ class AccountInfoPatient extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: SingleChildScrollView(
               child: Column(children: [
-            const Align(
-                alignment: Alignment.centerLeft,
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                 child: Text(
-                  'Your Name',
+                  S.of(context).Name,
                 )),
             const SizedBox(
               height: 5,
             ),
             TextField(
               decoration: InputDecoration(
-                  hintText: 'Enter Your Name',
+                  hintText: S.of(context).YourUsername,
                   contentPadding: const EdgeInsets.symmetric(
                     vertical: 16,
                     horizontal: 21,
@@ -79,15 +82,16 @@ class AccountInfoPatient extends StatelessWidget {
               obscureText: true,
             ),
             const SizedBox(height: 30),
-            const Align(
-                alignment: Alignment.centerLeft,
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                 child: Text(
-                  'Age',
+                  S.of(context).age,
                 )),
             const SizedBox(height: 5),
             TextField(
               decoration: InputDecoration(
-                hintText: 'Enter Your Age',
+                hintText: S.of(context).YourAge,
                 contentPadding: const EdgeInsets.symmetric(
                   vertical: 16,
                   horizontal: 21,
@@ -102,9 +106,10 @@ class AccountInfoPatient extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
+                child: const Text(
                   'ID',
                 )),
             const SizedBox(
@@ -112,7 +117,7 @@ class AccountInfoPatient extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
-                hintText: 'Enter Your ID',
+                hintText: S.of(context).IDY,
                 contentPadding: const EdgeInsets.symmetric(
                   vertical: 16,
                   horizontal: 21,
@@ -125,10 +130,11 @@ class AccountInfoPatient extends StatelessWidget {
               obscureText: true,
             ),
             const SizedBox(height: 30),
-            const Align(
-                alignment: Alignment.centerLeft,
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                 child: Text(
-                  'Location',
+                  S.of(context).location,
                   maxLines: 1,
                 )),
             const SizedBox(
@@ -136,7 +142,7 @@ class AccountInfoPatient extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
-                hintText: 'Enter Your Location',
+                hintText: S.of(context).enteryourlocation,
                 contentPadding: const EdgeInsets.symmetric(
                   vertical: 16,
                   horizontal: 21,
@@ -149,10 +155,11 @@ class AccountInfoPatient extends StatelessWidget {
               obscureText: true,
             ),
             const SizedBox(height: 30),
-            const Align(
-                alignment: Alignment.centerLeft,
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                 child: Text(
-                  'Experience',
+                  S.of(context).Experience,
                   maxLines: 1,
                 )),
             const SizedBox(
@@ -160,7 +167,7 @@ class AccountInfoPatient extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
-                hintText: 'Enter Your Experience',
+                hintText: S.of(context).Enteryourexpr,
                 contentPadding: const EdgeInsets.symmetric(
                   vertical: 16,
                   horizontal: 21,
@@ -175,8 +182,8 @@ class AccountInfoPatient extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            const Custombutton(
-              text: 'Save',
+            Custombutton(
+              text: S.of(context).save,
               width: 326,
               hieght: 47,
               fontsize: 18,

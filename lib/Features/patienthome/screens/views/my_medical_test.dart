@@ -5,6 +5,8 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/wid
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 class MyMedicalTest extends StatelessWidget {
   const MyMedicalTest({super.key});
@@ -33,9 +35,9 @@ class MyMedicalTest extends StatelessWidget {
           ],
         ),
         shadowColor: const Color.fromARGB(31, 255, 255, 255),
-        title: const Text(
-          'Medical Test',
-          style: TextStyle(
+        title: Text(
+          S.of(context).MedicalTests,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -49,34 +51,38 @@ class MyMedicalTest extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(top: 20, bottom: 20, right: 120),
+          Padding(
+            padding: EdgeInsets.only(
+                top: 20,
+                bottom: 20,
+                left: isArabic() ? (210) : (0),
+                right: isArabic() ? (0) : (210)),
             child: Text(
-              'My Medical Tests',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
-              textAlign: TextAlign.left,
+              S.of(context).MedicalTests,
+              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+              textAlign: TextAlign.right,
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 25),
             child: Column(children: [
-              const CustomMedical(
-                date: 'Date',
-                time: 'Time',
-                yourdate: '03 August 2020',
-                yourtime: '2.20 Pm',
-                sessions: 'Test 1',
+              CustomMedical(
+                date: S.of(context).Date,
+                time: S.of(context).Time,
+                yourdate: S.of(context).august,
+                yourtime: S.of(context).pm,
+                sessions: S.of(context).Test,
                 icon: Icons.drive_folder_upload_outlined,
               ),
               const SizedBox(
                 height: 30,
               ),
-              const CustomMedical(
-                date: 'Date',
-                time: 'Time',
-                yourdate: '03 August 2020',
-                yourtime: '2.20 Pm',
-                sessions: ' Test 2',
+              CustomMedical(
+                date: S.of(context).Date,
+                time: S.of(context).Time,
+                yourdate: S.of(context).august,
+                yourtime: S.of(context).pm,
+                sessions: S.of(context).Test,
                 icon: Icons.drive_folder_upload_outlined,
               ),
               SizedBox(height: 100.h),
@@ -84,14 +90,14 @@ class MyMedicalTest extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).push(RouterNames.TestsPage);
                   },
-                  text: 'Upload',
+                  text: S.of(context).Upload,
                   width: 151,
                   hieght: 46,
                   fontsize: 21,
                   radius: 15,
-                  color: Color(0xffDF7861),
+                  color: const Color(0xffDF7861),
                   icon: null,
-                  herozintal: 10,
+                  herozintal: isArabic() ? (25) : (10),
                   textcolor: Colors.white)
             ]),
           )

@@ -5,6 +5,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/abutus/second_abo
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/second_about_us.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class AboutUsPatient extends StatefulWidget {
   const AboutUsPatient({super.key});
@@ -39,9 +40,9 @@ class _AboutUsState extends State<AboutUsPatient> {
           ],
         ),
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'About Us',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Aboutus,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -76,13 +77,13 @@ class _AboutUsState extends State<AboutUsPatient> {
               //color: Colors.white,
               width: ScreenUtil().setWidth(327),
               height: ScreenUtil().setHeight(200),
-              child: const Center(
+              child: Center(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Chronic kidney disease (CKD) means your   kidneys are damaged and losing their ability to keep you healthy by filtering your blood. In the early stages of the disease, most people do not have symptoms. ',
+                    S.of(context).Chronic,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ksecondryColor,
                       fontFamily: 'Roboto',
                       fontSize: 16,
@@ -111,7 +112,9 @@ class _AboutUsState extends State<AboutUsPatient> {
                 onPressed: () {
                   GoRouter.of(context).go(RouterNames.SecondAboutUsPatient);
                 },
-                child: const Text('Next')),
+                child: Text(
+                  S.of(context).Next,
+                )),
           ),
         ],
       ),

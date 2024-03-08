@@ -3,6 +3,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/navbar/chat.dart'
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/widgets/custommessanger.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class MessangerPatient extends StatelessWidget {
   const MessangerPatient({super.key});
@@ -15,9 +16,9 @@ class MessangerPatient extends StatelessWidget {
         automaticallyImplyLeading: true,
         centerTitle: true,
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'Messenger',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Messenger,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -35,25 +36,16 @@ class MessangerPatient extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => ChatScreen()));
             },
-            child: customMessanger(
-                'Ahmed Magdy',
-                'It is a long established fact that a read and will be distracted lisece.',
-                '23:37',
-                Image.asset('assets/images/adamsmith .png')),
+            child: customMessanger('Dr. Malek Khan', S.of(context).itis,
+                '23:37', Image.asset('assets/images/adamsmith .png')),
           ),
-          customMessanger(
-              'omar ali',
-              'It is a long established fact that a read and will be distracted lisece.',
-              '23:37',
+          customMessanger('Dr. Nurjahan Khan', S.of(context).itis, '23:37',
               Image.asset('assets/images/patientpic1.png')),
-          customMessanger(
-              'sally ahmed',
-              'It is a long established fact that a read and will be distracted lisece.',
-              '23:37',
+          customMessanger('Dr. Raisa Rashid', S.of(context).itis, '23:37',
               Image.asset('assets/images/patientpic2.png')),
           customMessanger(
-              'rahma osama',
-              'It is a long established fact that a read and will be distracted lisece.',
+              'Dr. Salim Polash',
+              S.of(context).itis,
               '23:37',
               Image.asset(
                 'assets/images/patientpic3.png',

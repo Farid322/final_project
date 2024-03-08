@@ -953,6 +953,500 @@ class S {
       args: [],
     );
   }
+
+  /// `Test`
+  String get Test {
+    return Intl.message(
+      'Test',
+      name: 'Test',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date`
+  String get Date {
+    return Intl.message(
+      'Date',
+      name: 'Date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time`
+  String get Time {
+    return Intl.message(
+      'Time',
+      name: 'Time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View`
+  String get View {
+    return Intl.message(
+      'View',
+      name: 'View',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload`
+  String get Upload {
+    return Intl.message(
+      'Upload',
+      name: 'Upload',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You need to upload your`
+  String get Youneed {
+    return Intl.message(
+      'You need to upload your',
+      name: 'Youneed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medical Test Result`
+  String get MedicalTestResult {
+    return Intl.message(
+      'Medical Test Result',
+      name: 'MedicalTestResult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To can read your medical test, you must upload your medical test, So we put to you some options to can upload test`
+  String get ToCan {
+    return Intl.message(
+      'To can read your medical test, you must upload your medical test, So we put to you some options to can upload test',
+      name: 'ToCan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To upload your test`
+  String get Toupload {
+    return Intl.message(
+      'To upload your test',
+      name: 'Toupload',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use camera`
+  String get Usecamera {
+    return Intl.message(
+      'Use camera',
+      name: 'Usecamera',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload file / photo`
+  String get UploadF {
+    return Intl.message(
+      'Upload file / photo',
+      name: 'UploadF',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Med 1`
+  String get Med1 {
+    return Intl.message(
+      'Med 1',
+      name: 'Med1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Med 2`
+  String get Med2 {
+    return Intl.message(
+      'Med 2',
+      name: 'Med2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Med 3`
+  String get Med3 {
+    return Intl.message(
+      'Med 3',
+      name: 'Med3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine`
+  String get Medicine {
+    return Intl.message(
+      'Medicine',
+      name: 'Medicine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Session 1`
+  String get Session1 {
+    return Intl.message(
+      'Session 1',
+      name: 'Session1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'Session 2' key
+
+  /// `Notifications`
+  String get Notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'Notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today`
+  String get Today {
+    return Intl.message(
+      'Today',
+      name: 'Today',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remind For Serial`
+  String get Remind {
+    return Intl.message(
+      'Remind For Serial',
+      name: 'Remind',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It is a long established fact that a reader and will be distracted.`
+  String get itis {
+    return Intl.message(
+      'It is a long established fact that a reader and will be distracted.',
+      name: 'itis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification From Dr. Istiak`
+  String get NotificationFromDrIstiak {
+    return Intl.message(
+      'Notification From Dr. Istiak',
+      name: 'NotificationFromDrIstiak',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I accepted your add`
+  String get Iacceptedyouradd {
+    return Intl.message(
+      'I accepted your add',
+      name: 'Iacceptedyouradd',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification From Dr. Shofik`
+  String get NotificationFromDrShofik {
+    return Intl.message(
+      'Notification From Dr. Shofik',
+      name: 'NotificationFromDrShofik',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yesterday`
+  String get Yesterday {
+    return Intl.message(
+      'Yesterday',
+      name: 'Yesterday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `11 Min`
+  String get Min {
+    return Intl.message(
+      '11 Min',
+      name: 'Min',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `5 Hours`
+  String get Hour {
+    return Intl.message(
+      '5 Hours',
+      name: 'Hour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2 Hours`
+  String get hour2 {
+    return Intl.message(
+      '2 Hours',
+      name: 'hour2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Messenger`
+  String get Messenger {
+    return Intl.message(
+      'Messenger',
+      name: 'Messenger',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting`
+  String get Setting {
+    return Intl.message(
+      'Setting',
+      name: 'Setting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account info`
+  String get Accountinfo {
+    return Intl.message(
+      'Account info',
+      name: 'Accountinfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `name, age, gender, ...etc`
+  String get nameagegender {
+    return Intl.message(
+      'name, age, gender, ...etc',
+      name: 'nameagegender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy`
+  String get Privacy {
+    return Intl.message(
+      'Privacy',
+      name: 'Privacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `email, password, mobile number`
+  String get emailpasswordmobilenumber {
+    return Intl.message(
+      'email, password, mobile number',
+      name: 'emailpasswordmobilenumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About us`
+  String get Aboutus {
+    return Intl.message(
+      'About us',
+      name: 'Aboutus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get Logout {
+    return Intl.message(
+      'Logout',
+      name: 'Logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chronic kidney disease (CKD) means your   kidneys are damaged and losing their ability to keep you healthy by filtering your blood. In the early stages of the disease, most people do not have symptoms. `
+  String get Chronic {
+    return Intl.message(
+      'Chronic kidney disease (CKD) means your   kidneys are damaged and losing their ability to keep you healthy by filtering your blood. In the early stages of the disease, most people do not have symptoms. ',
+      name: 'Chronic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `But as kidney disease gets worse, wastes can build up in your blood and make you feel sick. You may develop other problems, like high blood pressure, anemia, weak bones, poor nutritional health, and nerve damage.`
+  String get But {
+    return Intl.message(
+      'But as kidney disease gets worse, wastes can build up in your blood and make you feel sick. You may develop other problems, like high blood pressure, anemia, weak bones, poor nutritional health, and nerve damage.',
+      name: 'But',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Because kidneys are vital to so many of the body's functions, kidney disease also increases your risk of having heart and blood vessel disease`
+  String get Because {
+    return Intl.message(
+      'Because kidneys are vital to so many of the body\'s functions, kidney disease also increases your risk of having heart and blood vessel disease',
+      name: 'Because',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `03 August 2020`
+  String get august {
+    return Intl.message(
+      '03 August 2020',
+      name: 'august',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2.20 Pm`
+  String get pm {
+    return Intl.message(
+      '2.20 Pm',
+      name: 'pm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next Session at 2:00 pm`
+  String get NextSession {
+    return Intl.message(
+      'Next Session at 2:00 pm',
+      name: 'NextSession',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'My Medicine' key
+
+  /// `confirm`
+  String get confirm {
+    return Intl.message(
+      'confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get Name {
+    return Intl.message(
+      'Name',
+      name: 'Name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `location`
+  String get location {
+    return Intl.message(
+      'location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Location`
+  String get enteryourlocation {
+    return Intl.message(
+      'Enter Your Location',
+      name: 'enteryourlocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experience`
+  String get Experience {
+    return Intl.message(
+      'Experience',
+      name: 'Experience',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Experience`
+  String get Enteryourexpr {
+    return Intl.message(
+      'Enter Your Experience',
+      name: 'Enteryourexpr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your ID`
+  String get IDY {
+    return Intl.message(
+      'Your ID',
+      name: 'IDY',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

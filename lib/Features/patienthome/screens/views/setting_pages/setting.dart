@@ -5,6 +5,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/wid
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
 import 'package:unicons/unicons.dart';
 
 class SettingPagePatient extends StatelessWidget {
@@ -18,9 +19,9 @@ class SettingPagePatient extends StatelessWidget {
         automaticallyImplyLeading: false,
         centerTitle: true,
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'Setting',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Setting,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -44,11 +45,11 @@ class SettingPagePatient extends StatelessWidget {
             const SizedBox(height: 20),
             InkWell(
               onTap: () {
-                GoRouter.of(context).push(RouterNames.AccountInfo);
+                GoRouter.of(context).push(RouterNames.AccountInfoPatient);
               },
               child: itemProfile(
-                'Account info',
-                'name, age, gender,..etc',
+                S.of(context).Accountinfo,
+                S.of(context).nameagegender,
                 CupertinoIcons.person,
                 () {},
               ),
@@ -56,10 +57,13 @@ class SettingPagePatient extends StatelessWidget {
             const SizedBox(height: 10),
             InkWell(
               onTap: () {
-                GoRouter.of(context).push(RouterNames.Privacy);
+                GoRouter.of(context).push(RouterNames.PrivacyPatient);
               }, // Call the navigation method on button press
-              child: itemProfile('Privacy', 'email, password, mobile number',
-                  UniconsLine.lock, () {}),
+              child: itemProfile(
+                  S.of(context).Privacy,
+                  S.of(context).emailpasswordmobilenumber,
+                  UniconsLine.lock,
+                  () {}),
             ),
             const SizedBox(height: 10),
             InkWell(
@@ -67,14 +71,14 @@ class SettingPagePatient extends StatelessWidget {
                   GoRouter.of(context).push(RouterNames.AboutUsPatient);
                 },
                 child: itemProfile(
-                    'About us', '', UniconsLine.info_circle, () {})),
+                    S.of(context).Aboutus, '', UniconsLine.info_circle, () {})),
             const SizedBox(height: 10),
             InkWell(
               onTap: () {
                 GoRouter.of(context).push(RouterNames.PatientLoginPage);
               },
               child: itemProfile(
-                'Logout',
+                S.of(context).Logout,
                 '',
                 UniconsLine.signout,
                 () {},

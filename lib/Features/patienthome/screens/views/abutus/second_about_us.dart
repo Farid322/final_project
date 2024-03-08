@@ -5,6 +5,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/abutus/third_abou
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/third_about_us.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class SecondAboutUsPatient extends StatelessWidget {
   const SecondAboutUsPatient({super.key});
@@ -32,9 +33,9 @@ class SecondAboutUsPatient extends StatelessWidget {
           ],
         ),
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'About Us',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Aboutus,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -69,13 +70,13 @@ class SecondAboutUsPatient extends StatelessWidget {
               //color: Colors.white,
               width: ScreenUtil().setWidth(327),
               height: ScreenUtil().setHeight(200),
-              child: const Center(
+              child: Center(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'But as kidney disease gets worse, wastes can build up in your blood and make you feel sick. You may develop other problems, like high blood pressure, anemia, weak bones, poor nutritional health, and nerve damage.',
+                    S.of(context).But,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ksecondryColor,
                       fontFamily: 'Roboto',
                       fontSize: 16,
@@ -104,7 +105,9 @@ class SecondAboutUsPatient extends StatelessWidget {
                 onPressed: () {
                   GoRouter.of(context).go(RouterNames.ThirdAboutUsPatient);
                 },
-                child: const Text('Next')),
+                child: Text(
+                  S.of(context).Next,
+                )),
           ),
         ],
       ),

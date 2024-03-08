@@ -6,6 +6,8 @@ import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 import 'package:graduation_project/core/widgets2/costom_text_feild.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 class PrivacyPatient extends StatelessWidget {
   const PrivacyPatient({super.key});
@@ -35,9 +37,9 @@ class PrivacyPatient extends StatelessWidget {
         ),
         centerTitle: true,
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'Privacy',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Privacy,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -54,17 +56,18 @@ class PrivacyPatient extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const Align(
-                  alignment: Alignment.centerLeft,
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                   child: Text(
-                    'Email Address',
+                    S.of(context).emailaddress,
                   )),
               const SizedBox(
                 height: 5,
               ),
               TextField(
                 decoration: InputDecoration(
-                    hintText: 'Enter Your Email',
+                    hintText: S.of(context).enteryouremail,
                     contentPadding: const EdgeInsets.symmetric(
                       vertical: 16,
                       horizontal: 21,
@@ -87,10 +90,12 @@ class PrivacyPatient extends StatelessWidget {
                     width: 100,
                     child: Column(
                       children: [
-                        const Align(
-                            alignment: Alignment.centerLeft,
+                        Align(
+                            alignment: isArabic()
+                                ? Alignment.centerRight
+                                : Alignment.centerLeft,
                             child: Text(
-                              ' Country code',
+                              S.of(context).Countrycode,
                             )),
                         const SizedBox(
                           height: 5,
@@ -110,10 +115,12 @@ class PrivacyPatient extends StatelessWidget {
                     width: 201,
                     child: Column(
                       children: [
-                        const Align(
-                            alignment: Alignment.centerLeft,
+                        Align(
+                            alignment: isArabic()
+                                ? Alignment.centerRight
+                                : Alignment.centerLeft,
                             child: Text(
-                              'Mobile number',
+                              S.of(context).Mobilenumber,
                               maxLines: 1,
                             )),
                         const SizedBox(
@@ -130,10 +137,11 @@ class PrivacyPatient extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 30),
-              const Align(
-                  alignment: Alignment.centerLeft,
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                   child: Text(
-                    'Password',
+                    S.of(context).password,
                     maxLines: 1,
                   )),
               const SizedBox(
@@ -141,7 +149,7 @@ class PrivacyPatient extends StatelessWidget {
               ),
               TextField(
                 decoration: InputDecoration(
-                    hintText: 'Enter Your Password',
+                    hintText: S.of(context).enteryourpassword,
                     contentPadding: const EdgeInsets.symmetric(
                       vertical: 16,
                       horizontal: 21,
@@ -158,8 +166,8 @@ class PrivacyPatient extends StatelessWidget {
                 obscureText: true,
               ),
               const SizedBox(height: 30),
-              const Custombutton(
-                text: 'Save',
+              Custombutton(
+                text: S.of(context).save,
                 width: 326,
                 hieght: 47,
                 fontsize: 15,
@@ -199,7 +207,9 @@ class PrivacyPatient extends StatelessWidget {
                         width: 24,
                       ),
                     ),
-                    const Text('Add your Google email')
+                    Text(
+                      S.of(context).LoginwithGoogle,
+                    )
                   ],
                 ),
               ),
@@ -233,7 +243,9 @@ class PrivacyPatient extends StatelessWidget {
                         width: 24,
                       ),
                     ),
-                    const Text("Add your Facebook email"),
+                    Text(
+                      S.of(context).LoginwithFacebook,
+                    ),
                   ],
                 ),
               ),

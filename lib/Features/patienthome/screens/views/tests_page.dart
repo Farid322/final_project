@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/utils/app_asset.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 
@@ -19,22 +20,20 @@ class TestsPage extends StatelessWidget {
           vertical: ScreenUtil().setHeight(78),
         ),
         child: Column(children: [
-          Text('Medical Tests',
+          Text(S.of(context).MedicalTests,
               style: AppStyels.s23.copyWith(color: Colors.white)),
-          const SizedBox(height: 21),
+          const SizedBox(height: 10),
           Image.asset(AppAssets.testsimage),
-          const SizedBox(height: 17),
-          const Text('You need to upload your', style: AppStyels.s14),
-          const SizedBox(height: 14),
-          Text('Medical Test Result',
+          const SizedBox(height: 10),
+          Text(S.of(context).Youneed, style: AppStyels.s14),
+          const SizedBox(height: 10),
+          Text(S.of(context).MedicalTestResult,
               style: AppStyels.s23
                   .copyWith(color: Colors.white, fontWeight: FontWeight.w500)),
-          const SizedBox(height: 14),
-          const Align(
+          const SizedBox(height: 10),
+          Align(
             alignment: Alignment.center,
-            child: Text(
-                'To can read your medical test, you must upload your medical test, So we put to you some options to can upload test .',
-                style: AppStyels.s14),
+            child: Text(S.of(context).ToCan, style: AppStyels.s14),
           ),
           const SizedBox(height: 39),
           InkWell(
@@ -57,11 +56,11 @@ class TestsPage extends StatelessWidget {
                     )
                   ],
                 ),
-                child: const Center(
+                child: Center(
                   child: Text(
-                    'Next',
+                    S.of(context).Next,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Color(0xFF496664),
                       fontSize: 20,
                       fontWeight: FontWeight.w300,

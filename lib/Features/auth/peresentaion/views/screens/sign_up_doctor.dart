@@ -148,7 +148,7 @@ class SignUpdoctor extends StatelessWidget {
               const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    ' Confirm Password',
+                    'Confirm Password',
                   )),
               const SizedBox(
                 height: 5,

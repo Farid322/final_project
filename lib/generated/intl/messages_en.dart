@@ -147,6 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Sessions": MessageLookupByLibrary.simpleMessage(" Sessions"),
         "Setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "SignupP": MessageLookupByLibrary.simpleMessage("Sign-Up"),
+        "Stop": MessageLookupByLibrary.simpleMessage("Stop"),
         "Test": MessageLookupByLibrary.simpleMessage("Test"),
         "Time": MessageLookupByLibrary.simpleMessage("Time"),
         "ToCan": MessageLookupByLibrary.simpleMessage(

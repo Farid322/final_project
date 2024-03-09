@@ -20,6 +20,14 @@ class Paitentsession extends StatefulWidget {
 }
 
 class _Paitentsession extends State<Paitentsession> {
+  bool isOpen = false;
+
+  void toggleSwitch() {
+    setState(() {
+      isOpen = !isOpen;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -87,29 +95,32 @@ class _Paitentsession extends State<Paitentsession> {
               padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
               child: Row(
                 children: [
-                  Custombutton(
-                    text: S.of(context).start,
-                    width: 140,
-                    hieght: 46,
-                    fontsize: 19,
-                    radius: 18,
-                    color: kthirdColor,
-                    icon: null,
-                    herozintal: isArabic() ? (35) : (25),
-                    textcolor: const Color.fromARGB(255, 255, 255, 255),
+                  InkWell(
+                    onTap: toggleSwitch,
+                    child: Custombutton(
+                      text: isOpen ? S.of(context).start : S.of(context).resume,
+                      width: 140,
+                      hieght: 46,
+                      fontsize: 19,
+                      radius: 18,
+                      color: isOpen ? kthirdColor : kPrimaryColor,
+                      icon: null,
+                      herozintal: isArabic() ? (30) : (25),
+                      textcolor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
                   ),
                   const SizedBox(
                     width: 20,
                   ),
                   Custombutton(
-                    text: S.of(context).resume,
+                    text: S.of(context).Stop,
                     width: 140,
                     hieght: 46,
                     fontsize: 19,
                     radius: 18,
                     color: const Color.fromARGB(255, 255, 255, 255),
                     icon: null,
-                    herozintal: isArabic() ? (4) : (5),
+                    herozintal: isArabic() ? (20) : (5),
                     textcolor: kPrimaryColor,
                   ),
                 ],

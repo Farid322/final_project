@@ -129,6 +129,7 @@ class _Paitentsession extends State<session> {
                     width: 103,
                     height: 116,
                     decoration: BoxDecoration(
+                        color: Colors.white,
                         border: Border.all(
                           color: Colors.black12,
                         ),
@@ -173,6 +174,7 @@ class _Paitentsession extends State<session> {
                     width: 103,
                     height: 116,
                     decoration: BoxDecoration(
+                        color: Colors.white,
                         border: Border.all(
                           color: Colors.black12,
                         ),
@@ -218,6 +220,7 @@ class _Paitentsession extends State<session> {
                     width: 103,
                     height: 116,
                     decoration: BoxDecoration(
+                        color: Colors.white,
                         border: Border.all(
                           color: Colors.black12,
                         ),
@@ -266,6 +269,7 @@ class _Paitentsession extends State<session> {
                     width: 103,
                     height: 116,
                     decoration: BoxDecoration(
+                        color: Colors.white,
                         border: Border.all(
                           color: Colors.black12,
                         ),
@@ -309,6 +313,7 @@ class _Paitentsession extends State<session> {
                       width: 103,
                       height: 116,
                       decoration: BoxDecoration(
+                          color: Colors.white,
                           border: Border.all(
                             color: Colors.black12,
                           ),
@@ -356,6 +361,7 @@ class _Paitentsession extends State<session> {
                       width: 103,
                       height: 116,
                       decoration: BoxDecoration(
+                          color: Colors.white,
                           border: Border.all(
                             color: Colors.black12,
                           ),

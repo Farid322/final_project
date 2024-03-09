@@ -1617,6 +1617,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Stop`
+  String get Stop {
+    return Intl.message(
+      'Stop',
+      name: 'Stop',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

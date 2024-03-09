@@ -147,6 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Sessions": MessageLookupByLibrary.simpleMessage(" جلسات"),
         "Setting": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "SignupP": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "Stop": MessageLookupByLibrary.simpleMessage("ايقاف"),
         "Test": MessageLookupByLibrary.simpleMessage("اختبار"),
         "Time": MessageLookupByLibrary.simpleMessage("وقت"),
         "ToCan": MessageLookupByLibrary.simpleMessage(
@@ -216,7 +217,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا يمكنك بدء الجلسة، يرجى الاتصال بالطبيب."),
         "repeatpassword":
             MessageLookupByLibrary.simpleMessage("تكرار كلمة المرور"),
-        "resume": MessageLookupByLibrary.simpleMessage("ايقاف مؤقت"),
+        "resume": MessageLookupByLibrary.simpleMessage(" مؤقت"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطى"),

@@ -145,7 +145,7 @@
 "AboutHemobelt":"عن Hemobelt",
 "Session2":"الجلسه 2",
 "mysession":"جلستي",
-"resume":"ايقاف مؤقت",
+"resume":" مؤقت",
 "Yourvital":"قياساتك الحيوية",
 "Hours": "ساعات",
 "Minutes": "دقائق",
@@ -157,7 +157,8 @@
 "weight": "الوزن",
 "fluidTemprature": "حرارة السائل",
 "Medicinespeclialist":"أخصائي الطب ",
-"Years8":"8سنوات"
+"Years8":"8سنوات",
+"Stop":"ايقاف"
 
 
 

@@ -18,8 +18,8 @@ import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/Pri
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/setting.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/RestPasswordDoctor.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/screens/checkemaildoctor.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/screens/entercodedoctor.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/check_email_doctor.dart';
+import 'package:graduation_project/Features/auth/peresentaion/views/screens/enter_code_doctor.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/error_email_doctor.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/forgetpasswoeddoctor.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/hemodialysis.dart';
@@ -134,7 +134,7 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: RouterNames.SignUpdoctor,
-      builder: (context, state) => const SignUpdoctor(),
+      builder: (context, state) =>  SignUpdoctor(),
     ),
     GoRoute(
       path: RouterNames.PatientLoginPage,
@@ -142,7 +142,7 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: RouterNames.DoctorLoginPage,
-      builder: (context, state) => const DoctorLoginPage(),
+      builder: (context, state) =>  DoctorLoginPage(),
     ),
     GoRoute(
       path: RouterNames.ForgetPassword,
@@ -258,7 +258,7 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: RouterNames.ErorremailDoctor,
-      builder: (context, state) => const ErorremailDoctor(),
+      builder: (context, state) =>  ErorremailDoctor(),
     ),
     GoRoute(
       path: RouterNames.CheckEmailDoctor,

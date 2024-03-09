@@ -5,11 +5,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/firebase_options.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 
+import 'core/network/dio_helper.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  DioHelper.init();
   runApp(const Hemodialysis());
 }
 

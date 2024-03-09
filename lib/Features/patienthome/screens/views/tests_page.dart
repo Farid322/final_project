@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/utils/app_asset.dart';
 import 'package:graduation_project/utils/app_styles.dart';
@@ -17,25 +18,25 @@ class TestsPage extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: ScreenUtil().setWidth(20),
-          vertical: ScreenUtil().setHeight(78),
+          vertical: ScreenUtil().setHeight(70),
         ),
         child: Column(children: [
           Text(S.of(context).MedicalTests,
               style: AppStyels.s23.copyWith(color: Colors.white)),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Image.asset(AppAssets.testsimage),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Text(S.of(context).Youneed, style: AppStyels.s14),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Text(S.of(context).MedicalTestResult,
               style: AppStyels.s23
                   .copyWith(color: Colors.white, fontWeight: FontWeight.w500)),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Align(
             alignment: Alignment.center,
             child: Text(S.of(context).ToCan, style: AppStyels.s14),
           ),
-          const SizedBox(height: 39),
+          const SizedBox(height: 10),
           InkWell(
             onTap: () {
               GoRouter.of(context).go(RouterNames.UploadTestPage);
@@ -70,6 +71,7 @@ class TestsPage extends StatelessWidget {
           ),
         ]),
       ),
+      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

@@ -26,7 +26,7 @@ class AboutDiabelt extends StatelessWidget {
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: 'About\n',
+                        text: S.of(context).about,
                         style: GoogleFonts.lora(
                           color: const Color(0xFF515151),
                           fontSize: 24,

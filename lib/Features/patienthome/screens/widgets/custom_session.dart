@@ -5,6 +5,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Fea
 import 'package:graduation_project/Features/patienthome/screens/views/sessions.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class CustomSessionPatient extends StatelessWidget {
   const CustomSessionPatient({
@@ -146,14 +147,14 @@ class CustomSessionPatient extends StatelessWidget {
                       onTap: () {
                         GoRouter.of(context).go(RouterNames.Sessions);
                       },
-                      child: const Custombutton(
+                      child: Custombutton(
                         schedulewidth: 30,
-                        text: 'veiw',
+                        text: S.of(context).View,
                         width: 102,
                         hieght: 38,
                         fontsize: 12,
                         radius: 8,
-                        color: Color(0xFF0E5C6D),
+                        color: const Color(0xFF0E5C6D),
                         icon: null,
                         herozintal: 5,
                         textcolor: Colors.white,

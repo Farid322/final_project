@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 import 'package:graduation_project/generated/l10n.dart';
@@ -35,7 +36,7 @@ class UploadTestPage extends StatelessWidget {
               child: Column(
                 children: [
                   Text(S.of(context).Toupload, style: AppStyels.s18),
-                  const SizedBox(height: 17),
+                  const SizedBox(height: 10),
                   Image.asset(AppAssets.uploadtestimage),
                   const SizedBox(height: 21),
                   CustomButton(
@@ -66,7 +67,7 @@ class UploadTestPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 5),
                   CustomButton(
                     text: S.of(context).UploadF,
                   )
@@ -74,6 +75,7 @@ class UploadTestPage extends StatelessWidget {
               ),
             )),
       ),
+      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

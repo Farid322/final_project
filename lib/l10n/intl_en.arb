@@ -141,7 +141,24 @@
     "enteryourlocation":"Enter Your Location",
     "Experience":"Experience",
     "Enteryourexpr":"Enter Your Experience",
-    "IDY":"Your ID"
+    "IDY":"Your ID",
+    "Details":"Details",
+    "AboutHemobelt":"About Hemobelt",
+    "Session2":"Session 2",
+    "mysession":"My Session",
+    "resume":"Resume",
+    "Yourvital":"Your vital measurements:",
+    "Hours":"Hours",
+    "Minutes":"Minutes",
+    "Seconds":"Seconds",
+    "Pressure":" Pressure",
+    "BloodTemperature":"Blood Temperature",
+    "Waste":"Waste",
+    "fluid":"fluid",
+    "weight":"weight",
+    "fluidTemprature":"fluid Temprature",
+    "Medicinespeclialist":"Medicine Specialist ",
+    "Years8":"8 Years"
 
     
 

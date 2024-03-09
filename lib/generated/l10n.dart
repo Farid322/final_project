@@ -1447,6 +1447,176 @@ class S {
       args: [],
     );
   }
+
+  /// `Details`
+  String get Details {
+    return Intl.message(
+      'Details',
+      name: 'Details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About Hemobelt`
+  String get AboutHemobelt {
+    return Intl.message(
+      'About Hemobelt',
+      name: 'AboutHemobelt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Session 2`
+  String get Session2 {
+    return Intl.message(
+      'Session 2',
+      name: 'Session2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Session`
+  String get mysession {
+    return Intl.message(
+      'My Session',
+      name: 'mysession',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resume`
+  String get resume {
+    return Intl.message(
+      'Resume',
+      name: 'resume',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your vital measurements:`
+  String get Yourvital {
+    return Intl.message(
+      'Your vital measurements:',
+      name: 'Yourvital',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hours`
+  String get Hours {
+    return Intl.message(
+      'Hours',
+      name: 'Hours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minutes`
+  String get Minutes {
+    return Intl.message(
+      'Minutes',
+      name: 'Minutes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seconds`
+  String get Seconds {
+    return Intl.message(
+      'Seconds',
+      name: 'Seconds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Pressure`
+  String get Pressure {
+    return Intl.message(
+      ' Pressure',
+      name: 'Pressure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blood Temperature`
+  String get BloodTemperature {
+    return Intl.message(
+      'Blood Temperature',
+      name: 'BloodTemperature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Waste`
+  String get Waste {
+    return Intl.message(
+      'Waste',
+      name: 'Waste',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `fluid`
+  String get fluid {
+    return Intl.message(
+      'fluid',
+      name: 'fluid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `weight`
+  String get weight {
+    return Intl.message(
+      'weight',
+      name: 'weight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `fluid Temprature`
+  String get fluidTemprature {
+    return Intl.message(
+      'fluid Temprature',
+      name: 'fluidTemprature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Specialist `
+  String get Medicinespeclialist {
+    return Intl.message(
+      'Medicine Specialist ',
+      name: 'Medicinespeclialist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `8 Years`
+  String get Years8 {
+    return Intl.message(
+      '8 Years',
+      name: 'Years8',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "AboutHemobelt": MessageLookupByLibrary.simpleMessage("About Hemobelt"),
         "Aboutus": MessageLookupByLibrary.simpleMessage("About us"),
         "Acceptedresult": MessageLookupByLibrary.simpleMessage(
             "You are ready to start session"),
@@ -29,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Barcode": MessageLookupByLibrary.simpleMessage("Barcode"),
         "Because": MessageLookupByLibrary.simpleMessage(
             "Because kidneys are vital to so many of the body\'s functions, kidney disease also increases your risk of having heart and blood vessel disease"),
+        "BloodTemperature":
+            MessageLookupByLibrary.simpleMessage("Blood Temperature"),
         "Bluetooth": MessageLookupByLibrary.simpleMessage("Bluetooth"),
         "BluetoothInfo": MessageLookupByLibrary.simpleMessage(
             "We aim to save time by using dialysis belt: Using programming technology and artificial intelligence with easy application which the patient can follow up with the process of dialysis and his vital sign, please, turn on your bluetooth to let us help you. "),
@@ -49,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Countrycode": MessageLookupByLibrary.simpleMessage("Country Code"),
         "Date": MessageLookupByLibrary.simpleMessage("Date"),
         "Delayed": MessageLookupByLibrary.simpleMessage("Delayed"),
+        "Details": MessageLookupByLibrary.simpleMessage("Details"),
         "Donthave":
             MessageLookupByLibrary.simpleMessage("Don’t have an account?"),
         "Dontworry": MessageLookupByLibrary.simpleMessage(
@@ -73,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "HiWelcomeBack":
             MessageLookupByLibrary.simpleMessage("Hi,Welcome Back,"),
         "Hour": MessageLookupByLibrary.simpleMessage("5 Hours"),
+        "Hours": MessageLookupByLibrary.simpleMessage("Hours"),
         "IDY": MessageLookupByLibrary.simpleMessage("Your ID"),
         "Iacceptedyouradd":
             MessageLookupByLibrary.simpleMessage("I accepted your add"),
@@ -93,9 +98,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Medical Test Result"),
         "MedicalTests": MessageLookupByLibrary.simpleMessage("Medical Test"),
         "Medicine": MessageLookupByLibrary.simpleMessage("Medicine"),
+        "Medicinespeclialist":
+            MessageLookupByLibrary.simpleMessage("Medicine Specialist "),
         "Messenger": MessageLookupByLibrary.simpleMessage("Messenger"),
         "Min": MessageLookupByLibrary.simpleMessage("11 Min"),
         "Minhours": MessageLookupByLibrary.simpleMessage("Min hours"),
+        "Minutes": MessageLookupByLibrary.simpleMessage("Minutes"),
         "Mobilenumber": MessageLookupByLibrary.simpleMessage("Mobile Number"),
         "Muhammed": MessageLookupByLibrary.simpleMessage("Muhammed"),
         "MyDoctor": MessageLookupByLibrary.simpleMessage("My Doctor"),
@@ -118,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please answer those Questions To get more details .."),
         "Pleasechoose": MessageLookupByLibrary.simpleMessage(
             "Please choose way from those options to rest your password"),
+        "Pressure": MessageLookupByLibrary.simpleMessage(" Pressure"),
         "Privacy": MessageLookupByLibrary.simpleMessage("Privacy"),
         "RegisterwithFacebook":
             MessageLookupByLibrary.simpleMessage("Register with Facebook"),
@@ -130,9 +139,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "Resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "Reset": MessageLookupByLibrary.simpleMessage("Reset your password"),
         "Restpassword": MessageLookupByLibrary.simpleMessage("Rest password"),
+        "Seconds": MessageLookupByLibrary.simpleMessage("Seconds"),
         "SendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "Sendanemail": MessageLookupByLibrary.simpleMessage("Send an email"),
         "Session1": MessageLookupByLibrary.simpleMessage("Session 1"),
+        "Session2": MessageLookupByLibrary.simpleMessage("Session 2"),
         "Sessions": MessageLookupByLibrary.simpleMessage(" Sessions"),
         "Setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "SignupP": MessageLookupByLibrary.simpleMessage("Sign-Up"),
@@ -147,8 +158,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "UploadF": MessageLookupByLibrary.simpleMessage("Upload file / photo"),
         "Usecamera": MessageLookupByLibrary.simpleMessage("Use camera"),
         "View": MessageLookupByLibrary.simpleMessage("View"),
+        "Waste": MessageLookupByLibrary.simpleMessage("Waste"),
         "Wevesent":
             MessageLookupByLibrary.simpleMessage("We’ve sent a code to "),
+        "Years8": MessageLookupByLibrary.simpleMessage("8 Years"),
         "Yesterday": MessageLookupByLibrary.simpleMessage("Yesterday"),
         "Youneed":
             MessageLookupByLibrary.simpleMessage("You need to upload your"),
@@ -158,6 +171,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "YourResultis": MessageLookupByLibrary.simpleMessage("Your Result is "),
         "YourUsername":
             MessageLookupByLibrary.simpleMessage("\'Your User Name"),
+        "Yourvital":
+            MessageLookupByLibrary.simpleMessage("Your vital measurements:"),
         "about": MessageLookupByLibrary.simpleMessage("About\n"),
         "aboutHemo": MessageLookupByLibrary.simpleMessage(
             "Hemodialysis is a machine filters your blood through a dialyzer, also known as an artificial kidney, with built-in safety checks to be sure the process is safe and effective. Home and in-center hemodialysis machines are very similar in function, though the home machine is much smaller."),
@@ -179,6 +194,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter Your Password"),
         "ex":
             MessageLookupByLibrary.simpleMessage("ex. I suffer from diabetes"),
+        "fluid": MessageLookupByLibrary.simpleMessage("fluid"),
+        "fluidTemprature":
+            MessageLookupByLibrary.simpleMessage("fluid Temprature"),
         "hour2": MessageLookupByLibrary.simpleMessage("2 Hours"),
         "hours": MessageLookupByLibrary.simpleMessage("12 hours"),
         "itis": MessageLookupByLibrary.simpleMessage(
@@ -187,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginP": MessageLookupByLibrary.simpleMessage("Log-In"),
         "mustbe8characters":
             MessageLookupByLibrary.simpleMessage("must be 8 characters"),
+        "mysession": MessageLookupByLibrary.simpleMessage("My Session"),
         "nameagegender":
             MessageLookupByLibrary.simpleMessage("name, age, gender, ...etc"),
         "number": MessageLookupByLibrary.simpleMessage("1024165373"),
@@ -201,6 +220,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "You can’t start the session, call the doctor please."),
         "repeatpassword":
             MessageLookupByLibrary.simpleMessage("repeat password"),
+        "resume": MessageLookupByLibrary.simpleMessage("Resume"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "signin": MessageLookupByLibrary.simpleMessage("Sign In"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
@@ -209,6 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("What is your temperature?"),
         "username": MessageLookupByLibrary.simpleMessage("User Name"),
         "waight": MessageLookupByLibrary.simpleMessage("What is your weight ?"),
+        "weight": MessageLookupByLibrary.simpleMessage("weight"),
         "yourbarcode": MessageLookupByLibrary.simpleMessage("Your Barcode"),
         "yourpassword": MessageLookupByLibrary.simpleMessage(
             "Your password has been changed successfully"),

@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
@@ -22,11 +24,11 @@ class Erorremail extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              'Forget password ?',
+            Text(
+              S.of(context).Forgetpassword,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black87,
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
@@ -35,18 +37,19 @@ class Erorremail extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              'Don’t worry! It happens. Please enter the email associated with your account',
+            Text(
+              S.of(context).Dontworry,
               maxLines: 2,
-              style: TextStyle(color: Colors.grey, fontSize: 14),
+              style: const TextStyle(color: Colors.grey, fontSize: 14),
             ),
             const SizedBox(
               height: 40,
             ),
-            const Align(
-                alignment: Alignment.centerLeft,
+            Align(
+                alignment:
+                    isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                 child: Text(
-                  'Email Adress',
+                  S.of(context).emailaddress,
                 )),
             const SizedBox(
               height: 5,
@@ -56,25 +59,27 @@ class Erorremail extends StatelessWidget {
               height: 30,
             ),
             CustomButton(
-              text: 'Send code',
+              text: S.of(context).SendCode,
               onTap: () {
-                GoRouter.of(context).go(RouterNames.EnterCode);
+                GoRouter.of(context).go(RouterNames.ResetPassword);
               },
             ),
             Padding(
               padding: EdgeInsets.symmetric(
                   vertical: ScreenUtil().setHeight(20),
-                  horizontal: ScreenUtil().setWidth(50)),
+                  horizontal: ScreenUtil().setWidth(40)),
               child: Row(
                 children: [
-                  const Text('Remember password ?'),
+                  Text(
+                    S.of(context).Rememberpassword,
+                  ),
                   InkWell(
                     onTap: () {
-                      GoRouter.of(context).go(RouterNames.DoctorLoginPage);
+                      GoRouter.of(context).go(RouterNames.PatientLoginPage);
                     },
-                    child: const Text(
-                      'login',
-                      style: TextStyle(
+                    child: Text(
+                      S.of(context).loginP,
+                      style: const TextStyle(
                         color: Color(0xFF737373),
                         fontSize: 15,
                         fontWeight: FontWeight.w600,

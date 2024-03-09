@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 
-class Customupcoming extends StatelessWidget {
+class Customupcoming extends StatefulWidget {
   const Customupcoming({
     super.key,
     required this.date,
@@ -18,6 +18,19 @@ class Customupcoming extends StatelessWidget {
   final String yourdate;
   final String yourtime;
   final String yourparcode;
+
+  @override
+  State<Customupcoming> createState() => _CustomupcomingState();
+}
+
+class _CustomupcomingState extends State<Customupcoming> {
+  bool isOpen = false;
+
+  void toggleSwitch() {
+    setState(() {
+      isOpen = !isOpen;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +56,7 @@ class Customupcoming extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        date,
+                        widget.date,
                         textAlign: TextAlign.start,
                         style: const TextStyle(
                           color: Color(0x9E35354F),
@@ -57,7 +70,7 @@ class Customupcoming extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        yourdate,
+                        widget.yourdate,
                         textAlign: TextAlign.start,
                         style: const TextStyle(
                           color: Color(0xFF35364F),
@@ -77,7 +90,7 @@ class Customupcoming extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          time,
+                          widget.time,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
                             color: Color(0x9E35354F),
@@ -91,7 +104,7 @@ class Customupcoming extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          yourtime,
+                          widget.yourtime,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
                             color: Color(0xFF35364F),
@@ -113,7 +126,7 @@ class Customupcoming extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        parcode,
+                        widget.parcode,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           color: Color(0x9E35354F),
@@ -127,7 +140,7 @@ class Customupcoming extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        yourparcode,
+                        widget.yourparcode,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           color: Color(0xFF35364F),
@@ -185,18 +198,20 @@ class Customupcoming extends StatelessWidget {
                       width: 10,
                     ),
                     InkWell(
-                      onTap: () {},
-                      child: const Custombutton(
+                      onTap: toggleSwitch,
+                      child: Custombutton(
                         schedulewidth: 30,
-                        text: 'Open',
+                        text: isOpen ? 'Cancel' : 'Open',
                         width: 102,
                         hieght: 38,
                         fontsize: 12,
                         radius: 8,
-                        color: Color.fromRGBO(22, 139, 12, 1),
+                        color: isOpen
+                            ? Colors.red
+                            : const Color.fromRGBO(22, 139, 12, 1),
                         shadow: null,
                         icon: null,
-                        herozintal: 2,
+                        herozintal: 1,
                         textcolor: Colors.white,
                       ),
                     ),

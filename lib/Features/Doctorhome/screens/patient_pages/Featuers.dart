@@ -102,7 +102,7 @@ class _SessionFeaturesState extends State<SessionFeatures> {
                         ),
                         borderRadius: BorderRadius.circular(10)),
                     child: Padding(
-                      padding: const EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(12),
                       child: Column(
                         children: [
                           Padding(
@@ -122,6 +122,13 @@ class _SessionFeaturesState extends State<SessionFeatures> {
                                   fontWeight: FontWeight.w400,
                                   color: Color.fromRGBO(112, 112, 112, 1)),
                             ),
+                          ),
+                          const Text(
+                            '120/80',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromRGBO(112, 112, 112, 1)),
                           ),
                           const Text(
                             '120/80',
@@ -263,6 +270,51 @@ class _SessionFeaturesState extends State<SessionFeatures> {
                           ),
                           const Text(
                             '92%',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromRGBO(112, 112, 112, 1)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 103,
+                    height: 116,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black12,
+                        ),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 5),
+                            child: Image.asset(
+                              'assets/images/water-temperature 1.png',
+                              width: 35,
+                              height: 35,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(5),
+                            child: Text(
+                              'Fluid Temperature',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(112, 112, 112, 1)),
+                            ),
+                          ),
+                          const Text(
+                            '36',
                             style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.w400,

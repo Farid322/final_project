@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class AboutDiabelt extends StatelessWidget {
   const AboutDiabelt({super.key});
@@ -49,10 +50,10 @@ class AboutDiabelt extends StatelessWidget {
               ),
               SizedBox(
                 width: ScreenUtil().setWidth(320),
-                child: const Text(
-                  'Hemodialysis is a machine filters your blood through a dialyzer, also known as an artificial kidney, with built-in safety checks to be sure the process is safe and effective. Home and in-center hemodialysis machines are very similar in function, though the home machine is much smaller.',
+                child: Text(
+                  S.of(context).aboutHemo,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontFamily: 'Roboto',
                       height: 2,
                       fontWeight: FontWeight.w400),
@@ -71,7 +72,7 @@ class AboutDiabelt extends StatelessWidget {
                 height: ScreenUtil().setHeight(47),
               ),
               CustomButton(
-                text: 'Get started',
+                text: S.of(context).GetStarted,
                 onTap: () {
                   GoRouter.of(context).go(RouterNames.hemodialysis);
                 },

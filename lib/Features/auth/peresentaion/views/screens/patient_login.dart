@@ -2,16 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
-class PatientLoginPage extends StatelessWidget {
+class PatientLoginPage extends StatefulWidget {
   const PatientLoginPage({super.key});
+
+  @override
+  State<PatientLoginPage> createState() => _PatientLoginPageState();
+}
+
+class _PatientLoginPageState extends State<PatientLoginPage> {
   @override
   Widget build(BuildContext context) {
+    bool rememberMe = false;
+    void _onRememberMeChanged(bool? newValue) {
+      setState(() {
+        rememberMe = newValue ?? false;
+        if (rememberMe) {
+          // TODO: Implement functionality to remember the user
+          print("User wants to be remembered");
+        } else {
+          // TODO: Implement functionality to forget the user
+          print("User does not want to be remembered");
+        }
+      });
+    }
+
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 90.w),
         child: SingleChildScrollView(
@@ -27,9 +51,9 @@ class PatientLoginPage extends StatelessWidget {
                               .go(RouterNames.PatientRegisterPage);
                         },
                         child: const Icon(Icons.arrow_back)),
-                    const Text(
-                      ' Log in',
-                      style: TextStyle(
+                    Text(
+                      S.of(context).loginP,
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
@@ -41,54 +65,61 @@ class PatientLoginPage extends StatelessWidget {
               SizedBox(
                 height: 16.h,
               ),
-              const Text(
-                'Hello, welcome back to your account',
+              Text(
+                S.of(context).Hellowelcomebacktoouraccount,
                 textAlign: TextAlign.center,
               ),
               SizedBox(
                 height: 46.h,
               ),
-              const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Email adress',
-                  )),
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
+                  child: Text(S.of(context).emailaddress)),
               SizedBox(
                 height: 5.h,
               ),
-              CustomTextFormField(hintText: 'Enter Your Email'),
+              CustomTextFormField(
+                hintText: S.of(context).enteryouremail,
+              ),
               SizedBox(
                 height: 33.h,
               ),
-              const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'password',
-                  )),
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
+                  child: Text(S.of(context).password)),
               SizedBox(height: 5.h),
               CustomTextFormField(
-                hintText: 'Enter Your Password',
+                hintText: S.of(context).enteryourpassword,
               ),
               SizedBox(
                 height: 19.h,
               ),
               Row(
                 children: [
-                  const Text(
-                    'Remember me',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                  Checkbox(
+                    shape: const CircleBorder(),
+                    activeColor: kPrimaryColor,
+                    value: rememberMe,
+                    onChanged: _onRememberMeChanged,
+                  ),
+                  Text(
+                    S.of(context).Rememberme,
+                    style: const TextStyle(
+                        fontSize: 14, fontWeight: FontWeight.w400),
                   ),
                   SizedBox(
-                    width: ScreenUtil().setWidth(130),
+                    width: ScreenUtil().setWidth(isArabic() ? (150) : (80)),
                   ),
                   TextButton(
                     onPressed: () {
                       GoRouter.of(context).go(RouterNames.ForgetPassword);
                     },
-                    child: const Text(
-                      'Forget password?',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    child: Text(
+                      S.of(context).Forgetpassword,
+                      style: const TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   ),
                 ],
@@ -100,7 +131,7 @@ class PatientLoginPage extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).go(RouterNames.PatientHome);
                   },
-                  child: const CustomButton(text: 'Login')),
+                  child: CustomButton(text: S.of(context).signin)),
               SizedBox(
                 height: 22.h,
               ),
@@ -115,7 +146,7 @@ class PatientLoginPage extends StatelessWidget {
                       thickness: 1,
                     ),
                   ),
-                  const Text('OR'),
+                  Text(S.of(context).or),
                   SizedBox(
                     width: 110.w,
                     child: const Divider(
@@ -153,7 +184,7 @@ class PatientLoginPage extends StatelessWidget {
                       height: 50,
                       width: 45,
                     ),
-                    const Text('Login with Google')
+                    Text(S.of(context).Registerwithgoogle)
                   ],
                 ),
               ),
@@ -184,7 +215,7 @@ class PatientLoginPage extends StatelessWidget {
                       height: 50,
                       width: 45,
                     ),
-                    const Text('Login with Facebook')
+                    Text(S.of(context).RegisterwithFacebook)
                   ],
                 ),
               ),
@@ -195,9 +226,9 @@ class PatientLoginPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 70),
                 child: Row(
                   children: [
-                    const Text(
-                      'Don’t have an account? ',
-                      style: TextStyle(
+                    Text(
+                      S.of(context).Donthave,
+                      style: const TextStyle(
                           color: Color(0xFF737373),
                           fontSize: 15,
                           fontWeight: FontWeight.w600),
@@ -206,9 +237,9 @@ class PatientLoginPage extends StatelessWidget {
                       onPressed: () {
                         GoRouter.of(context).go(RouterNames.PatientLoginPage);
                       },
-                      child: const Text(
-                        'signup',
-                        style: TextStyle(
+                      child: Text(
+                        S.of(context).SignupP,
+                        style: const TextStyle(
                           color: Color(0xFF737373),
                           fontSize: 15,
                           fontWeight: FontWeight.w600,

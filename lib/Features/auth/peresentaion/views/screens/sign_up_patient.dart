@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 import 'package:graduation_project/core/widgets/custom_text_form_field.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 
 class SignUppatient extends StatelessWidget {
   const SignUppatient({super.key});
@@ -29,9 +31,9 @@ class SignUppatient extends StatelessWidget {
                     const SizedBox(
                       width: 3,
                     ),
-                    const Text(
-                      'Create account',
-                      style: TextStyle(
+                    Text(
+                      S.of(context).createaccount,
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 26,
                         fontWeight: FontWeight.w700,
@@ -43,25 +45,31 @@ class SignUppatient extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              const Align(
-                  alignment: Alignment.centerLeft,
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                   child: Text(
-                    'User Name',
+                    S.of(context).username,
                   )),
               const SizedBox(
                 height: 5,
               ),
-              CustomTextFormField(hintText: 'Your User name'),
+              CustomTextFormField(
+                hintText: S.of(context).YourUsername,
+              ),
               const SizedBox(height: 30),
-              const Align(
-                  alignment: Alignment.centerLeft,
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                   child: Text(
-                    'Email Address',
+                    S.of(context).emailaddress,
                   )),
               const SizedBox(
                 height: 5,
               ),
-              CustomTextFormField(hintText: 'Your Email'),
+              CustomTextFormField(
+                hintText: S.of(context).YourEmail,
+              ),
               const SizedBox(height: 30),
               Row(
                 children: [
@@ -69,16 +77,18 @@ class SignUppatient extends StatelessWidget {
                     width: 100,
                     child: Column(
                       children: [
-                        const Align(
-                            alignment: Alignment.centerLeft,
+                        Align(
+                            alignment: isArabic()
+                                ? Alignment.centerRight
+                                : Alignment.centerLeft,
                             child: Text(
-                              'Country code',
+                              S.of(context).Countrycode,
                             )),
                         const SizedBox(
                           height: 5,
                         ),
                         CustomTextFormField(
-                          hintText: '+012',
+                          hintText: S.of(context).code,
                           width: 60,
                           height: 56,
                         ),
@@ -92,17 +102,19 @@ class SignUppatient extends StatelessWidget {
                     width: 201,
                     child: Column(
                       children: [
-                        const Align(
-                            alignment: Alignment.centerLeft,
+                        Align(
+                            alignment: isArabic()
+                                ? Alignment.centerRight
+                                : Alignment.centerLeft,
                             child: Text(
-                              'Mobile Number',
+                              S.of(context).Mobilenumber,
                               maxLines: 1,
                             )),
                         const SizedBox(
                           height: 5,
                         ),
                         CustomTextFormField(
-                          hintText: '1024165373',
+                          hintText: S.of(context).number,
                           width: 150,
                           height: 56,
                         ),
@@ -112,36 +124,53 @@ class SignUppatient extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 30),
-              const Align(
-                  alignment: Alignment.centerLeft,
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                   child: Text(
-                    'Password',
+                    S.of(context).password,
                   )),
               const SizedBox(
                 height: 5,
               ),
-              CustomTextFormField(hintText: 'Your Password'),
+              CustomTextFormField(
+                hintText: S.of(context).YourPassword,
+              ),
               const SizedBox(height: 30),
-              const Align(
-                  alignment: Alignment.centerLeft,
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                   child: Text(
-                    ' Confirm Password',
+                    S.of(context).ConfirmPassword,
                   )),
               const SizedBox(
                 height: 5,
               ),
-              CustomTextFormField(hintText: 'Confirm Your Password'),
+              CustomTextFormField(
+                hintText: S.of(context).ConfirmYourPassword,
+              ),
               const SizedBox(height: 30),
-              const Align(alignment: Alignment.centerLeft, child: Text('Age')),
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
+                  child: Text(
+                    S.of(context).age,
+                  )),
               const SizedBox(
                 height: 5,
               ),
-              CustomTextFormField(hintText: 'Your Age'),
+              CustomTextFormField(
+                hintText: S.of(context).YourAge,
+              ),
               const SizedBox(
                 height: 33,
               ),
-              const Align(
-                  alignment: Alignment.centerLeft, child: Text('Gender')),
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
+                  child: Text(
+                    S.of(context).Gender,
+                  )),
               Row(
                 children: [
                   Padding(
@@ -165,11 +194,11 @@ class SignUppatient extends StatelessWidget {
                             )
                           ],
                         ),
-                        child: const Center(
+                        child: Center(
                           child: Text(
-                            'Female',
+                            S.of(context).Female,
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.grey,
                               fontFamily: 'Roboto',
                               fontSize: 14,
@@ -196,11 +225,11 @@ class SignUppatient extends StatelessWidget {
                           )
                         ],
                       ),
-                      child: const Center(
+                      child: Center(
                         child: Text(
-                          'Male',
+                          S.of(context).Male,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.grey,
                             fontFamily: 'Roboto',
                             fontSize: 14,
@@ -213,20 +242,23 @@ class SignUppatient extends StatelessWidget {
               const SizedBox(
                 height: 23,
               ),
-              const Align(
-                  alignment: Alignment.centerLeft,
+              Align(
+                  alignment:
+                      isArabic() ? Alignment.centerRight : Alignment.centerLeft,
                   child: Text(
-                    'Parcode',
+                    S.of(context).Barcode,
                   )),
               const SizedBox(
                 height: 5,
               ),
-              CustomTextFormField(hintText: 'Your ParCode'),
+              CustomTextFormField(
+                hintText: S.of(context).yourbarcode,
+              ),
               const SizedBox(
                 height: 36,
               ),
               CustomButton(
-                text: 'Next',
+                text: S.of(context).Next,
                 onTap: () {
                   GoRouter.of(context).go(RouterNames.PatientSignUp);
                 },

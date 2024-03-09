@@ -35,7 +35,7 @@ class Messanger extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => ChatScreen()));
             },
             child: customMessanger(
-                'Adam Smith',
+                'Mohamed Magdy',
                 'It is a long established fact that a read and will be distracted lisece.',
                 '23:37',
                 Image.asset('assets/images/adamsmith .png')),
@@ -51,7 +51,7 @@ class Messanger extends StatelessWidget {
               '23:37',
               Image.asset('assets/images/patientpic2.png')),
           customMessanger(
-              'adam ahmed',
+              'adam osama',
               'It is a long established fact that a read and will be distracted lisece.',
               '23:37',
               Image.asset(

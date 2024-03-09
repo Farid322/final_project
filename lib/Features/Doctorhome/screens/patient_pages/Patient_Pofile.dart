@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/sessions.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/CustomPatientMed.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/Custom_medical.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custompaitent.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
-
-import 'Medical_test.dart';
 
 class Patientprofile extends StatelessWidget {
   const Patientprofile({super.key});
@@ -22,7 +23,9 @@ class Patientprofile extends StatelessWidget {
         leading: Row(
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).go(RouterNames.Appointments);
+              },
               child: const Icon(
                 Icons.arrow_back,
                 color: Colors.black,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
+import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/utils/app_asset.dart';
 
 class LogoPage extends StatelessWidget {
@@ -17,40 +18,38 @@ class LogoPage extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(AppAssets.logoimage),
-              const SizedBox(
-                height: 131,
+              SizedBox(
+                height: ScreenUtil().setHeight(131),
               ),
               InkWell(
                 onTap: () {
                   GoRouter.of(context).push(RouterNames.DoctorRegisterPage);
                 },
                 child: Container(
-                    width: ScreenUtil().setWidth(330),
-                    height: ScreenUtil().setWidth(52),
-                    decoration: ShapeDecoration(
-                      color: const Color(0xFFDA7761),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      shadows: const [
-                        BoxShadow(
-                          color: Color(0x210E5C6D),
-                          blurRadius: 40,
-                          offset: Offset(0, 10),
-                          spreadRadius: 0,
-                        )
-                      ],
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Doctor',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                    )),
+                  width: ScreenUtil().setWidth(330),
+                  height: ScreenUtil().setHeight(52),
+                  decoration: ShapeDecoration(
+                    color: const Color(0xFFDA7761),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                    shadows: const [
+                      BoxShadow(
+                        color: Color(0x210E5C6D),
+                        blurRadius: 40,
+                        offset: Offset(0, 10),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                  child: Center(
+                      child: Text(S.of(context).LogoD,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w300,
+                          ))),
+                ),
               ),
               SizedBox(
                 height: ScreenUtil().setHeight(23),
@@ -75,11 +74,11 @@ class LogoPage extends StatelessWidget {
                         )
                       ],
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
-                        'patient',
+                        S.of(context).LogoP,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.w300,

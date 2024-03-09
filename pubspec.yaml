@@ -48,8 +48,12 @@ dependencies:
   intl: ^0.19.0
   line_icons: ^2.0.3
   persistent_bottom_nav_bar: ^5.0.2
+  google_fonts: ^6.1.0
   table_calendar: ^3.1.0
-  unicons: ^2.1.1
+  intl: ^0.19.0
+  dio: ^5.4.1
+  http: ^1.1.0
+
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -70,6 +74,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -94,3 +99,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true

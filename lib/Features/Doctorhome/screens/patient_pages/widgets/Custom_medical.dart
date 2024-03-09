@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class CustomMedical extends StatelessWidget {
   const CustomMedical({
@@ -140,8 +141,8 @@ class CustomMedical extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const MedicalTest()));
                       },
-                      child: const Custombutton(
-                        text: 'veiw',
+                      child: Custombutton(
+                        text: S.of(context).View,
                         width: 102,
                         hieght: 38,
                         fontsize: 12,

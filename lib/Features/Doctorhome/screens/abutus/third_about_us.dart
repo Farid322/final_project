@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/setting.dart';
 import 'package:graduation_project/constant/constant.dart';
 
 class ThirdAboutUs extends StatelessWidget {
@@ -97,7 +99,13 @@ class ThirdAboutUs extends StatelessWidget {
                 minWidth: 293,
                 color: const Color.fromRGBO(14, 92, 109, 1),
                 textColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SettingPage()),
+                  );
+                },
                 child: const Text('Done')),
           ),
         ],

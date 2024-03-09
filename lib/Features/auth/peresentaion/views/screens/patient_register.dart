@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets/custom_button.dart';
 import 'package:graduation_project/Features/auth/peresentaion/widgets/social_linkes_category.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 class PatientRegisterPage extends StatelessWidget {
   const PatientRegisterPage({super.key});
@@ -11,6 +12,7 @@ class PatientRegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: ScreenUtil().setWidth(30),
@@ -23,7 +25,7 @@ class PatientRegisterPage extends StatelessWidget {
               height: ScreenUtil().setHeight(29),
             ),
             CustomButton(
-              text: 'log-in',
+              text: S.of(context).loginP,
               onTap: () {
                 GoRouter.of(context).go(RouterNames.PatientLoginPage);
               },
@@ -32,7 +34,7 @@ class PatientRegisterPage extends StatelessWidget {
               height: ScreenUtil().setHeight(20),
             ),
             CustomButton(
-              text: 'sign-up',
+              text: S.of(context).SignupP,
               onTap: () {
                 GoRouter.of(context).go(RouterNames.SignUppatient);
               },
@@ -82,9 +84,9 @@ class PatientRegisterPage extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            const Text(
-              'contniue with Registration ',
-              style: TextStyle(
+            Text(
+              S.of(context).ContinueWithoutRegisteration,
+              style: const TextStyle(
                   color: Color(0xFF737373),
                   fontSize: 15,
                   fontWeight: FontWeight.w600),

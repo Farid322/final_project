@@ -11,12 +11,12 @@ class UpcomingAppiontments extends StatefulWidget {
 class _UpcomingAppiontmentsState extends State<UpcomingAppiontments> {
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 2,
       child: Scaffold(
         body: Center(
-          child: Column(
-            children: [
+          child: ListView(
+            children: const [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

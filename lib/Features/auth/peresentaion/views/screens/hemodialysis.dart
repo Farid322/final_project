@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project/generated/l10n.dart';
 
 import '../../../../../core/routes/app_routes.dart';
 
@@ -19,44 +20,41 @@ class hemodialysis extends StatelessWidget {
                   image: AssetImage("assets/images/Ellipse 63.png"),
                   fit: BoxFit.cover),
             ),
-            child: const Column(
+            child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 60,
                 ),
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 6,
                     ),
-                    Icon(Icons.arrow_back, color: Colors.white),
-                    SizedBox(
+                    const Icon(Icons.arrow_back, color: Colors.white),
+                    const SizedBox(
                       width: 7,
                     ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Hemodialysis',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w700,
-                          height: 0,
-                        ),
+                    Text(
+                      S.of(context).Hemo,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w700,
+                        height: 0,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 SizedBox(
                     height: 150,
                     width: 315,
                     child: Text(
-                      'Hemodialysis: is the most common type of dialysis and the one most people are aware of. ',
-                      style: TextStyle(
+                      S.of(context).Hemodialysis,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontFamily: 'Roboto',
                           fontSize: 18,
@@ -85,11 +83,11 @@ class hemodialysis extends StatelessWidget {
                     )
                   ],
                 ),
-                child: const Center(
+                child: Center(
                   child: Text(
-                    'Start',
+                    S.of(context).start,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontFamily: 'Roboto',
                       fontSize: 20,

@@ -216,7 +216,7 @@ class PatientHome extends StatelessWidget {
                   children: [
                     Text(S.of(context).MyDoctor,
                         style: AppStyels.s18.copyWith(color: Colors.grey)),
-                    SizedBox(width: isArabic() ? (270) : (207)),
+                    SizedBox(width: isArabic() ? (270) : (230)),
                     InkWell(
                         onTap: () {
                           GoRouter.of(context).go(RouterNames.Search);

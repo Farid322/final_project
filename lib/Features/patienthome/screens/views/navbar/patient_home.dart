@@ -97,7 +97,7 @@ class PatientHome extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(
                           right: isArabic() ? (20) : (0),
-                          left: isArabic() ? (0) : (30)),
+                          left: isArabic() ? (0) : (20)),
                       child: Custombutton(
                           onTap: () {
                             GoRouter.of(context).go(RouterNames.Bluetoothpage);
@@ -217,7 +217,11 @@ class PatientHome extends StatelessWidget {
                     Text(S.of(context).MyDoctor,
                         style: AppStyels.s18.copyWith(color: Colors.grey)),
                     SizedBox(width: isArabic() ? (270) : (207)),
-                    const Icon(Icons.search, size: 32)
+                    InkWell(
+                        onTap: () {
+                          GoRouter.of(context).go(RouterNames.Search);
+                        },
+                        child: const Icon(Icons.search, size: 32))
                   ],
                 ),
               ),

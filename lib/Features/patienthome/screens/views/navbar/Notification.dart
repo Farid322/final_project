@@ -41,7 +41,7 @@ class _NotificationScreenState extends State<NotificationScreenPatient> {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: isArabic() ? (15) : (0),
+                  left: isArabic() ? (0) : (15),
                   top: 20,
                   bottom: 5,
                   right: isArabic() ? (15) : (0)),
@@ -82,7 +82,7 @@ class _NotificationScreenState extends State<NotificationScreenPatient> {
             const Divider(thickness: 0.5),
             Padding(
               padding: EdgeInsets.only(
-                  left: isArabic() ? (15) : (0),
+                  left: isArabic() ? (0) : (15),
                   top: 20,
                   bottom: 5,
                   right: isArabic() ? (15) : (0)),

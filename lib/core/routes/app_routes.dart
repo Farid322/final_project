@@ -12,9 +12,14 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Fea
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Patient_Pofile.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/Doctor2.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/Doctor3.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/DoctorProfile.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_Appointments.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_medicine.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/My_session.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/Search.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/Search_output.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/first_about_us.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/second_about_us.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/third_about_us.dart';
@@ -123,6 +128,11 @@ class RouterNames {
   static const AboutUsPatient = '/AboutUsPatient';
   static const SecondAboutUsPatient = '/SecondAboutUsPatient';
   static const ThirdAboutUsPatient = '/ThirdAboutUsPatient';
+  static const Search = '/Search';
+  static const SearchOutput = '/SearchOutput';
+  static const DoctorProfile = '/DoctorProfile';
+  static const DoctorTwo = '/DoctorTwo';
+  static const DoctorThree = '/DoctorThree';
 }
 
 abstract class AppRouter {
@@ -157,7 +167,7 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: RouterNames.SignUpdoctor,
-      builder: (context, state) =>  SignUpdoctor(),
+      builder: (context, state) => SignUpdoctor(),
     ),
     GoRoute(
       path: RouterNames.PatientLoginPage,
@@ -165,7 +175,7 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: RouterNames.DoctorLoginPage,
-      builder: (context, state) =>  DoctorLoginPage(),
+      builder: (context, state) => DoctorLoginPage(),
     ),
     GoRoute(
       path: RouterNames.ForgetPassword,
@@ -278,7 +288,7 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: RouterNames.ErorremailDoctor,
-      builder: (context, state) =>  ErorremailDoctor(),
+      builder: (context, state) => ErorremailDoctor(),
     ),
     GoRoute(
       path: RouterNames.CheckEmailDoctor,
@@ -335,6 +345,26 @@ abstract class AppRouter {
     GoRoute(
       path: RouterNames.ThirdAboutUsPatient,
       builder: (context, state) => const ThirdAboutUsPatient(),
+    ),
+    GoRoute(
+      path: RouterNames.Search,
+      builder: (context, state) => const Search(),
+    ),
+    GoRoute(
+      path: RouterNames.SearchOutput,
+      builder: (context, state) => const SearchOutput(),
+    ),
+    GoRoute(
+      path: RouterNames.DoctorProfile,
+      builder: (context, state) => const DoctorProfile(),
+    ),
+    GoRoute(
+      path: RouterNames.DoctorTwo,
+      builder: (context, state) => const DoctorTwo(),
+    ),
+    GoRoute(
+      path: RouterNames.DoctorThree,
+      builder: (context, state) => const DoctorThree(),
     ),
   ]);
 }

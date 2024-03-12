@@ -34,9 +34,9 @@ class Search extends StatelessWidget {
           ],
         ),
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          "Search Here",
-          style: TextStyle(
+        title: Text(
+          S.of(context).SearchHere,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -56,9 +56,10 @@ class Search extends StatelessWidget {
                   top: 20,
                   right: isArabic() ? (0) : (250),
                   left: isArabic() ? (250) : (0)),
-              child: const Text(
-                "Search Your",
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+              child: Text(
+                S.of(context).SearchYour,
+                style:
+                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
                 textAlign: TextAlign.left,
               ),
             ),
@@ -68,9 +69,10 @@ class Search extends StatelessWidget {
                   bottom: 5,
                   right: isArabic() ? (0) : (270),
                   left: isArabic() ? (250) : (0)),
-              child: const Text(
-                "Doctor",
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 28),
+              child: Text(
+                S.of(context).Doctor,
+                style:
+                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 28),
                 textAlign: TextAlign.left,
               ),
             ),
@@ -86,22 +88,22 @@ class Search extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const CustomSearch(
-              select: 'Select Area',
-              doctor: 'Doctor',
-              date: 'Select Date',
+            CustomSearch(
+              select: S.of(context).SelectArea,
+              doctor: S.of(context).Doctor,
+              date: S.of(context).SelectDate,
             ),
             InkWell(
               onTap: () {
                 GoRouter.of(context).go(RouterNames.SearchOutput);
               },
-              child: const Custombutton(
-                text: 'Search',
+              child: Custombutton(
+                text: S.of(context).Search,
                 width: 318,
                 hieght: 52,
                 fontsize: 16,
                 radius: 8,
-                color: Color(0xFF0E5C6D),
+                color: const Color(0xFF0E5C6D),
                 icon: null,
                 herozintal: 110,
                 textcolor: Colors.white,

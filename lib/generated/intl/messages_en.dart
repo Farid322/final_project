@@ -22,11 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "AboutDoctor": MessageLookupByLibrary.simpleMessage("About Doctor"),
         "AboutHemobelt": MessageLookupByLibrary.simpleMessage("About Hemobelt"),
+        "AboutSerena": MessageLookupByLibrary.simpleMessage("About Serena"),
+        "AboutSerenainfo": MessageLookupByLibrary.simpleMessage(
+            "Doctor serena is a professional doctor with more than 8 years of experience. she can really help you."),
         "Aboutus": MessageLookupByLibrary.simpleMessage("About us"),
         "Acceptedresult": MessageLookupByLibrary.simpleMessage(
             "You are ready to start session"),
         "Accountinfo": MessageLookupByLibrary.simpleMessage("Account info"),
+        "Add": MessageLookupByLibrary.simpleMessage("Add"),
+        "AllDoctor": MessageLookupByLibrary.simpleMessage("All Doctor"),
         "Barcode": MessageLookupByLibrary.simpleMessage("Barcode"),
         "Because": MessageLookupByLibrary.simpleMessage(
             "Because kidneys are vital to so many of the body\'s functions, kidney disease also increases your risk of having heart and blood vessel disease"),
@@ -37,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "We aim to save time by using dialysis belt: Using programming technology and artificial intelligence with easy application which the patient can follow up with the process of dialysis and his vital sign, please, turn on your bluetooth to let us help you. "),
         "But": MessageLookupByLibrary.simpleMessage(
             "But as kidney disease gets worse, wastes can build up in your blood and make you feel sick. You may develop other problems, like high blood pressure, anemia, weak bones, poor nutritional health, and nerve damage."),
+        "Cairo": MessageLookupByLibrary.simpleMessage("Cairo"),
+        "Carddiologist":
+            MessageLookupByLibrary.simpleMessage("Carddiologist (MBBS,FCPS)"),
         "CheckYourEmail":
             MessageLookupByLibrary.simpleMessage("Check Your Email"),
         "Chronic": MessageLookupByLibrary.simpleMessage(
@@ -53,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Date": MessageLookupByLibrary.simpleMessage("Date"),
         "Delayed": MessageLookupByLibrary.simpleMessage("Delayed"),
         "Details": MessageLookupByLibrary.simpleMessage("Details"),
+        "Doctor": MessageLookupByLibrary.simpleMessage("Doctor"),
         "Donthave":
             MessageLookupByLibrary.simpleMessage("Don’t have an account?"),
         "Dontworry": MessageLookupByLibrary.simpleMessage(
@@ -98,8 +108,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Medical Test Result"),
         "MedicalTests": MessageLookupByLibrary.simpleMessage("Medical Test"),
         "Medicine": MessageLookupByLibrary.simpleMessage("Medicine"),
+        "MedicineHeartSpecialist":
+            MessageLookupByLibrary.simpleMessage("Medicine & Heart Specialist"),
         "Medicinespeclialist":
             MessageLookupByLibrary.simpleMessage("Medicine Specialist "),
+        "Message": MessageLookupByLibrary.simpleMessage("Message"),
         "Messenger": MessageLookupByLibrary.simpleMessage("Messenger"),
         "Min": MessageLookupByLibrary.simpleMessage("11 Min"),
         "Minhours": MessageLookupByLibrary.simpleMessage("Min hours"),
@@ -120,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "Passwordchanged":
             MessageLookupByLibrary.simpleMessage("Password changed"),
+        "Patients": MessageLookupByLibrary.simpleMessage("Patients"),
         "PleaseAnswer": MessageLookupByLibrary.simpleMessage(
             "Please answer those Questions .To get more details .."),
         "Pleaseanswer": MessageLookupByLibrary.simpleMessage(
@@ -139,7 +153,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "Resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "Reset": MessageLookupByLibrary.simpleMessage("Reset your password"),
         "Restpassword": MessageLookupByLibrary.simpleMessage("Rest password"),
+        "Review": MessageLookupByLibrary.simpleMessage("Review"),
+        "Search": MessageLookupByLibrary.simpleMessage("Search"),
+        "SearchHere": MessageLookupByLibrary.simpleMessage("Search Here"),
+        "SearchYour": MessageLookupByLibrary.simpleMessage("Search Your"),
         "Seconds": MessageLookupByLibrary.simpleMessage("Seconds"),
+        "SelectArea": MessageLookupByLibrary.simpleMessage("Select Area"),
+        "SelectDate": MessageLookupByLibrary.simpleMessage("Select Date"),
         "SendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "Sendanemail": MessageLookupByLibrary.simpleMessage("Send an email"),
         "Session1": MessageLookupByLibrary.simpleMessage("Session 1"),
@@ -158,7 +178,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Upload": MessageLookupByLibrary.simpleMessage("Upload"),
         "UploadF": MessageLookupByLibrary.simpleMessage("Upload file / photo"),
         "Usecamera": MessageLookupByLibrary.simpleMessage("Use camera"),
+        "VideoCall": MessageLookupByLibrary.simpleMessage("Video Call"),
         "View": MessageLookupByLibrary.simpleMessage("View"),
+        "VoiceCall": MessageLookupByLibrary.simpleMessage("Voice Call"),
         "Waste": MessageLookupByLibrary.simpleMessage("Waste"),
         "Wevesent":
             MessageLookupByLibrary.simpleMessage("We’ve sent a code to "),
@@ -198,6 +220,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "fluid": MessageLookupByLibrary.simpleMessage("fluid"),
         "fluidTemprature":
             MessageLookupByLibrary.simpleMessage("fluid Temprature"),
+        "good": MessageLookupByLibrary.simpleMessage("Good Health Clinic"),
         "hour2": MessageLookupByLibrary.simpleMessage("2 Hours"),
         "hours": MessageLookupByLibrary.simpleMessage("12 hours"),
         "itis": MessageLookupByLibrary.simpleMessage(

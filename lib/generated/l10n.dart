@@ -1627,6 +1627,206 @@ class S {
       args: [],
     );
   }
+
+  /// `Search Here`
+  String get SearchHere {
+    return Intl.message(
+      'Search Here',
+      name: 'SearchHere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search Your`
+  String get SearchYour {
+    return Intl.message(
+      'Search Your',
+      name: 'SearchYour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Doctor`
+  String get Doctor {
+    return Intl.message(
+      'Doctor',
+      name: 'Doctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Area`
+  String get SelectArea {
+    return Intl.message(
+      'Select Area',
+      name: 'SelectArea',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Date`
+  String get SelectDate {
+    return Intl.message(
+      'Select Date',
+      name: 'SelectDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get Search {
+    return Intl.message(
+      'Search',
+      name: 'Search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cairo`
+  String get Cairo {
+    return Intl.message(
+      'Cairo',
+      name: 'Cairo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Carddiologist (MBBS,FCPS)`
+  String get Carddiologist {
+    return Intl.message(
+      'Carddiologist (MBBS,FCPS)',
+      name: 'Carddiologist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Voice Call`
+  String get VoiceCall {
+    return Intl.message(
+      'Voice Call',
+      name: 'VoiceCall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Video Call`
+  String get VideoCall {
+    return Intl.message(
+      'Video Call',
+      name: 'VideoCall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get Message {
+    return Intl.message(
+      'Message',
+      name: 'Message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine & Heart Specialist`
+  String get MedicineHeartSpecialist {
+    return Intl.message(
+      'Medicine & Heart Specialist',
+      name: 'MedicineHeartSpecialist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About Serena`
+  String get AboutSerena {
+    return Intl.message(
+      'About Serena',
+      name: 'AboutSerena',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Doctor serena is a professional doctor with more than 8 years of experience. she can really help you.`
+  String get AboutSerenainfo {
+    return Intl.message(
+      'Doctor serena is a professional doctor with more than 8 years of experience. she can really help you.',
+      name: 'AboutSerenainfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patients`
+  String get Patients {
+    return Intl.message(
+      'Patients',
+      name: 'Patients',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Review`
+  String get Review {
+    return Intl.message(
+      'Review',
+      name: 'Review',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get Add {
+    return Intl.message(
+      'Add',
+      name: 'Add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Health Clinic`
+  String get good {
+    return Intl.message(
+      'Good Health Clinic',
+      name: 'good',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About Doctor`
+  String get AboutDoctor {
+    return Intl.message(
+      'About Doctor',
+      name: 'AboutDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Doctor`
+  String get AllDoctor {
+    return Intl.message(
+      'All Doctor',
+      name: 'AllDoctor',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

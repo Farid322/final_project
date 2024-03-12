@@ -245,7 +245,7 @@ class PatientHome extends StatelessWidget {
                 child: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Column(
                         children: [
                           const Text(
@@ -267,9 +267,9 @@ class PatientHome extends StatelessWidget {
                           Text(S.of(context).Years8,
                               style: AppStyels.s18
                                   .copyWith(fontWeight: FontWeight.normal)),
-                          SizedBox(height: 17.h),
+                          SizedBox(height: 10.h),
                           Padding(
-                            padding: const EdgeInsets.all(3.0),
+                            padding: const EdgeInsets.all(2.0),
                             child: Custombutton(
                                 text: S.of(context).Details,
                                 width: 96,

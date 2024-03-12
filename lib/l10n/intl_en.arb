@@ -159,7 +159,28 @@
     "fluidTemprature":"fluid Temprature",
     "Medicinespeclialist":"Medicine Specialist ",
     "Years8":"8 Years",
-    "Stop":"Stop"
+    "Stop":"Stop",
+    "SearchHere":"Search Here",
+    "SearchYour":"Search Your",
+    "Doctor":"Doctor",
+    "SelectArea":"Select Area",
+    "SelectDate":"Select Date",
+    "Search":"Search",
+    "Cairo":"Cairo",
+    "Carddiologist":"Carddiologist (MBBS,FCPS)",
+    "VoiceCall":"Voice Call",
+    "VideoCall":"Video Call",
+    "Message":"Message",
+    "MedicineHeartSpecialist":"Medicine & Heart Specialist",
+    "AboutSerena":"About Serena",
+    "AboutSerenainfo":"Doctor serena is a professional doctor with more than 8 years of experience. she can really help you.",
+    "Patients":"Patients",
+    "Review":"Review",
+    "Add":"Add",
+    "good":"Good Health Clinic",
+    "AboutDoctor":"About Doctor",
+    "AllDoctor":"All Doctor"
+
 
     
 

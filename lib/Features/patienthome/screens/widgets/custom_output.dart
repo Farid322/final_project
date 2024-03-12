@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/main.dart';
 
 class CustomOutput extends StatelessWidget {
   const CustomOutput({
@@ -44,7 +45,11 @@ class CustomOutput extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 5, right: 55),
+                      padding: EdgeInsets.only(
+                        top: 5,
+                        right: isArabic() ? (0) : (55),
+                        left: isArabic() ? (55) : (0),
+                      ),
                       child: Text(
                         head,
                         textAlign: TextAlign.left,
@@ -53,9 +58,10 @@ class CustomOutput extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(
+                      padding: EdgeInsets.only(
                         top: 5,
-                        right: 45,
+                        right: isArabic() ? (0) : (55),
+                        left: isArabic() ? (55) : (0),
                       ),
                       child: Text(
                         title,

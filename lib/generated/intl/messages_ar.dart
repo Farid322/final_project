@@ -22,11 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "AboutDoctor":
+            MessageLookupByLibrary.simpleMessage("تفاصيل عن الدكتور"),
         "AboutHemobelt": MessageLookupByLibrary.simpleMessage("عن Hemobelt"),
+        "AboutSerena": MessageLookupByLibrary.simpleMessage("حول سيرينا"),
+        "AboutSerenainfo": MessageLookupByLibrary.simpleMessage(
+            "الدكتورة سيرينا هي طبيبة محترفة لديها أكثر من 8 سنوات من الخبرة. يمكنها مساعدتك بشكل حقيقي."),
         "Aboutus": MessageLookupByLibrary.simpleMessage("من نحن"),
         "Acceptedresult":
             MessageLookupByLibrary.simpleMessage("أنت جاهز لبدء الجلسة"),
         "Accountinfo": MessageLookupByLibrary.simpleMessage("معلومات الحساب"),
+        "Add": MessageLookupByLibrary.simpleMessage("إضافة"),
+        "AllDoctor": MessageLookupByLibrary.simpleMessage("جميع الاطباء"),
         "Barcode": MessageLookupByLibrary.simpleMessage("الباركود"),
         "Because": MessageLookupByLibrary.simpleMessage(
             "نظرًا لأن الكلى ضرورية للعديد من وظائف الجسم، فإن مرض الكلى يزيد أيضًا من خطر الإصابة بأمراض القلب والأوعية الدموية."),
@@ -36,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "نهدف إلى توفير الوقت باستخدام حزام الغسيل الكلوي: باستخدام تكنولوجيا البرمجة والذكاء الاصطناعي مع تطبيق سهل الاستخدام يمكن للمريض متابعة عملية الغسيل الكلوي وعلاماته الحيوية، يرجى تشغيل بلوتوث الهاتف لنساعدك."),
         "But": MessageLookupByLibrary.simpleMessage(
             "ولكن مع تفاقم مرض الكلى، يمكن أن تتراكم الفضلات في الدم وتجعلك تشعر بالمرض. قد تظهر لديك مشاكل أخرى، مثل ارتفاع ضغط الدم وفقر الدم وضعف العظام وسوء التغذية وتلف الأعصاب."),
+        "Cairo": MessageLookupByLibrary.simpleMessage("القاهرة"),
+        "Carddiologist":
+            MessageLookupByLibrary.simpleMessage("أخصائي القلب (MBBS, FCPS)"),
         "CheckYourEmail":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
         "Chronic": MessageLookupByLibrary.simpleMessage(
@@ -53,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Date": MessageLookupByLibrary.simpleMessage("تاريخ"),
         "Delayed": MessageLookupByLibrary.simpleMessage("مؤجل"),
         "Details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
+        "Doctor": MessageLookupByLibrary.simpleMessage("الطبيب"),
         "Donthave": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "Dontworry": MessageLookupByLibrary.simpleMessage(
             "لا تقلق! يحدث ذلك. يرجى إدخال البريد الإلكتروني المرتبط بحسابك."),
@@ -94,8 +105,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نتيجة الفحص الطبي"),
         "MedicalTests": MessageLookupByLibrary.simpleMessage("الفحوصات الطبية"),
         "Medicine": MessageLookupByLibrary.simpleMessage("الدواء"),
+        "MedicineHeartSpecialist":
+            MessageLookupByLibrary.simpleMessage("اختصاصي الطب الباطني والقلب"),
         "Medicinespeclialist":
             MessageLookupByLibrary.simpleMessage("أخصائي الطب "),
+        "Message": MessageLookupByLibrary.simpleMessage("رسالة"),
         "Messenger": MessageLookupByLibrary.simpleMessage("الرسائل"),
         "Min": MessageLookupByLibrary.simpleMessage("11 دقيقة"),
         "Minhours": MessageLookupByLibrary.simpleMessage("الحد الأدنى للساعات"),
@@ -117,6 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "Passwordchanged":
             MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور"),
+        "Patients": MessageLookupByLibrary.simpleMessage("المرضى"),
         "PleaseAnswer": MessageLookupByLibrary.simpleMessage(
             "يرجى الإجابة على هذه الأسئلة للحصول على مزيد من التفاصيل.."),
         "Pleaseanswer": MessageLookupByLibrary.simpleMessage(
@@ -138,7 +153,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "Restpassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "Review": MessageLookupByLibrary.simpleMessage("مراجعة"),
+        "Search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "SearchHere": MessageLookupByLibrary.simpleMessage("البحث هنا"),
+        "SearchYour": MessageLookupByLibrary.simpleMessage("ابحث عن"),
         "Seconds": MessageLookupByLibrary.simpleMessage("ثواني"),
+        "SelectArea": MessageLookupByLibrary.simpleMessage("اختر المنطقة"),
+        "SelectDate": MessageLookupByLibrary.simpleMessage("اختر التاريخ"),
         "SendCode": MessageLookupByLibrary.simpleMessage("إرسال رمز"),
         "Sendanemail":
             MessageLookupByLibrary.simpleMessage("إرسال بريد إلكتروني"),
@@ -159,7 +180,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Upload": MessageLookupByLibrary.simpleMessage("تحميل"),
         "UploadF": MessageLookupByLibrary.simpleMessage("تحميل ملف / صورة"),
         "Usecamera": MessageLookupByLibrary.simpleMessage("استخدام الكاميرا"),
+        "VideoCall": MessageLookupByLibrary.simpleMessage("مكالمة فيديو"),
         "View": MessageLookupByLibrary.simpleMessage("عرض"),
+        "VoiceCall": MessageLookupByLibrary.simpleMessage("مكالمة صوتية"),
         "Waste": MessageLookupByLibrary.simpleMessage("فضلات"),
         "Wevesent":
             MessageLookupByLibrary.simpleMessage("لقد قمنا بإرسال رمز إلى "),
@@ -174,7 +197,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "YourUsername":
             MessageLookupByLibrary.simpleMessage("اسم المستخدم الخاص بك"),
         "Yourvital": MessageLookupByLibrary.simpleMessage("قياساتك الحيوية"),
-        "about": MessageLookupByLibrary.simpleMessage("عن\n"),
+        "about": MessageLookupByLibrary.simpleMessage("نبذه عن\n"),
         "aboutHemo": MessageLookupByLibrary.simpleMessage(
             "غسيل الكلى هو آلة تقوم بتنقيه الدم من خلال جهاز غسيل الكلى ، المعروف أيضا باسم الكلى الاصطناعية ، مع فحوصات سلامة مدمجة للتأكد من أن العملية آمنة وفعالة.لذلك يقوم حزام غسيل الكلى بنفس الوظيفة وبطريقة امنة بالاضافة الى متابعة الطبيب مع المريض "),
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
@@ -195,6 +218,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ex": MessageLookupByLibrary.simpleMessage("مثلا أعاني من مرض السكري"),
         "fluid": MessageLookupByLibrary.simpleMessage("سائل"),
         "fluidTemprature": MessageLookupByLibrary.simpleMessage("حرارة السائل"),
+        "good": MessageLookupByLibrary.simpleMessage("عيادة الصحة الجيدة "),
         "hour2": MessageLookupByLibrary.simpleMessage("2 ساعات"),
         "hours": MessageLookupByLibrary.simpleMessage("12 ساعه"),
         "itis": MessageLookupByLibrary.simpleMessage(

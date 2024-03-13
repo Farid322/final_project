@@ -19,16 +19,16 @@ class DoctorLoginPage extends StatelessWidget {
     return BlocProvider(
       create: (context) => LoginCubit(),
       child: BlocListener<LoginCubit, LoginState>(
-        listenWhen: (previous, current) => 
-         current is LoginSuccess || current is LoginFailure,
+        listenWhen: (previous, current) =>
+            current is LoginSuccess || current is LoginFailure,
         listener: (context, state) {
-           if (state is LoginSuccess) {
+          if (state is LoginSuccess) {
             GoRouter.of(context).push(RouterNames.DoctorHome);
           } else if (state is LoginFailure) {
             showToast(message: state.errMsg, state: ToastStates.ERROR);
           }
           // TODO: implement listener
-          },
+        },
         child: Scaffold(
           backgroundColor: Colors.white,
           body: Padding(
@@ -123,11 +123,23 @@ class DoctorLoginPage extends StatelessWidget {
                   SizedBox(
                     height: 32.h,
                   ),
-                  InkWell(
+                 BlocBuilder<LoginCubit, LoginState>(
+                  buildWhen: (previous, current) =>
+                      current is LoginSuccess ||
+                      current is LoginFailure ||
+                      current is LoginLoading,
+                  builder: (context, state) {
+                    return CustomButton(
+                      text: 'Log-In',
                       onTap: () {
-                        GoRouter.of(context).push(RouterNames.DoctorHome);
+                        BlocProvider.of<LoginCubit>(context)
+                            .userLogin(email: _emailController.text,
+                            passWord: _passWordController.text);
+                            
                       },
-                      child: const CustomButton(text: 'Log-In')),
+                    );
+                  },
+                ),
                   SizedBox(
                     height: 22.h,
                   ),

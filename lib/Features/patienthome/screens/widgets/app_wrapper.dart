@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/navbar/Notification.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/navbar/home.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/navbar/messanger.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/setting.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/Notification.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/messanger.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/patient_home.dart';

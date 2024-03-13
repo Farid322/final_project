@@ -21,7 +21,7 @@ class LoginCubit extends Cubit<LoginState> {
         endPoint: ApiConstance.login,
         data: {'email': email, 'password': passWord},
       );
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         loginModel = LoginModel.fromJson(response.data);
        // Session.saveSession(loginModel?);
         emit(LoginSuccess(loginModel!));

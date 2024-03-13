@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/generated/l10n.dart';
-import 'package:graduation_project/main.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
 

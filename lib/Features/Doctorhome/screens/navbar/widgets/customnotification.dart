@@ -5,7 +5,7 @@ Widget customNotification(
     String title, String subtitle, Color color, String time) {
   return Padding(
     padding: EdgeInsets.only(
-        left: isArabic() ? (15) : (0),
+        left: isArabic() ? (0) : (15),
         top: 10,
         bottom: 15,
         right: isArabic() ? (15) : (0)),

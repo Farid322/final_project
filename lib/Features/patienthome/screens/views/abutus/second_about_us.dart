@@ -50,12 +50,13 @@ class SecondAboutUsPatient extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          const Row(
+          Row(
             children: [
-              Padding(padding: EdgeInsets.only(right: 30)),
+              const Padding(padding: EdgeInsets.only(right: 30)),
               Text(
-                'About Hemobelt',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                S.of(context).AboutHemobelt,
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
             ],
           ),

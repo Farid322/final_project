@@ -31,7 +31,12 @@ class BluetoothPage extends StatelessWidget {
                     const SizedBox(
                       width: 6,
                     ),
-                    const Icon(Icons.arrow_back, color: Colors.white),
+                    InkWell(
+                        onTap: () {
+                          GoRouter.of(context).go(RouterNames.PatientHome);
+                        },
+                        child:
+                            const Icon(Icons.arrow_back, color: Colors.white)),
                     const SizedBox(
                       width: 7,
                     ),

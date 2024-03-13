@@ -76,11 +76,11 @@ class PatientHome extends StatelessWidget {
               SizedBox(height: 13.h),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 child: Row(
                   children: [
                     CircularPercentIndicator(
-                      radius: 60.0,
+                      radius: 75.0,
                       animation: true,
                       animationDuration: 1200,
                       lineWidth: 15.0,
@@ -95,7 +95,9 @@ class PatientHome extends StatelessWidget {
                       progressColor: kPrimaryColor,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.only(
+                          right: isArabic() ? (20) : (0),
+                          left: isArabic() ? (0) : (20)),
                       child: Custombutton(
                           onTap: () {
                             GoRouter.of(context).go(RouterNames.Bluetoothpage);
@@ -214,8 +216,12 @@ class PatientHome extends StatelessWidget {
                   children: [
                     Text(S.of(context).MyDoctor,
                         style: AppStyels.s18.copyWith(color: Colors.grey)),
-                    SizedBox(width: isArabic() ? (270) : (207)),
-                    const Icon(Icons.search, size: 32)
+                    SizedBox(width: isArabic() ? (270) : (230)),
+                    InkWell(
+                        onTap: () {
+                          GoRouter.of(context).go(RouterNames.Search);
+                        },
+                        child: const Icon(Icons.search, size: 32))
                   ],
                 ),
               ),
@@ -239,7 +245,7 @@ class PatientHome extends StatelessWidget {
                 child: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Column(
                         children: [
                           const Text(
@@ -247,32 +253,34 @@ class PatientHome extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 12, fontWeight: FontWeight.w600),
                           ),
-                          const Text('Medicine Specialist',
-                              style: TextStyle(
+                          Text(S.of(context).Medicinespeclialist,
+                              style: const TextStyle(
                                   fontSize: 10, fontWeight: FontWeight.w500)),
                           SizedBox(height: 9.h),
-                          Image.asset(AppAssets.ratingimage),
                           SizedBox(height: 27.h),
-                          const Text('Experience',
-                              style: TextStyle(
+                          Text(S.of(context).Experience,
+                              style: const TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.grey)),
                           SizedBox(height: 9.h),
-                          Text('8 Years',
+                          Text(S.of(context).Years8,
                               style: AppStyels.s18
                                   .copyWith(fontWeight: FontWeight.normal)),
-                          SizedBox(height: 17.h),
-                          const Custombutton(
-                              text: 'Details',
-                              width: 100,
-                              hieght: 30,
-                              fontsize: 15,
-                              radius: 10,
-                              color: Color(0xff0E5C6D),
-                              icon: null,
-                              herozintal: 5,
-                              textcolor: Colors.white),
+                          SizedBox(height: 10.h),
+                          Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Custombutton(
+                                text: S.of(context).Details,
+                                width: 96,
+                                hieght: 35,
+                                fontsize: 15,
+                                radius: 10,
+                                color: const Color(0xff0E5C6D),
+                                icon: null,
+                                herozintal: isArabic() ? (1) : (5),
+                                textcolor: Colors.white),
+                          ),
                         ],
                       ),
                     ),

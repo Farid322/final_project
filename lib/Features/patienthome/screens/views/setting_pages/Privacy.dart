@@ -101,7 +101,7 @@ class PrivacyPatient extends StatelessWidget {
                           height: 5,
                         ),
                         CustomTextFormFieldd(
-                          hintText: '+012',
+                          hintText: S.of(context).code,
                           width: 80,
                           height: 56,
                         ),
@@ -127,7 +127,7 @@ class PrivacyPatient extends StatelessWidget {
                           height: 5,
                         ),
                         CustomTextFormFieldd(
-                          hintText: '1024165373',
+                          hintText: S.of(context).number,
                           width: 150,
                           height: 56,
                         ),

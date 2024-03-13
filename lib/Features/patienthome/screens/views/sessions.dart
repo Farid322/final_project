@@ -79,7 +79,7 @@ class SessionsPatient extends StatelessWidget {
                 time: S.of(context).Time,
                 yourdate: S.of(context).august,
                 yourtime: S.of(context).pm,
-                sessions: S.of(context).Test,
+                sessions: S.of(context).Session1,
                 icon: null,
               ),
               SizedBox(
@@ -90,7 +90,7 @@ class SessionsPatient extends StatelessWidget {
                 time: S.of(context).Time,
                 yourdate: S.of(context).august,
                 yourtime: S.of(context).pm,
-                sessions: S.of(context).Test,
+                sessions: S.of(context).Session2,
                 icon: null,
               ),
             ])

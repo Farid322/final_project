@@ -23,9 +23,9 @@ class _NotificationScreenState extends State<NotificationScreenPatient> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Text(
-          'Notification',
-          style: TextStyle(
+        title: Text(
+          S.of(context).Notifications,
+          style: const TextStyle(
             color: Color(0xFF35364F),
             fontSize: 20,
             fontFamily: 'Roboto',
@@ -41,15 +41,16 @@ class _NotificationScreenState extends State<NotificationScreenPatient> {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: isArabic() ? (15) : (0),
+                  left: isArabic() ? (0) : (15),
                   top: 20,
                   bottom: 5,
                   right: isArabic() ? (15) : (0)),
-              child: const Row(
+              child: Row(
                 children: [
                   Text(
-                    'Today',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                    S.of(context).Today,
+                    style: const TextStyle(
+                        fontSize: 15, fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -81,7 +82,7 @@ class _NotificationScreenState extends State<NotificationScreenPatient> {
             const Divider(thickness: 0.5),
             Padding(
               padding: EdgeInsets.only(
-                  left: isArabic() ? (15) : (0),
+                  left: isArabic() ? (0) : (15),
                   top: 20,
                   bottom: 5,
                   right: isArabic() ? (15) : (0)),

@@ -31,7 +31,7 @@ class Hemodialysis extends StatelessWidget {
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
-        locale: const Locale('ar'),
+        locale: const Locale('en'),
         localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,

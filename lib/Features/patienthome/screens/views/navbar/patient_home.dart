@@ -8,7 +8,6 @@ import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
 import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/main.dart';
-import 'package:graduation_project/utils/app_asset.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
@@ -216,7 +215,7 @@ class PatientHome extends StatelessWidget {
                   children: [
                     Text(S.of(context).MyDoctor,
                         style: AppStyels.s18.copyWith(color: Colors.grey)),
-                    SizedBox(width: isArabic() ? (270) : (230)),
+                    SizedBox(width: isArabic() ? (ScreenUtil().setWidth(250)) : (230)),
                     InkWell(
                         onTap: () {
                           GoRouter.of(context).go(RouterNames.Search);

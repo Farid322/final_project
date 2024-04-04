@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/chat.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/navbar/widgets/custommessanger.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/generated/l10n.dart';
 

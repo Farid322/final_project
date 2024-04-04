@@ -32,7 +32,6 @@ import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/sc
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/Privacy.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/accountinfo.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/setting_pages/setting.dart';
-import 'package:graduation_project/Features/auth/peresentaion/views/screens/RestPasswordDoctor.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/check_email_doctor.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/enter_code_doctor.dart';
 import 'package:graduation_project/Features/auth/peresentaion/views/screens/error_email_doctor.dart';

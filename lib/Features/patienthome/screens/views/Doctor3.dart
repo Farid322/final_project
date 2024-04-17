@@ -110,7 +110,7 @@ class DoctorThree extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                      right: isArabic() ? (0) : (150),
+                      right: isArabic() ? (0) : (230),
                       left: isArabic() ? (240) : (0),
                       top: 5,
                       bottom: 10),

@@ -3,9 +3,12 @@ import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/widgets/CustomCategory.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/schedule_pages/widgets/time%20picker.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/widgets/Navigationbar.dart';
+import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/constant/constant.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/core/widgets2/CustomButton.dart';
+import 'package:graduation_project/generated/l10n.dart';
+import 'package:graduation_project/main.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 // ignore: camel_case_types
@@ -38,7 +41,7 @@ class _selectappointmentState extends State<selectappointment> {
               padding: const EdgeInsets.all(10),
               child: InkWell(
                 onTap: () {
-                  GoRouter.of(context).go(RouterNames.PatientHome);
+                  GoRouter.of(context).go(RouterNames.DoctorProfilePatient);
                 },
                 child: const Icon(
                   Icons.arrow_back,
@@ -50,11 +53,11 @@ class _selectappointmentState extends State<selectappointment> {
           ],
         ),
         shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        title: const Padding(
-          padding: EdgeInsets.only(right: 25),
+        title: Padding(
+          padding: const EdgeInsets.only(right: 25),
           child: Text(
-            'Lets set the schedule easily',
-            style: TextStyle(
+            S.of(context).lets,
+            style: const TextStyle(
               color: Color(0xFF35364F),
               fontSize: 20,
               fontFamily: 'Roboto',
@@ -75,7 +78,7 @@ class _selectappointmentState extends State<selectappointment> {
                     selectedDecoration: BoxDecoration(
                         color: kPrimaryColor,
                         borderRadius: BorderRadius.all(Radius.circular(20)))),
-                locale: 'en-us',
+                locale: isArabic() ? ('ar-eg') : ('en-us'),
                 rowHeight: 35,
                 headerStyle: const HeaderStyle(
                     formatButtonVisible: false, titleCentered: true),
@@ -89,33 +92,39 @@ class _selectappointmentState extends State<selectappointment> {
           const SizedBox(
             height: 25,
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, bottom: 10, top: 10),
+          Padding(
+            padding: EdgeInsets.only(
+                left: isArabic() ? (0) : (20),
+                right: isArabic() ? (20) : (0),
+                bottom: 10,
+                top: 10),
             child: Row(
               children: [
                 Text(
-                  'Category',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  S.of(context).Category,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w500),
                 ),
               ],
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(
-              left: 20,
+              left: isArabic() ? (0) : (20),
+              right: isArabic() ? (20) : (0),
             ),
             child: Row(
               children: [
                 CustomCategory(
-                  text: 'Meeting',
-                  color: Color.fromRGBO(245, 158, 11, 1),
+                  text: S.of(context).Meeting,
+                  color: const Color.fromRGBO(245, 158, 11, 1),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
                 CustomCategory(
-                  text: 'Session',
-                  color: Color.fromRGBO(26, 117, 41, 1),
+                  text: S.of(context).Session,
+                  color: const Color.fromRGBO(26, 117, 41, 1),
                 ),
               ],
             ),
@@ -123,13 +132,18 @@ class _selectappointmentState extends State<selectappointment> {
           const SizedBox(
             height: 25,
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, bottom: 10, top: 10),
+          Padding(
+            padding: EdgeInsets.only(
+                left: isArabic() ? (0) : (20),
+                right: isArabic() ? (20) : (0),
+                bottom: 10,
+                top: 10),
             child: Row(
               children: [
                 Text(
-                  'Notes',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  S.of(context).Notes,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w500),
                 ),
               ],
             ),
@@ -139,7 +153,7 @@ class _selectappointmentState extends State<selectappointment> {
                 const EdgeInsets.only(left: 20, bottom: 10, top: 10, right: 20),
             child: TextFormField(
               decoration: InputDecoration(
-                  hintText: 'Type Your Notes',
+                  hintText: S.of(context).Type,
                   filled: true,
                   fillColor: const Color.fromRGBO(241, 245, 249, 1),
                   enabledBorder: OutlineInputBorder(
@@ -151,10 +165,10 @@ class _selectappointmentState extends State<selectappointment> {
           const SizedBox(
             height: 20,
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30, right: 30, bottom: 10),
+          Padding(
+            padding: const EdgeInsets.only(left: 30, right: 30, bottom: 10),
             child: Custombutton(
-              text: 'Save',
+              text: S.of(context).save,
               width: 100,
               hieght: 47,
               fontsize: 16,
@@ -170,7 +184,7 @@ class _selectappointmentState extends State<selectappointment> {
           ),
         ],
       ),
-      bottomNavigationBar: const NavBar(),
+      bottomNavigationBar: const NavBarPatient(),
     );
   }
 }

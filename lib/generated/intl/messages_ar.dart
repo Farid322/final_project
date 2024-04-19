@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Cairo": MessageLookupByLibrary.simpleMessage("القاهرة"),
         "Carddiologist":
             MessageLookupByLibrary.simpleMessage("أخصائي القلب (MBBS, FCPS)"),
+        "Category": MessageLookupByLibrary.simpleMessage("الفئة"),
         "CheckYourEmail":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
         "Chronic": MessageLookupByLibrary.simpleMessage(
@@ -109,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختصاصي الطب الباطني والقلب"),
         "Medicinespeclialist":
             MessageLookupByLibrary.simpleMessage("أخصائي الطب "),
+        "Meeting": MessageLookupByLibrary.simpleMessage("اجتماع"),
         "Message": MessageLookupByLibrary.simpleMessage("رسالة"),
         "Messenger": MessageLookupByLibrary.simpleMessage("الرسائل"),
         "Min": MessageLookupByLibrary.simpleMessage("11 دقيقة"),
@@ -124,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Next": MessageLookupByLibrary.simpleMessage("التالي"),
         "NextSession": MessageLookupByLibrary.simpleMessage(
             "الجلسة القادمة الساعة 2:00 ظهرا"),
+        "Notes": MessageLookupByLibrary.simpleMessage("ملاحظاتك"),
         "NotificationFromDrIstiak":
             MessageLookupByLibrary.simpleMessage("إشعار من الدكتور "),
         "NotificationFromDrShofik":
@@ -158,11 +161,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "SearchHere": MessageLookupByLibrary.simpleMessage("البحث هنا"),
         "SearchYour": MessageLookupByLibrary.simpleMessage("ابحث عن"),
         "Seconds": MessageLookupByLibrary.simpleMessage("ثواني"),
+        "Select": MessageLookupByLibrary.simpleMessage("اختر التاريخ"),
         "SelectArea": MessageLookupByLibrary.simpleMessage("اختر المنطقة"),
         "SelectDate": MessageLookupByLibrary.simpleMessage("اختر التاريخ"),
         "SendCode": MessageLookupByLibrary.simpleMessage("إرسال رمز"),
         "Sendanemail":
             MessageLookupByLibrary.simpleMessage("إرسال بريد إلكتروني"),
+        "Session": MessageLookupByLibrary.simpleMessage("جلسة"),
         "Session1": MessageLookupByLibrary.simpleMessage("الجلسة 1"),
         "Session2": MessageLookupByLibrary.simpleMessage("الجلسه 2"),
         "Sessions": MessageLookupByLibrary.simpleMessage(" جلسات"),
@@ -177,6 +182,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Totalsessions": MessageLookupByLibrary.simpleMessage("إجمالي الجلسات"),
         "Toupload":
             MessageLookupByLibrary.simpleMessage("لتحميل الفحص الخاص بك"),
+        "Type": MessageLookupByLibrary.simpleMessage("اكتب ملاحظاتك"),
         "Upload": MessageLookupByLibrary.simpleMessage("تحميل"),
         "UploadF": MessageLookupByLibrary.simpleMessage("تحميل ملف / صورة"),
         "Usecamera": MessageLookupByLibrary.simpleMessage("استخدام الكاميرا"),
@@ -223,6 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hours": MessageLookupByLibrary.simpleMessage("12 ساعه"),
         "itis": MessageLookupByLibrary.simpleMessage(
             "إنه حقيقة مثبتة منذ فترة طويلة أن القارئ سيشتت انتباهه عن النص المقروء."),
+        "lets": MessageLookupByLibrary.simpleMessage("لنقم بضبط الجدول بسهولة"),
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "loginP": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "mustbe8characters":

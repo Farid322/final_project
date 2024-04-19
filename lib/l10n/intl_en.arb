@@ -1,8 +1,8 @@
 {
     "LogoD" : "Doctor",
     "LogoP": "Patient",
-    "loginP": "Log-In",
-    "SignupP":"Sign-Up",
+    "loginP": "Log In",
+    "SignupP":"Sign Up",
     "GetStarted":"Get started",
     "ContinueWithoutRegisteration":"Continue Without Registeration",
     "aboutHemo":"Hemodialysis is a machine filters your blood through a dialyzer, also known as an artificial kidney, with built-in safety checks to be sure the process is safe and effective. Home and in-center hemodialysis machines are very similar in function, though the home machine is much smaller.",
@@ -24,7 +24,7 @@
     "Male":"Male",
     "Barcode":"Barcode",
     "Next":"Next",
-    "YourUsername":"'Your User Name",
+    "YourUsername":"Your User Name",
     "YourEmail":"Your Email",
     "code":"+012",
     "number":"1024165373",
@@ -44,7 +44,7 @@
     "signin":"Sign In",
     "Forgetpassword":"Forget password?",
    "Rememberme":"Remember me",
-   "Log-In":"Log-In",
+   "Log-In":"Log In",
    "LoginwithGoogle":"Login with Google",
    "LoginwithFacebook":"Login with Facebook",
    "Don’thaveanaccount?":"Don’t have an account?",
@@ -179,7 +179,15 @@
     "Add":"Add",
     "good":"Good Health Clinic",
     "AboutDoctor":"About Doctor",
-    "AllDoctor":"All Doctor"
+    "AllDoctor":"All Doctor",
+    "Category":"Category",
+    "lets":"Let's set the schedule easily",
+    "Select":"Select the date",
+    "Meeting":"Meeting",
+    "Session":"Session",
+    "Notes":"Notes",
+    "Type":"Type Your Notes"
+
 
 
     

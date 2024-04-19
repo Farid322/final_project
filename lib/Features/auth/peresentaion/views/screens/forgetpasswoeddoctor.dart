@@ -15,7 +15,7 @@ class ForgetPasswordDoctor extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               vertical: ScreenUtil().setHeight(200),
               horizontal: ScreenUtil().setWidth(50)),
-          child: Column(
+          child: ListView(
             children: [
               Image.asset('assets/images/Character.jpg'),
               SizedBox(

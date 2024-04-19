@@ -31,7 +31,7 @@ class CustomTextFormField extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
             )),
-        obscureText: true,
+        // obscureText: true,
       ),
     );
   }

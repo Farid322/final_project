@@ -215,7 +215,9 @@ class PatientHome extends StatelessWidget {
                   children: [
                     Text(S.of(context).MyDoctor,
                         style: AppStyels.s18.copyWith(color: Colors.grey)),
-                    SizedBox(width: isArabic() ? (ScreenUtil().setWidth(250)) : (230)),
+                    SizedBox(
+                        width:
+                            isArabic() ? (ScreenUtil().setWidth(250)) : (230)),
                     InkWell(
                         onTap: () {
                           GoRouter.of(context).go(RouterNames.Search);
@@ -244,7 +246,10 @@ class PatientHome extends StatelessWidget {
                 child: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.only(
+                          left: isArabic() ? (0) : (5),
+                          right: 15,
+                          top: isArabic() ? (20) : (30)),
                       child: Column(
                         children: [
                           const Text(
@@ -255,39 +260,45 @@ class PatientHome extends StatelessWidget {
                           Text(S.of(context).Medicinespeclialist,
                               style: const TextStyle(
                                   fontSize: 10, fontWeight: FontWeight.w500)),
-                          SizedBox(height: 9.h),
-                          SizedBox(height: 27.h),
+                          SizedBox(height: 20.h),
                           Text(S.of(context).Experience,
                               style: const TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.grey)),
-                          SizedBox(height: 9.h),
+                          SizedBox(height: 5.h),
                           Text(S.of(context).Years8,
-                              style: AppStyels.s18
-                                  .copyWith(fontWeight: FontWeight.normal)),
-                          SizedBox(height: 10.h),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 12,
+                                  color: Colors.black)),
+                          SizedBox(height: 8.h),
+                          InkWell(
+                            onTap: () {
+                              GoRouter.of(context)
+                                  .go(RouterNames.selectappointment);
+                            },
                             child: Custombutton(
                                 text: S.of(context).Details,
-                                width: 96,
+                                width: 95,
                                 hieght: 35,
                                 fontsize: 15,
                                 radius: 10,
                                 color: const Color(0xff0E5C6D),
                                 icon: null,
-                                herozintal: isArabic() ? (1) : (5),
+                                herozintal: isArabic() ? (1) : (2),
                                 textcolor: Colors.white),
                           ),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 6),
+                      padding: EdgeInsets.only(
+                          left: isArabic() ? (0) : (15),
+                          right: isArabic() ? (25) : (0)),
                       child: Image.asset(
-                          'assets/images/5175-removebg-preview 1.png'),
+                        'assets/images/5175-removebg-preview 1.png',
+                      ),
                     )
                   ],
                 ),

@@ -70,20 +70,20 @@ class S {
     );
   }
 
-  /// `Log-In`
+  /// `Log In`
   String get loginP {
     return Intl.message(
-      'Log-In',
+      'Log In',
       name: 'loginP',
       desc: '',
       args: [],
     );
   }
 
-  /// `Sign-Up`
+  /// `Sign Up`
   String get SignupP {
     return Intl.message(
-      'Sign-Up',
+      'Sign Up',
       name: 'SignupP',
       desc: '',
       args: [],
@@ -300,10 +300,10 @@ class S {
     );
   }
 
-  /// `'Your User Name`
+  /// `Your User Name`
   String get YourUsername {
     return Intl.message(
-      '\'Your User Name',
+      'Your User Name',
       name: 'YourUsername',
       desc: '',
       args: [],
@@ -1823,6 +1823,76 @@ class S {
     return Intl.message(
       'All Doctor',
       name: 'AllDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Category`
+  String get Category {
+    return Intl.message(
+      'Category',
+      name: 'Category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's set the schedule easily`
+  String get lets {
+    return Intl.message(
+      'Let\'s set the schedule easily',
+      name: 'lets',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the date`
+  String get Select {
+    return Intl.message(
+      'Select the date',
+      name: 'Select',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meeting`
+  String get Meeting {
+    return Intl.message(
+      'Meeting',
+      name: 'Meeting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Session`
+  String get Session {
+    return Intl.message(
+      'Session',
+      name: 'Session',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notes`
+  String get Notes {
+    return Intl.message(
+      'Notes',
+      name: 'Notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type Your Notes`
+  String get Type {
+    return Intl.message(
+      'Type Your Notes',
+      name: 'Type',
       desc: '',
       args: [],
     );

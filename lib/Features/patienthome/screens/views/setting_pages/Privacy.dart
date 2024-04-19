@@ -148,20 +148,16 @@ class PrivacyPatient extends StatelessWidget {
               ),
               TextField(
                 decoration: InputDecoration(
-                    hintText: S.of(context).enteryourpassword,
-                    contentPadding: const EdgeInsets.symmetric(
-                      vertical: 16,
-                      horizontal: 21,
-                    ),
-                    hintStyle: const TextStyle(fontFamily: 'Roboto'),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    suffixIcon: Image.asset(
-                      'assets/icons/eye.png',
-                      width: 17,
-                      height: 15,
-                    )),
+                  hintText: S.of(context).enteryourpassword,
+                  contentPadding: const EdgeInsets.symmetric(
+                    vertical: 16,
+                    horizontal: 21,
+                  ),
+                  hintStyle: const TextStyle(fontFamily: 'Roboto'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 obscureText: true,
               ),
               const SizedBox(height: 30),

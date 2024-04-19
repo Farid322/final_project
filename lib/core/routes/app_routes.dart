@@ -23,6 +23,7 @@ import 'package:graduation_project/Features/patienthome/screens/views/Search_out
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/first_about_us.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/second_about_us.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/abutus/third_about_us.dart';
+import 'package:graduation_project/Features/patienthome/screens/views/doctorprofilepatient.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/Notification.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/navbar/messanger.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/selectappointment.dart';
@@ -134,6 +135,7 @@ class RouterNames {
   static const DoctorTwo = '/DoctorTwo';
   static const DoctorThree = '/DoctorThree';
   static const selectappointment = '/selectappointment';
+  static const DoctorProfilePatient = '/DoctorProfilePatient';
 }
 
 abstract class AppRouter {
@@ -370,6 +372,10 @@ abstract class AppRouter {
     GoRoute(
       path: RouterNames.selectappointment,
       builder: (context, state) => const selectappointment(),
+    ),
+    GoRoute(
+      path: RouterNames.DoctorProfilePatient,
+      builder: (context, state) => const DoctorProfilePatient(),
     ),
   ]);
 }

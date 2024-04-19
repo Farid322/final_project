@@ -243,64 +243,60 @@ class PatientHome extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: Row(
-                  children: [
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Row(children: [
                     Padding(
-                      padding: EdgeInsets.only(
-                          left: isArabic() ? (0) : (5),
-                          right: 15,
-                          top: isArabic() ? (20) : (30)),
+                      padding: EdgeInsets.symmetric(
+                          vertical: isArabic() ? (15) : (30), horizontal: 2),
                       child: Column(
                         children: [
-                          const Text(
-                            'Dr. Serena Gome',
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
+                          const Text('Dr. Serena Gome'),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5, left: 2),
+                            child: Text(
+                              S.of(context).Medicinespeclialist,
+                            ),
                           ),
-                          Text(S.of(context).Medicinespeclialist,
-                              style: const TextStyle(
-                                  fontSize: 10, fontWeight: FontWeight.w500)),
-                          SizedBox(height: 20.h),
-                          Text(S.of(context).Experience,
-                              style: const TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.grey)),
-                          SizedBox(height: 5.h),
-                          Text(S.of(context).Years8,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 12,
-                                  color: Colors.black)),
-                          SizedBox(height: 8.h),
-                          InkWell(
-                            onTap: () {
-                              GoRouter.of(context)
-                                  .go(RouterNames.selectappointment);
-                            },
-                            child: Custombutton(
-                                text: S.of(context).Details,
-                                width: 95,
-                                hieght: 35,
-                                fontsize: 15,
-                                radius: 10,
-                                color: const Color(0xff0E5C6D),
-                                icon: null,
-                                herozintal: isArabic() ? (1) : (2),
-                                textcolor: Colors.white),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5, left: 2),
+                            child: Text(
+                              S.of(context).Experience,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 3, left: 2),
+                            child: Text(
+                              S.of(context).Years8,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 3, left: 2),
+                            child: InkWell(
+                              onTap: () {
+                                GoRouter.of(context)
+                                    .go(RouterNames.DoctorProfilePatient);
+                              },
+                              child: Custombutton(
+                                  text: S.of(context).Details,
+                                  width: 96,
+                                  hieght: 35,
+                                  fontsize: 15,
+                                  radius: 10,
+                                  color: const Color(0xff0E5C6D),
+                                  icon: null,
+                                  herozintal: isArabic() ? (1) : (5),
+                                  textcolor: Colors.white),
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: isArabic() ? (0) : (15),
-                          right: isArabic() ? (25) : (0)),
-                      child: Image.asset(
-                        'assets/images/5175-removebg-preview 1.png',
-                      ),
-                    )
-                  ],
+                    const SizedBox(
+                      width: 45,
+                    ),
+                    Image.asset('assets/images/doctor2.png')
+                  ]),
                 ),
               )
             ]),

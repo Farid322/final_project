@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Cairo": MessageLookupByLibrary.simpleMessage("Cairo"),
         "Carddiologist":
             MessageLookupByLibrary.simpleMessage("Carddiologist (MBBS,FCPS)"),
+        "Category": MessageLookupByLibrary.simpleMessage("Category"),
         "CheckYourEmail":
             MessageLookupByLibrary.simpleMessage("Check Your Email"),
         "Chronic": MessageLookupByLibrary.simpleMessage(
@@ -112,6 +113,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Medicine & Heart Specialist"),
         "Medicinespeclialist":
             MessageLookupByLibrary.simpleMessage("Medicine Specialist "),
+        "Meeting": MessageLookupByLibrary.simpleMessage("Meeting"),
         "Message": MessageLookupByLibrary.simpleMessage("Message"),
         "Messenger": MessageLookupByLibrary.simpleMessage("Messenger"),
         "Min": MessageLookupByLibrary.simpleMessage("11 Min"),
@@ -126,6 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Next": MessageLookupByLibrary.simpleMessage("Next"),
         "NextSession":
             MessageLookupByLibrary.simpleMessage("Next Session at 2:00 pm"),
+        "Notes": MessageLookupByLibrary.simpleMessage("Notes"),
         "NotificationFromDrIstiak": MessageLookupByLibrary.simpleMessage(
             "Notification From Dr. Istiak"),
         "NotificationFromDrShofik": MessageLookupByLibrary.simpleMessage(
@@ -158,15 +161,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "SearchHere": MessageLookupByLibrary.simpleMessage("Search Here"),
         "SearchYour": MessageLookupByLibrary.simpleMessage("Search Your"),
         "Seconds": MessageLookupByLibrary.simpleMessage("Seconds"),
+        "Select": MessageLookupByLibrary.simpleMessage("Select the date"),
         "SelectArea": MessageLookupByLibrary.simpleMessage("Select Area"),
         "SelectDate": MessageLookupByLibrary.simpleMessage("Select Date"),
         "SendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "Sendanemail": MessageLookupByLibrary.simpleMessage("Send an email"),
+        "Session": MessageLookupByLibrary.simpleMessage("Session"),
         "Session1": MessageLookupByLibrary.simpleMessage("Session 1"),
         "Session2": MessageLookupByLibrary.simpleMessage("Session 2"),
         "Sessions": MessageLookupByLibrary.simpleMessage(" Sessions"),
         "Setting": MessageLookupByLibrary.simpleMessage("Setting"),
-        "SignupP": MessageLookupByLibrary.simpleMessage("Sign-Up"),
+        "SignupP": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "Stop": MessageLookupByLibrary.simpleMessage("Stop"),
         "Test": MessageLookupByLibrary.simpleMessage("Test"),
         "Time": MessageLookupByLibrary.simpleMessage("Time"),
@@ -175,6 +180,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Today": MessageLookupByLibrary.simpleMessage("Today"),
         "Totalsessions": MessageLookupByLibrary.simpleMessage("Total sessions"),
         "Toupload": MessageLookupByLibrary.simpleMessage("To upload your test"),
+        "Type": MessageLookupByLibrary.simpleMessage("Type Your Notes"),
         "Upload": MessageLookupByLibrary.simpleMessage("Upload"),
         "UploadF": MessageLookupByLibrary.simpleMessage("Upload file / photo"),
         "Usecamera": MessageLookupByLibrary.simpleMessage("Use camera"),
@@ -192,8 +198,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "YourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
         "YourPassword": MessageLookupByLibrary.simpleMessage("Your Password"),
         "YourResultis": MessageLookupByLibrary.simpleMessage("Your Result is "),
-        "YourUsername":
-            MessageLookupByLibrary.simpleMessage("\'Your User Name"),
+        "YourUsername": MessageLookupByLibrary.simpleMessage("Your User Name"),
         "Yourvital":
             MessageLookupByLibrary.simpleMessage("Your vital measurements:"),
         "about": MessageLookupByLibrary.simpleMessage("About\n"),
@@ -225,8 +230,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "hours": MessageLookupByLibrary.simpleMessage("12 hours"),
         "itis": MessageLookupByLibrary.simpleMessage(
             "It is a long established fact that a reader and will be distracted."),
+        "lets": MessageLookupByLibrary.simpleMessage(
+            "Let\'s set the schedule easily"),
         "location": MessageLookupByLibrary.simpleMessage("location"),
-        "loginP": MessageLookupByLibrary.simpleMessage("Log-In"),
+        "loginP": MessageLookupByLibrary.simpleMessage("Log In"),
         "mustbe8characters":
             MessageLookupByLibrary.simpleMessage("must be 8 characters"),
         "mysession": MessageLookupByLibrary.simpleMessage("My Session"),

@@ -11,23 +11,36 @@ part 'signup_doctor_state.dart';
 class SignupDoctorCubit extends Cubit<SignupDoctorState> {
   SignupDoctorCubit() : super(SignupDoctorInitial());
 
+  SignupModel? signupModel;
 
-  SignupModel? signupModel ;
-
-   Future<void> DoctorSignup(
-      {required String email, required String passWord,required String name , required String phone,
-      required String location , required String iD ,required String experience , required String confirmPassword}) async {
+  Future<void> DoctorSignup(
+      {required String email,
+      required String passWord,
+      required String name,
+      required String phone,
+      required String location,
+      required String iD,
+      required String experience,
+      required String confirmPassword}) async {
     emit(SignupDoctorLoading());
 
     try {
       Response response = await DioHelper.postData(
         endPoint: ApiConstance.signupdoctor,
-        data: {'email': email, 'password': passWord,'name' : name ,'phone': phone , 'ID': iD , 'experience' : experience ,
-        'location' : location , 'confirmPassword' : confirmPassword },
+        data: {
+          'email': email,
+          'password': passWord,
+          'name': name,
+          'phone': phone,
+          'ID': iD,
+          'experience': experience,
+          'location': location,
+          'confirmPassword': confirmPassword
+        },
       );
       if (response.statusCode == 201) {
         signupModel = SignupModel.fromJson(response.data);
-       // Session.saveSession(loginModel?);
+        // Session.saveSession(loginModel?);
         emit(SignupDoctorSuccess(signupModel!));
       }
     } on DioException catch (ex) {
@@ -45,5 +58,5 @@ class SignupDoctorCubit extends Cubit<SignupDoctorState> {
         ),
       );
     }
-}
+  }
 }

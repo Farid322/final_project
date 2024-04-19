@@ -104,10 +104,11 @@ class CheckEmailDoctor extends StatelessWidget {
                 CustomButton(
                   text: 'Check Code',
                   onTap: () {
-                    BlocProvider.of<OtpCodeCubit>(context).sendOtpCode(
-                      resetCode:
-                          '${_firstController.text}${_secondController.text}${_thirdController.text}${_fourthController.text}',
-                    );
+                    GoRouter.of(context).push(RouterNames.ResetPasswordDoctor);
+                    // BlocProvider.of<OtpCodeCubit>(context).sendOtpCode(
+                    //   resetCode:
+                    //       '${_firstController.text}${_secondController.text}${_thirdController.text}${_fourthController.text}',
+                    // );
                   },
                 ),
                 Padding(

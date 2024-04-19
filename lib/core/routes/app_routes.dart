@@ -291,11 +291,11 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: RouterNames.CheckEmailDoctor,
-      builder: (context, state) => const CheckEmailDoctor(),
+      builder: (context, state) => CheckEmailDoctor(),
     ),
     GoRoute(
       path: RouterNames.EnterCodeDoctor,
-      builder: (context, state) => const EnterCodeDoctor(),
+      builder: (context, state) => EnterCodeDoctor(),
     ),
     GoRoute(
       path: RouterNames.AccountInfoPatient,

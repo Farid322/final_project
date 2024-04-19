@@ -18,11 +18,11 @@ class DioHelper {
     );
     dio2 = Dio(
       BaseOptions(
-        baseUrl: ApiConstance.baseUrlDoctor,
+        baseUrl: ApiConstance.baseUrlPatient,
         receiveDataWhenStatusError: true,
       ),
     );
-    dio1.interceptors.add(
+    dio2.interceptors.add(
       MyDioInterceptor(),
     );
   }
@@ -74,51 +74,51 @@ class DioHelper {
   }
   
   
-  //patient methods
+ // patient methods
   
   
-  // static Future<Response> pathientpostData(
-  //     {required String endPoint,
-  //     required Map<String, dynamic> data,
+  static Future<Response> pathientpostData(
+      {required String endPoint,
+      required Map<String, dynamic> data,
       
-  //     String lang = 'en',
-  //     String? token}) async {
-  //   dio2.options.headers = {
-  //     'lang': lang,
-  //     'Authorization': 'Bearer $token',
-  //     'Content-Type': 'application/json',
-  //     'Accept': 'application/json',
-  //   };
-  //   Response response = await dio2.post(endPoint, data: data);
-  //   return response;
-  // }
+      String lang = 'en',
+      String? token}) async {
+    dio2.options.headers = {
+      'lang': lang,
+      'Authorization': 'Bearer $token',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    };
+    Response response = await dio2.post(endPoint, data: data);
+    return response;
+  }
 
-  // static Future<Response> pathientgetData(
-  //     {required String endPoint, String lang = 'en', String? token}) async {
-  //   dio2.options.headers = {
-  //     'lang': lang,
-  //     'Authorization': 'Bearer $token',
-  //     'Content-Type': 'application/json',
-  //     'Accept': 'application/json',
-  //   };
-  //   Response response = await dio2.get(endPoint);
-  //   return response;
-  // }
+  static Future<Response> pathientgetData(
+      {required String endPoint, String lang = 'en', String? token}) async {
+    dio2.options.headers = {
+      'lang': lang,
+      'Authorization': 'Bearer $token',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    };
+    Response response = await dio2.get(endPoint);
+    return response;
+  }
 
-  // static Future<Response> pahtientputtData(
-  //     {required String endPoint,
-  //     required Map<String, dynamic> data,
-  //     String lang = 'en',
-  //     String? token}) async {
-  //   dio2.options.headers = {
-  //     'lang': lang,
-  //     'Authorization': 'Bearer $token',
-  //     'Content-Type': 'application/json',
-  //     'Accept': 'application/json',
-  //   };
-  //   Response response = await dio2.put(endPoint, data: data);
-  //   return response;
-  // }
+  static Future<Response> pahtientputtData(
+      {required String endPoint,
+      required Map<String, dynamic> data,
+      String lang = 'en',
+      String? token}) async {
+    dio2.options.headers = {
+      'lang': lang,
+      'Authorization': 'Bearer $token',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    };
+    Response response = await dio2.put(endPoint, data: data);
+    return response;
+  }
 
 
 }

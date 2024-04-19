@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/Features/auth/peresentaion/widgets/otp_form.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:graduation_project/Features/auth/peresentaion/widgets/otp_form_widget.dart';
+import 'package:graduation_project/Features/auth/view_model/cubit/code_cubit.dart';
 import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/main.dart';
 
@@ -56,19 +58,7 @@ class CheckEmail extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            const Row(
-              children: [
-                OtpForm(),
-                SizedBox(
-                  width: 5,
-                ),
-                OtpForm(),
-                SizedBox(width: 5),
-                OtpForm(),
-                SizedBox(width: 5),
-                OtpForm()
-              ],
-            ),
+            OtpForm(),
             const SizedBox(
               height: 40,
             ),
@@ -100,6 +90,32 @@ class CheckEmail extends StatelessWidget {
             )
           ],
         ),
+      ),
+    );
+  }
+}
+
+class OtpForm extends StatelessWidget {
+  OtpForm({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: BlocProvider.of<OtpCodeCubit>(context).otpFormKey,
+      child: const Row(
+        children: [
+          OtpFormWidget(),
+          SizedBox(
+            width: 5,
+          ),
+          OtpFormWidget(),
+          SizedBox(width: 5),
+          OtpFormWidget(),
+          SizedBox(width: 5),
+          OtpFormWidget()
+        ],
       ),
     );
   }

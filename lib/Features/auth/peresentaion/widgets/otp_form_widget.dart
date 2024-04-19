@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class OtpForm extends StatelessWidget {
-  const OtpForm({super.key});
+class OtpFormWidget extends StatelessWidget {
+  const OtpFormWidget({super.key, this.textEditingController});
+
+  final TextEditingController? textEditingController;
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +13,7 @@ class OtpForm extends StatelessWidget {
         width: 79.83,
         height: 63.86,
         child: TextFormField(
+          controller: textEditingController,
           onChanged: (value) {
             if (value.length == 1) {
               FocusScope.of(context).nextFocus();

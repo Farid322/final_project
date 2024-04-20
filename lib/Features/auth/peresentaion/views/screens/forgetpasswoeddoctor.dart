@@ -13,25 +13,25 @@ class ForgetPasswordDoctor extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(
-              vertical: ScreenUtil().setHeight(200),
+              vertical: ScreenUtil().setHeight(150),
               horizontal: ScreenUtil().setWidth(50)),
           child: ListView(
             children: [
               Image.asset('assets/images/Character.jpg'),
               SizedBox(
-                height: ScreenUtil().setHeight(50),
+                height: ScreenUtil().setHeight(10),
               ),
-              SizedBox(
-                height: ScreenUtil().setHeight(20),
-              ),
-              const Text(
-                'Forget password ?',
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 50),
+                child: Text(
+                  'Forget password ?',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
               ),
               SizedBox(

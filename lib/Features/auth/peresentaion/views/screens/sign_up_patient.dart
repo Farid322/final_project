@@ -8,6 +8,13 @@ import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/main.dart';
 
 class SignUppatient extends StatelessWidget {
+  // final TextEditingController _emailController = TextEditingController();
+  // final TextEditingController _passWordController = TextEditingController();
+  // final TextEditingController _confirmPasswordController = TextEditingController();
+  // final TextEditingController _usernameController = TextEditingController();
+  // final TextEditingController _barcodeController = TextEditingController();
+  // final TextEditingController _gendersController = TextEditingController();
+
   const SignUppatient({super.key});
   static String id = 'SignUppatient';
   @override

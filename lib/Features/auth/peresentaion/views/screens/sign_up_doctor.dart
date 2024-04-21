@@ -210,37 +210,37 @@ class SignUpdoctor extends StatelessWidget {
                       child: Text(
                         'Exprience',
                       )),
-                   const SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   CustomTextFormField(
                       hintText: 'ex.7years',
                       textEditingController: _experienceController),
-                   const SizedBox(
+                  const SizedBox(
                     height: 64,
                   ),
-                   BlocBuilder<SignupDoctorCubit, SignupDoctorState>(
-                  buildWhen: (previous, current) =>
-                      current is SignupDoctorSuccess ||
-                      current is SignupDoctorFaliure ||
-                      current is SignupDoctorLoading,
-                  builder: (context, state) {
-                    return CustomButton(
-                      text: 'Sign Up',
-                      onTap: () {
-                        BlocProvider.of<SignupDoctorCubit>(context)
-                            .DoctorSignup(
-                            email: _emailController.text,
-                            passWord: _passWordController.text,
-                            confirmPassword: _confirmPasswordController.text,
-                            name: _nameController.text,
-                            phone: _phoneController.text,
-                            iD: _idController.text,
-                           location: _locationController.text,
-                            experience: _experienceController.text  
-                            );
+                  BlocBuilder<SignupDoctorCubit, SignupDoctorState>(
+                    buildWhen: (previous, current) =>
+                        current is SignupDoctorSuccess ||
+                        current is SignupDoctorFaliure ||
+                        current is SignupDoctorLoading,
+                    builder: (context, state) {
+                      return CustomButton(
+                        text: 'Sign Up',
+                        onTap: () {
+                          BlocProvider.of<SignupDoctorCubit>(context)
+                              .DoctorSignup(
+                                  email: _emailController.text,
+                                  passWord: _passWordController.text,
+                                  confirmPassword:
+                                      _confirmPasswordController.text,
+                                  name: _nameController.text,
+                                  phone: _phoneController.text,
+                                  iD: _idController.text,
+                                  location: _locationController.text,
+                                  experience: _experienceController.text);
                         },
-                        );
+                      );
                     },
                   ),
                   const SizedBox(

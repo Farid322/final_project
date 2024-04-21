@@ -180,7 +180,7 @@ class Patientprofile extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Medicine()),
+                    MaterialPageRoute(builder: (context) => Medicine()),
                   );
                 },
                 child: Padding(

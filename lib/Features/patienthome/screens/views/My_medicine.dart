@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/widgets/custom_container_medicine.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/view_model/cubit/add_medicine_cubit.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/view_model/cubit/add_medicine_state.dart';
 import 'package:graduation_project/Features/patienthome/screens/widgets/Navigationbar.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/main.dart';
 
-class MyMedicine extends StatefulWidget {
+class MyMedicine extends StatelessWidget {
   const MyMedicine({super.key});
 
-  @override
-  State<MyMedicine> createState() => _MedicineState();
-}
-
-class _MedicineState extends State<MyMedicine> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,25 +65,48 @@ class _MedicineState extends State<MyMedicine> {
                 textAlign: TextAlign.left,
               ),
             ),
-            CustomMedicine(
-              text: S.of(context).Med1,
+            const Expanded(
+              child: PatientMedicineListView(),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            CustomMedicine(
-              text: S.of(context).Med2,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            CustomMedicine(
-              text: S.of(context).Med3,
-            ),
+            // CustomMedicine(
+            //   text: S.of(context).Med1,
+            // ),
+            // const SizedBox(
+            //   height: 10,
+            // ),
+            // CustomMedicine(
+            //   text: S.of(context).Med2,
+            // ),
+            // const SizedBox(
+            //   height: 10,
+            // ),
+            // CustomMedicine(
+            //   text: S.of(context).Med3,
+            // ),
           ],
         ),
       ),
       bottomNavigationBar: const NavBarPatient(),
+    );
+  }
+}
+
+class PatientMedicineListView extends StatelessWidget {
+  const PatientMedicineListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<AddMedicineCubit, AddMedicineState>(
+      builder: (context, state) {
+        return ListView.builder(
+          itemCount: state.medicines.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(state.medicines[index].medicine),
+            );
+          },
+        );
+      },
     );
   }
 }

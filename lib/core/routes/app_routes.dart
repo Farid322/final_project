@@ -1,3 +1,4 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/AppiontmentsCP.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/Appiontment_pages/BasicSession.dart';
@@ -12,6 +13,7 @@ import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Fea
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Medical_test.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/Patient_Pofile.dart';
 import 'package:graduation_project/Features/Doctorhome/screens/patient_pages/medicine.dart';
+import 'package:graduation_project/Features/Doctorhome/screens/view_model/cubit/add_medicine_cubit.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/Doctor2.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/Doctor3.dart';
 import 'package:graduation_project/Features/patienthome/screens/views/DoctorProfile.dart';
@@ -251,7 +253,10 @@ abstract class AppRouter {
         builder: (context, state) => const MedicalTest()),
     GoRoute(
         path: RouterNames.Medicine,
-        builder: (context, state) => const Medicine()),
+        builder: (context, state) => BlocProvider(
+              create: (context) => AddMedicineCubit(),
+              child: Medicine(),
+            )),
     GoRoute(
         path: RouterNames.Patientprofile,
         builder: (context, state) => const Patientprofile()),

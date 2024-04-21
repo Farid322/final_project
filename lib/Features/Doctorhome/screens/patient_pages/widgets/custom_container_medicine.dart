@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomMedicine extends StatelessWidget {
-  const CustomMedicine({super.key, required this.text});
+  CustomMedicine({super.key, required this.text, this.controller});
   final String text;
+  TextEditingController? controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -10,6 +12,7 @@ class CustomMedicine extends StatelessWidget {
         padding:
             const EdgeInsets.only(left: 20, bottom: 10, top: 10, right: 20),
         child: TextFormField(
+          controller: controller,
           decoration: InputDecoration(
               suffixIcon: const Icon(
                 Icons.edit,

@@ -101,15 +101,20 @@ class CheckEmailDoctor extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                CustomButton(
-                  text: 'Check Code',
+                InkWell(
                   onTap: () {
                     GoRouter.of(context).push(RouterNames.ResetPasswordDoctor);
-                    // BlocProvider.of<OtpCodeCubit>(context).sendOtpCode(
-                    //   resetCode:
-                    //       '${_firstController.text}${_secondController.text}${_thirdController.text}${_fourthController.text}',
-                    // );
                   },
+                  child: const CustomButton(
+                    text: 'Check Code',
+                    // onTap: () {
+                    //   GoRouter.of(context).push(RouterNames.ResetPasswordDoctor);
+                    //   // BlocProvider.of<OtpCodeCubit>(context).sendOtpCode(
+                    //   //   resetCode:
+                    //   //       '${_firstController.text}${_secondController.text}${_thirdController.text}${_fourthController.text}',
+                    //   // );
+                    // },
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(33),

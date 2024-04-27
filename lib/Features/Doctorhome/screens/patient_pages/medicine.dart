@@ -15,7 +15,7 @@ class Medicine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AddMedicineCubit(),
+      create: (context) => AddMedicineCubit()..getMedicineList(),
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 85,
@@ -96,12 +96,8 @@ class Medicine extends StatelessWidget {
                 textcolor: Colors.white,
                 onTap: () {
                   String medicine1 = medicineController1!.text;
-                  if (medicine1.isNotEmpty) {
-                    BlocProvider.of<AddMedicineCubit>(context)
-                        .addMedicine(medicine1);
-
-                    medicineController1!.clear();
-                  }
+                  BlocProvider.of<AddMedicineCubit>(context)
+                      .addMedicine(medicine1);
                   // String medicine2 = medicineController2!.text;
                   // String medicine3 = medicineController3!.text;
                 },

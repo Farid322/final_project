@@ -101,7 +101,7 @@ class RouterNames {
   static const Appointments = '/appoinment';
   static const SessionFeatures = '/sessionfeatures';
   static const MedicalTest = '/medicaltest';
-  static const Medicine = '/medicine';
+  static const Medicine = '/medician';
   static const Patientprofile = '/patientprofile';
   static const Sessions = '/sessions';
   static const Schedule = '/schedule';
@@ -138,6 +138,7 @@ class RouterNames {
   static const DoctorThree = '/DoctorThree';
   static const selectappointment = '/selectappointment';
   static const DoctorProfilePatient = '/DoctorProfilePatient';
+  static const MyMedicinepatient = '/mymedicinepatient';
 }
 
 abstract class AppRouter {
@@ -381,6 +382,10 @@ abstract class AppRouter {
     GoRoute(
       path: RouterNames.DoctorProfilePatient,
       builder: (context, state) => const DoctorProfilePatient(),
+    ),
+    GoRoute(
+      path: RouterNames.MyMedicinepatient,
+      builder: (context, state) => const MyMedicine(),
     ),
   ]);
 }

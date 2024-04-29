@@ -124,7 +124,7 @@ class RouterNames {
   static const AccountInfoPatient = '/AccountInfoPatient';
   static const PrivacyPatient = '/PrivacyPatient';
   static const SettingPagePatient = '/SettingPagePatient';
-  static const Paitentsession = '/Paitentsession';
+  static const Paitentsession = '/PatientSession';
   static const MyAppointments = '/MyAppointments';
   static const MyMedicine = '/MyMedicine';
   static const SessionsPatient = '/SessionsPatient';
@@ -209,13 +209,13 @@ abstract class AppRouter {
     ),
     GoRoute(
         path: RouterNames.PressurePage,
-        builder: (context, state) => const PressurePage()),
+        builder: (context, state) => PressurePage()),
     GoRoute(
         path: RouterNames.TemperaturePage,
-        builder: (context, state) => const TemperaturePage()),
+        builder: (context, state) => TemperaturePage()),
     GoRoute(
         path: RouterNames.WeightPage,
-        builder: (context, state) => const WeightPage()),
+        builder: (context, state) => WeightPage()),
     GoRoute(
         path: RouterNames.TestsPage,
         builder: (context, state) => const TestsPage()),

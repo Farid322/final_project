@@ -11,7 +11,7 @@ class CustomTimer extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       child: TimerCountdown(
-        enableDescriptions: true,
+        enableDescriptions: false,
         timeTextStyle: const TextStyle(
             fontSize: 80,
             fontWeight: FontWeight.w500,

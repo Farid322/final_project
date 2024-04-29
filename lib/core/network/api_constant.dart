@@ -7,7 +7,7 @@ class ApiConstance {
   static const String resetPassord = 'auth/forgotpassword';
 
   static const String baseUrlPatient =
-      'https://api-hemobelt-n1q6.onrender.com/api/v1/';
+      'https://patient-api-lyart.vercel.app/api/v1/';
   static const String patientlogin = 'auth/login';
   static const String signuppatient = 'auth/signup';
   static const String forgetpasswordpatient = 'auth/forgotpassword';

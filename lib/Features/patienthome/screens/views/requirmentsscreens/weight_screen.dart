@@ -8,7 +8,9 @@ import 'package:graduation_project/utils/app_styles.dart';
 import '../../../../../core/routes/app_routes.dart';
 
 class WeightPage extends StatelessWidget {
-  const WeightPage({super.key});
+  WeightPage({super.key});
+
+  final TextEditingController _weightController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +64,7 @@ class WeightPage extends StatelessWidget {
                   width: 238,
                   height: 56,
                   child: TextFormField(
+                    controller: _weightController,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                           vertical: 16,
@@ -95,12 +98,25 @@ class WeightPage extends StatelessWidget {
               SizedBox(
                 width: ScreenUtil().setWidth(140),
               ),
-              Button(
-                text: S.of(context).Next,
-                onTap: () {
-                  GoRouter.of(context).go(RouterNames.AccptedResultPage);
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: Color(0xff0E5C6D),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8))),
+                onPressed: () {
+                  if (int.tryParse(_weightController.text) != null) {
+                    int weight = int.tryParse(_weightController.text)!;
+                    if (weight > 50 && weight < 100) {
+                      GoRouter.of(context).go(RouterNames.AccptedResultPage);
+                    } else {
+                      GoRouter.of(context).go(RouterNames.RefuesdResultPage);
+                    }
+                  }
                 },
-              )
+                child: const Text('Next',
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
+              ),
             ]),
           ]),
         ),

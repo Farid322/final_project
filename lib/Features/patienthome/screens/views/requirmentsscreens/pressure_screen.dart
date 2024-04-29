@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:graduation_project/Features/patienthome/screens/widgets/requirments_button.dart';
 import 'package:graduation_project/core/routes/app_routes.dart';
 import 'package:graduation_project/generated/l10n.dart';
 import 'package:graduation_project/main.dart';
 import 'package:graduation_project/utils/app_styles.dart';
 
 class PressurePage extends StatelessWidget {
-  const PressurePage({super.key});
+  PressurePage({Key? key});
+
+  final TextEditingController _pressureController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -52,41 +53,64 @@ class PressurePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 30),
-                    child: Text(S.of(context).pressure,
-                        style: AppStyels.s18
-                            .copyWith(fontWeight: FontWeight.w500)),
+                      horizontal: 20,
+                      vertical: 30,
+                    ),
+                    child: Text(
+                      S.of(context).pressure,
+                      style:
+                          AppStyels.s18.copyWith(fontWeight: FontWeight.w500),
+                    ),
                   ),
                   const SizedBox(height: 32),
                   SizedBox(
                     width: 238,
                     height: 56,
                     child: TextFormField(
+                      controller: _pressureController,
                       decoration: InputDecoration(
-                          contentPadding: const EdgeInsets.symmetric(
-                            vertical: 16,
-                            horizontal: 21,
-                          ),
-                          hintText: 'ex.120/80 ',
-                          hintStyle: const TextStyle(
-                              fontFamily: 'Roboto', fontSize: 15),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          )),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 16,
+                          horizontal: 21,
+                        ),
+                        hintText: 'ex.120/80 ',
+                        hintStyle: const TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 15,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
                     ),
                   ),
                 ]),
               ),
               const SizedBox(height: 21),
               Align(
-                  alignment:
-                      isArabic() ? Alignment.bottomLeft : Alignment.bottomRight,
-                  child: Button(
-                    text: S.of(context).Next,
-                    onTap: () {
-                      GoRouter.of(context).go(RouterNames.TemperaturePage);
+                alignment:
+                    isArabic() ? Alignment.bottomLeft : Alignment.bottomRight,
+                child: Container(
+                  width: 118,
+                  height: 47,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: Color(0xff0E5C6D),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8))),
+                    onPressed: () {
+                      if (_pressureController.text == '120/80') {
+                        GoRouter.of(context).go(RouterNames.TemperaturePage);
+                      } else {
+                        GoRouter.of(context).go(RouterNames.RefuesdResultPage);
+                      }
                     },
-                  ))
+                    child: const Text('Next',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w500)),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
